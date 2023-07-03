@@ -1,8 +1,8 @@
 {
-    "name": "jared-is-coding",
+    "name": "cherryparkband.com",
     "version": "1.0.0",
     "private": true,
-    "description": "jared-is-coding",
+    "description": "cherryparkband.com",
     "author": "Jared H <jared@jarediscoding.com>",
     "keywords": [
         "gatsby"
@@ -38,9 +38,9 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Jared-Is-Coding/jarediscoding.com"
+        "url": "https://github.com/Jared-Is-Coding/cherryparkband.com"
     },
     "bugs": {
-        "url": "https://github.com/Jared-Is-Coding/jarediscoding.com/issues"
+        "url": "https://github.com/Jared-Is-Coding/cherryparkband.com/issues"
     }
 }

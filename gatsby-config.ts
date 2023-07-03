@@ -5,8 +5,8 @@ dotenv.config()
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: "Jared Is Coding",
-        description: "Jared is a software developer creating exceptional digital solutions across web and app platforms",
+        title: "Cherry Park",
+        description: "Cherry Park is a Delaware-based band creating music",
         image: "/images/icon.png",
         siteUrl: process.env.SITE_URL
     },
