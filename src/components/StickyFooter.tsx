@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
-import { FaGithub } from "react-icons/fa"
+import { FaSpotify } from "react-icons/fa"
 
 export const StickyFooter = () => (
     <footer className="flex-row flex-center">
-        <Link to="https://github.com/Jared-Is-Coding/jarediscoding.com" target="_blank" title="Link to GitHub.com">
-            <FaGithub size="2em" title="GitHub icon" />
+        <Link to="#" target="_blank" title="Link to Spotify.com">
+            <FaSpotify size="2em" title="Spotify icon" />
         </Link>
     </footer>
 )

@@ -8,22 +8,14 @@ export const Head: HeadFC = () => (
     <MetaData />
 )
 
-const projectData = [
+const albumData = [
     {
-        text: "Elemental Bot for Discord",
-        image: "/images/projects/elemental/icon.png",
-        imageTitle: "Elemental Logo",
-        imageAlt: "Logo icon for the Elemental Bot on Discord",
-        url: "https://elementalbot.com/",
+        text: "Album Name",
+        image: "/images/albums/album_name/icon.png",
+        imageTitle: "Album Name album art",
+        imageAlt: "Logo icon for the Album Name album by Cherry Park",
+        url: "#",
         target: "_blank"
-    },
-    {
-        text: "JaredIsCoding.com",
-        image: "/images/icon.png",
-        imageTitle: "Website Logo",
-        imageAlt: "Logo icon for jarediscoding.com",
-        url: "https://JaredIsCoding.com/",
-        target: "_self"
     }
 ]
 
@@ -33,32 +25,32 @@ const IndexPage: React.FC<PageProps> = () => {
             <main className="flex-col flex-center">
                 <div>
                     <h1>
-                        Work in Progress
+                        Cherry Park
                     </h1>
                 </div>
 
                 <div>
-                    <p>In the mean time, here are some of Jared's projects</p>
+                    <p>Coming August 2023</p>
                 </div>
 
-                <div className="flex-row">
-                    {projectData.map((project) => (
+                {/* <div className="flex-row">
+                    {albumData.map((album) => (
                         <div className="row-item card flex-row">
-                            {(project.image) &&
-                                <img className="card-image flex-center" src={project.image} title={project.imageTitle} alt={project.imageAlt}></img>
+                            {(album.image) &&
+                                <img className="card-image flex-center" src={album.image} title={album.imageTitle} alt={album.imageAlt}></img>
                             }
                             
                             <span className="card-content flex-center">
-                                <Link to={project.url} target={project.target}>
-                                    {project.text}
+                                <Link to={album.url} target={album.target}>
+                                    {album.text}
                                 </Link>
                             </span>
                         </div>
                     ))}
-                </div>
+                </div> */}
             </main>
             
-            <StickyFooter />
+            {/* <StickyFooter /> */}
         </>
     )
 }
