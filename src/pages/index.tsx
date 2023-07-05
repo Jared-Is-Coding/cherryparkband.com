@@ -50,7 +50,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </div> */}
             </main>
             
-            {/* <StickyFooter /> */}
+            <StickyFooter />
         </>
     )
 }
