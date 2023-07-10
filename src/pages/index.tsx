@@ -10,7 +10,7 @@ export const Head: HeadFC = () => (
 
 const albumData = [
     {
-        text: "Secret Garden",
+        text: "Secret Garden (EP)",
         date: "August 2023",
         image: "/images/albums/secret_garden/icon.png",
         imageTitle: "Secret Garden album art",
