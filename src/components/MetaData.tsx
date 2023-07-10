@@ -28,6 +28,10 @@ export const MetaData = ({ title, description, image }: searchEngineOptimization
             <meta property="og:type" content="website" />
             <meta property="og:locale" content="en_US" />
 
+            {/* Font */}
+            <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+            <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet"></link>
         </>
     )
 }
