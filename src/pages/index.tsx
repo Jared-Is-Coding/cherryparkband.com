@@ -10,10 +10,11 @@ export const Head: HeadFC = () => (
 
 const albumData = [
     {
-        text: "Album Name",
-        image: "/images/albums/album_name/icon.png",
-        imageTitle: "Album Name album art",
-        imageAlt: "Logo icon for the Album Name album by Cherry Park",
+        text: "Secret Garden",
+        date: "August 2023",
+        image: "/images/albums/secret_garden/icon.png",
+        imageTitle: "Secret Garden album art",
+        imageAlt: "Logo icon for the Secret Garden album by Cherry Park",
         url: "#",
         target: "_blank"
     }
@@ -29,25 +30,22 @@ const IndexPage: React.FC<PageProps> = () => {
                     </h1>
                 </div>
 
-                <div>
-                    <p>Coming August 2023</p>
-                </div>
-
-                {/* <div className="flex-row">
+                <div className="flex-row">
                     {albumData.map((album) => (
-                        <div className="row-item card flex-row">
-                            {(album.image) &&
-                                <img className="card-image flex-center" src={album.image} title={album.imageTitle} alt={album.imageAlt}></img>
-                            }
-                            
-                            <span className="card-content flex-center">
+                        <>
+                            <div className="card flex-col flex-center">
                                 <Link to={album.url} target={album.target}>
-                                    {album.text}
+                                    {(album.image) &&
+                                        <img className="card-image" src={album.image} title={album.imageTitle} alt={album.imageAlt}></img>
+                                    }
                                 </Link>
-                            </span>
-                        </div>
+
+                                <h2 className="card-text">{album.text}</h2>
+                                <p className="card-text">{album.date}</p>
+                            </div>
+                        </>
                     ))}
-                </div> */}
+                </div>
             </main>
             
             <StickyFooter />

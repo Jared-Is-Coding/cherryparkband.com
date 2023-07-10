@@ -104,19 +104,17 @@ footer {
     }
 }
 
-.full-height {
-    height: 100%;
-}
-
 .card {
-    background-color: rgb(59, 58, 58);
     padding: 5px;
-    border: 2px solid rgb(73, 72, 72);
-    border-radius: $border-radius;
 }
 
 .card .card-image {
-    height: 2.2em;
+    max-height: 300px;
+}
+
+.card .card-text {
+    padding: 0;
+    margin: 0;
 }
 
 .card .card-content {

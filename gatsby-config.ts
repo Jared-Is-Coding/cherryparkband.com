@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
     siteMetadata: {
         title: "Cherry Park",
         description: "Cherry Park is a Delaware-based band creating music",
-        image: "/images/icon.png",
+        image: "/images/logo.png",
         siteUrl: process.env.SITE_URL
     },
     // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
