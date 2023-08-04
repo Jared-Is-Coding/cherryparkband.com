@@ -5,6 +5,7 @@
  **/
 
 $font-stack: "EB Garamond", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, -apple-system, BlinkMacSystemFont;
+$font-size: calc(14px + 0.390625vw);
 
 $background-color: #1F2833;
 $highlight-color: #58E6DD;
@@ -19,6 +20,7 @@ $border-radius: 5px;
 
 html {
     font-family: $font-stack;
+    font-size: $font-size;
 }
 
 /**
@@ -38,29 +40,54 @@ a {
 
 /**
  * ------------------
+ *         Res
+ * ------------------
+ **/
+
+/* Small screens */
+@media screen and (max-width: 767px) {
+    .hide-on-small {
+        display: none;
+    }
+}
+
+/**
+ * ------------------
  *    Page Elements
  * ------------------
  **/
 
 html,
-body {
+body,
+main,
+header,
+footer,
+#___gatsby,
+#gatsby-focus-wrapper {
     margin : 0;
     padding : 0;
-    height: 100%;
 	width : 100%;
+    overflow-x: hidden;
 }
 
-main {
-	height : 90vh;
-	width : 100%;
+header {
+    height: 15.2vh;
+    padding-top: 2%;
+    padding-bottom: 0.2vh;
+    overflow: hidden;
+}
+
+h1:after {
+    content: ' ';
+    display: block;
+    border: solid 2px white;
+    margin-top: 25px;
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 5%;
-    height: 5vh;
-    width: 100%;
+    height: 10%;
+    margin-top: calc(20px + 1.2vh);
+    margin-bottom: 2%;
 }
 
 /**
@@ -104,12 +131,25 @@ footer {
     }
 }
 
+/**
+ * ------------------
+ *     Cards
+ * ------------------
+ **/
+
 .card {
     padding: 5px;
 }
 
 .card .card-image {
-    max-height: 300px;
+    max-height: 352px;
+    height: calc(.75 * 100vw);
+}
+
+.card .card-iframe {
+    width: calc(.5 * 100vw);
+    min-width: 300px;
+    max-width: 50vh;
 }
 
 .card .card-text {

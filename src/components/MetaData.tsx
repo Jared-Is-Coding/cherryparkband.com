@@ -24,6 +24,7 @@ export const MetaData = ({ title, description, image }: searchEngineOptimization
 
             {/* Site description */}
             <meta name="description" content={description || defaultDescription} />
+            <meta name="keywords" content="cherry park, indie music, east coast band"/>
             
             {/* Site properties */}
             <meta property="og:type" content="website" />
@@ -32,7 +33,7 @@ export const MetaData = ({ title, description, image }: searchEngineOptimization
             {/* Font */}
             <link rel="preconnect" href="https://fonts.googleapis.com"></link>
             <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap" rel="stylesheet"></link>
         </>
     )
 }

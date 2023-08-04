@@ -5,7 +5,10 @@ import { StickyFooter } from "../components/StickyFooter"
 import "../css/styles.scss"
 
 export const Head: HeadFC = () => (
-    <MetaData />
+    <>
+        <html lang="en" />
+        <MetaData />
+    </>
 )
 
 const albumData = [
@@ -16,40 +19,63 @@ const albumData = [
         imageTitle: "Secret Garden album art",
         imageAlt: "Logo icon for the Secret Garden album by Cherry Park",
         url: "https://open.spotify.com/album/4uxRAidPaTHs8qcvYajCHb",
-        target: "_blank"
+        target: "_blank",
+        iframe: <>
+            <iframe
+                style={{borderRadius: "12px"}}
+                src="https://open.spotify.com/embed/album/4uxRAidPaTHs8qcvYajCHb?utm_source=generator"
+                frameBorder="0"
+                width="100%"
+                height="352"
+                allowFullScreen={true}
+                allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"/>
+        </>
     }
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
-            <main className="flex-col flex-center">
-                <div>
-                    <h1>
-                        Cherry Park
-                    </h1>
-                </div>
+            <header className="flex-col flex-center">
+                <h1>
+                    Cherry Park<span className="hide-on-small"> | East coast indie band</span>
+                </h1>
+            </header>
 
-                <div className="flex-row">
-                    {albumData.map((album) => (
-                        <>
-                            <div className="card flex-col flex-center">
-                                {album.url &&
-                                    <Link to={album.url} target={album.target}>
-                                        {(album.image) &&
-                                            <img className="card-image" src={album.image} title={album.imageTitle} alt={album.imageAlt}></img>
+            <main className="flex-col">
+                <div className="flex-row flex-wrap flex-center">
+                    {/* Our music */}
+                    <div className="flex-col">
+                        <h2 className="flex-center">
+                            Check out our music!
+                        </h2>
+
+                        <div className="flex-row">
+                            {albumData.map((album) => (
+                                <>
+                                    <div className="card flex-col flex-center">
+                                        {(album.iframe)&&
+                                            <div className="card-iframe">
+                                                {album.iframe}
+                                            </div>
                                         }
-                                    </Link>
-                                }
+                                        {(album.url) && (album.image) && (!album.iframe) &&
+                                            <Link to={album.url} target={album.target}>
+                                                <img className="card-image" src={album.image} title={album.imageTitle} alt={album.imageAlt} />
+                                            </Link>
+                                        }
 
-                                <h2 className="card-text">{album.text}</h2>
+                                        <h3 className="card-text">{album.text}</h3>
 
-                                {album.date && 
-                                    <p className="card-text">{album.date}</p>
-                                }
-                            </div>
-                        </>
-                    ))}
+                                        {album.date && 
+                                            <p className="card-text">{album.date}</p>
+                                        }
+                                    </div>
+                                </>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </main>
             
