@@ -20,6 +20,7 @@ export const MetaData = ({ title, description, image }: searchEngineOptimization
             {/* Site icon */}
             <meta property="og:image" content={image || siteUrl + defaultImage}></meta>
             <link rel="icon" href={image || siteUrl + defaultImage} />
+            <link rel="apple-touch-icon" href={image || siteUrl + defaultImage} />
 
             {/* Site description */}
             <meta name="description" content={description || defaultDescription} />

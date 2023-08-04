@@ -6,7 +6,7 @@ dotenv.config()
 const config: GatsbyConfig = {
     siteMetadata: {
         title: "Cherry Park",
-        description: "Cherry Park is a Delaware-based band creating music",
+        description: `Cherry Park is an east coast indie group creating music. With songs that explore sonic textures of psych rock, garage rock and indie pop, there is sure to be something for every music lover within their debut EP, "secret garden", available August 4, 2023.`,
         image: "/images/logo.png",
         siteUrl: process.env.SITE_URL
     },
@@ -17,7 +17,9 @@ const config: GatsbyConfig = {
     plugins: [
         "gatsby-plugin-sitemap",
         "gatsby-plugin-netlify",
-        "gatsby-plugin-sass"
+        "gatsby-plugin-sass",
+        "gatsby-plugin-robots-txt",
+        "gatsby-plugin-sitemap"
     ]
 };
 
