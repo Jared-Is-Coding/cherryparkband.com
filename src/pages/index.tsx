@@ -11,11 +11,11 @@ export const Head: HeadFC = () => (
 const albumData = [
     {
         text: "Secret Garden (EP)",
-        date: "August 2023",
+        date: "August 4th, 2023",
         image: "/images/albums/secret_garden/icon.png",
         imageTitle: "Secret Garden album art",
         imageAlt: "Logo icon for the Secret Garden album by Cherry Park",
-        url: "https://distrokid.com/hyperfollow/cherrypark/secret-garden-2",
+        url: "https://open.spotify.com/album/4uxRAidPaTHs8qcvYajCHb",
         target: "_blank"
     }
 ]
@@ -34,14 +34,19 @@ const IndexPage: React.FC<PageProps> = () => {
                     {albumData.map((album) => (
                         <>
                             <div className="card flex-col flex-center">
-                                <Link to={album.url} target={album.target}>
-                                    {(album.image) &&
-                                        <img className="card-image" src={album.image} title={album.imageTitle} alt={album.imageAlt}></img>
-                                    }
-                                </Link>
+                                {album.url &&
+                                    <Link to={album.url} target={album.target}>
+                                        {(album.image) &&
+                                            <img className="card-image" src={album.image} title={album.imageTitle} alt={album.imageAlt}></img>
+                                        }
+                                    </Link>
+                                }
 
                                 <h2 className="card-text">{album.text}</h2>
-                                <p className="card-text">{album.date}</p>
+
+                                {album.date && 
+                                    <p className="card-text">{album.date}</p>
+                                }
                             </div>
                         </>
                     ))}
