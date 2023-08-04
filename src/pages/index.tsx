@@ -15,7 +15,7 @@ const albumData = [
         image: "/images/albums/secret_garden/icon.png",
         imageTitle: "Secret Garden album art",
         imageAlt: "Logo icon for the Secret Garden album by Cherry Park",
-        url: "#",
+        url: "https://distrokid.com/hyperfollow/cherrypark/secret-garden-2",
         target: "_blank"
     }
 ]
