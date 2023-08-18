@@ -115,10 +115,12 @@ footer {
 }
 
 .flex-center {
+    display: flex;
     justify-content: center;
     justify-self: center;
     align-items: center;
     align-self: center;
+    text-align: center;
 }
 
 .flex-col > * {
