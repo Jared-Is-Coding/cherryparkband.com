@@ -1,4 +1,4 @@
-import { Link, type HeadFC, type PageProps } from "gatsby"
+import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { MetaData } from "../components/MetaData"
 import { StickyFooter } from "../components/StickyFooter"
@@ -22,15 +22,25 @@ const albumData = [
         target: "_blank",
         iframe: <>
             <iframe
-                style={{borderRadius: "12px"}}
+                style={{borderRadius: "12px", border: "none"}}
                 src="https://open.spotify.com/embed/album/4uxRAidPaTHs8qcvYajCHb?utm_source=generator"
-                frameBorder="0"
                 width="100%"
                 height="352"
-                allowFullScreen={true}
                 allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"/>
         </>
+    }
+]
+
+const showData = [
+    {
+        text: "The Queen, Wilmington DE",
+        date: "September 24th, 2023",
+        image: "/images/shows/the_queen.png",
+        imageTitle: "The Queen venue image",
+        imageAlt: "Venue image for The Queen in Wilmington Delaware",
+        url: "https://thequeenwilmington.com/events/cherry-park-secret-garden-album-release-w-rachel-ana-dobken-chvnce/",
+        target: "_blank"
     }
 ]
 
@@ -48,7 +58,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     {/* Our music */}
                     <div className="flex-col">
                         <h2 className="flex-center">
-                            Check out our music!
+                            Our Music
                         </h2>
 
                         <div className="flex-row">
@@ -61,15 +71,42 @@ const IndexPage: React.FC<PageProps> = () => {
                                             </div>
                                         }
                                         {(album.url) && (album.image) && (!album.iframe) &&
-                                            <Link to={album.url} target={album.target}>
-                                                <img className="card-image" src={album.image} title={album.imageTitle} alt={album.imageAlt} />
-                                            </Link>
+                                            <a href={album.url} target={album.target}>
+                                                <img className={album.image.endsWith(".png") ? "card-image png" : "card-image"} src={album.image} title={album.imageTitle} alt={album.imageAlt} />
+                                            </a>
                                         }
 
                                         <h3 className="card-text">{album.text}</h3>
 
+
                                         {album.date && 
                                             <p className="card-text">{album.date}</p>
+                                        }
+                                    </div>
+                                </>
+                            ))}
+                        </div>
+                    </div>
+                    {/* Our Shows */}
+                    <div className="flex-col">
+                        <h2 className="flex-center">
+                            Live Shows
+                        </h2>
+
+                        <div className="flex-row">
+                            {showData.map((show) => (
+                                <>
+                                    <div className="card flex-col flex-center">
+                                        {(show.url) && (show.image) &&
+                                            <a href={show.url} target={show.target}>
+                                                <img className={show.image.endsWith(".png") ? "card-image png" : "card-image"} src={show.image} title={show.imageTitle} alt={show.imageAlt} />
+                                            </a>
+                                        }
+
+                                        <h3 className="card-text">{show.text}</h3>
+
+                                        {show.date && 
+                                            <p className="card-text">{show.date}</p>
                                         }
                                     </div>
                                 </>

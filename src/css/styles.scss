@@ -10,7 +10,7 @@ $font-size: calc(14px + 0.390625vw);
 $background-color: #1F2833;
 $highlight-color: #58E6DD;
 
-$border-radius: 5px;
+$border-radius: 12px;
 
 /**
  * ------------------
@@ -84,6 +84,10 @@ h1:after {
     margin-top: 25px;
 }
 
+h2 {
+    text-transform: uppercase;
+}
+
 footer {
     height: 10%;
     margin-top: calc(20px + 1.2vh);
@@ -144,6 +148,11 @@ footer {
 .card .card-image {
     max-height: 352px;
     height: calc(.75 * 100vw);
+}
+
+.card .card-image.png {
+    background-color: white;
+    border-radius: $border-radius;
 }
 
 .card .card-iframe {
