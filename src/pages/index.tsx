@@ -14,7 +14,7 @@ export const Head: HeadFC = () => (
 const albumData = [
     {
         text: "Secret Garden (EP)",
-        date: "August 4th, 2023",
+        date: null,
         image: "/images/albums/secret_garden/icon.png",
         imageTitle: "Secret Garden album art",
         imageAlt: "Logo icon for the Secret Garden album by Cherry Park",
@@ -88,7 +88,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         </div>
                     </div>
                     {/* Our Shows */}
-                    <div className="flex-col">
+                    {/* <div className="flex-col">
                         <h2 className="flex-center">
                             Live Shows
                         </h2>
@@ -112,7 +112,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 </>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </main>
             
