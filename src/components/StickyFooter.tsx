@@ -3,7 +3,7 @@ import { FaInstagram, FaMusic, FaRegEnvelope, FaSpotify, FaYoutube } from "react
 
 export const StickyFooter = () => (
     <footer className="flex-row flex-center">
-        <a href="mailto:thecherryparkband@gmai.com" title="Send an email to Cherry Park">
+        <a href="mailto:thecherryparkband@gmail.com" title="Send an email to Cherry Park">
             <FaRegEnvelope size="2em" title="Email" />
         </a>
         <a href="https://www.instagram.com/cherryparkband/" target="_blank" title="Link to Cherry Park on Instagram.com">
