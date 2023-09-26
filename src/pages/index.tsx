@@ -20,15 +20,27 @@ const albumData = [
         imageAlt: "Logo icon for the Secret Garden album by Cherry Park",
         url: "https://open.spotify.com/album/4uxRAidPaTHs8qcvYajCHb",
         target: "_blank",
-        iframe: <>
-            <iframe
-                style={{borderRadius: "12px", border: "none"}}
-                src="https://open.spotify.com/embed/album/4uxRAidPaTHs8qcvYajCHb?utm_source=generator"
-                width="100%"
-                height="352"
-                allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"/>
-        </>
+        iframes: [
+            <>
+                <iframe
+                    style={{borderRadius: "12px", border: "none"}}
+                    src="https://open.spotify.com/embed/album/4uxRAidPaTHs8qcvYajCHb?utm_source=generator"
+                    width="100%"
+                    height="352"
+                    allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"/>
+            </>,
+            <>
+                <iframe
+                    style={{borderRadius: "12px", border: "none", background: "transparent", maxWidth: ""}}
+                    src="https://embed.music.apple.com/us/album/secret-garden/1699107941?wmode=opaque"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                    data-embed="true"
+                    width="100%"
+                    height="352"
+                    allow="encrypted-media; fullscreen"/>
+            </>
+        ]
     }
 ]
 
@@ -68,16 +80,25 @@ const IndexPage: React.FC<PageProps> = () => {
                             {albumData.map((album) => (
                                 <>
                                     <div className="card flex-col flex-center">
-                                        {(album.iframe)&&
+                                        <div className="flex-row flex-center flex-wrap">
                                             <div className="card-iframe">
-                                                {album.iframe}
+                                                {album.iframes.at(0)}
                                             </div>
-                                        }
-                                        {(album.url) && (album.image) && (!album.iframe) &&
-                                            <a href={album.url} target={album.target}>
-                                                <img className={album.image.endsWith(".png") ? "card-image png" : "card-image"} src={album.image} title={album.imageTitle} alt={album.imageAlt} />
-                                            </a>
-                                        }
+                                            {(album.iframes) && (album.iframes.length > 1) &&
+                                                <>
+                                                    {album.iframes.slice(1).map((iframe) => (
+                                                        <div className="card-iframe hide-on-small">
+                                                            {iframe}
+                                                        </div>
+                                                    ))}
+                                                </>
+                                            }
+                                            {(album.url) && (album.image) && (!album.iframes) &&
+                                                <a href={album.url} target={album.target}>
+                                                    <img className={album.image.endsWith(".png") ? "card-image png" : "card-image"} src={album.image} title={album.imageTitle} alt={album.imageAlt} />
+                                                </a>
+                                            }
+                                        </div>
 
                                         <h3 className="card-text">{album.text}</h3>
 
