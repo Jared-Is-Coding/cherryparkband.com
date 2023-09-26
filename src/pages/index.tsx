@@ -49,17 +49,20 @@ const IndexPage: React.FC<PageProps> = () => {
         <>
             <header className="flex-col flex-center">
                 <h1>
-                    Cherry Park<span className="hide-on-small"> | East coast indie band</span>
+                    Cherry Park
                 </h1>
+                <h2 className="hide-on-small">
+                    East coast indie band
+                </h2>
             </header>
 
             <main className="flex-col">
                 <div className="flex-row flex-wrap flex-center">
                     {/* Our music */}
                     <div className="flex-col">
-                        <h2 className="flex-center">
+                        <h3 className="flex-center">
                             Our Music
-                        </h2>
+                        </h3>
 
                         <div className="flex-row">
                             {albumData.map((album) => (
@@ -89,9 +92,9 @@ const IndexPage: React.FC<PageProps> = () => {
                     </div>
                     {/* Our Shows */}
                     {/* <div className="flex-col">
-                        <h2 className="flex-center">
+                        <h3 className="flex-center">
                             Live Shows
-                        </h2>
+                        </h3>
 
                         <div className="flex-row">
                             {showData.map((show) => (

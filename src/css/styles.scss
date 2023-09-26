@@ -4,11 +4,15 @@
  * ------------------
  **/
 
+$h1-font-stack: "Creampuff", "EB Garamond", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, -apple-system, BlinkMacSystemFont;
+$h1-font-size: 300%;
+
 $font-stack: "EB Garamond", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, -apple-system, BlinkMacSystemFont;
 $font-size: calc(14px + 0.390625vw);
 
-$background-color: #1F2833;
-$highlight-color: #58E6DD;
+$background-color: #B8BAB7;
+$highlight-color: #486c46;
+$font-color: #2F2A27;
 
 $border-radius: 12px;
 
@@ -17,6 +21,16 @@ $border-radius: 12px;
  *       Fonts
  * ------------------
  **/
+
+ @font-face {
+    font-family: "Creampuff";
+    src: url("../fonts/creampuff.eot?") format("eot"),
+        url("../fonts/creampuff.woff") format("woff"),
+        url("../fonts/creampuff.ttf") format("truetype"),
+        url("../fonts/creampuff.svg#Creampuff") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
     font-family: $font-stack;
@@ -31,7 +45,7 @@ html {
 
 body {
     background-color: $background-color;
-    color: white;
+    color: $font-color;
 }
 
 a {
@@ -48,6 +62,17 @@ a {
 @media screen and (max-width: 767px) {
     .hide-on-small {
         display: none;
+    }
+
+    header {
+        height: 20vh;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 768px) {
+    header {
+        height: 30vh;
     }
 }
 
@@ -71,20 +96,30 @@ footer,
 }
 
 header {
-    height: 15.2vh;
     padding-top: 2%;
     padding-bottom: 0.2vh;
     overflow: hidden;
 }
 
+h1 {
+    font-family: $h1-font-stack;
+    font-size: $h1-font-size;
+    margin-bottom: 0;
+}
+
 h1:after {
     content: ' ';
     display: block;
-    border: solid 2px white;
-    margin-top: 25px;
+    border: solid 1px $font-color;
+    margin-top: 10px;
 }
 
 h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+h3 {
     text-transform: uppercase;
 }
 
