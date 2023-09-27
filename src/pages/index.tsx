@@ -1,146 +1,114 @@
-import { type HeadFC, type PageProps } from "gatsby"
+import { Script, type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
+import { Carousel, Col, Container, Row } from "react-bootstrap"
+import { CherryParkNavbar } from "../components/CherryNavbar"
 import { MetaData } from "../components/MetaData"
-import { StickyFooter } from "../components/StickyFooter"
-import "../css/styles.scss"
+import { CherryFooter } from "../components/CherryFooter"
+import { CarouselImage } from "../components/CarouselImage"
+import { ListenIconLinks } from "../components/ListenIconLinks"
 
 export const Head: HeadFC = () => (
     <>
         <html lang="en" />
-        <MetaData />
+        <MetaData title="Home | Cherry Park" />
     </>
 )
 
-const albumData = [
+const carouselSlides: carouselSlideData[] = [
     {
-        text: "Secret Garden (EP)",
-        date: null,
-        image: "/images/albums/secret_garden/icon.png",
-        imageTitle: "Secret Garden album art",
-        imageAlt: "Logo icon for the Secret Garden album by Cherry Park",
-        url: "https://open.spotify.com/album/4uxRAidPaTHs8qcvYajCHb",
-        target: "_blank",
-        iframes: [
-            <>
-                <iframe
-                    style={{borderRadius: "12px", border: "none"}}
-                    src="https://open.spotify.com/embed/album/4uxRAidPaTHs8qcvYajCHb?utm_source=generator"
-                    width="100%"
-                    height="352"
-                    allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"/>
-            </>,
-            <>
-                <iframe
-                    style={{borderRadius: "12px", border: "none", background: "transparent", maxWidth: ""}}
-                    src="https://embed.music.apple.com/us/album/secret-garden/1699107941?wmode=opaque"
-                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                    data-embed="true"
-                    width="100%"
-                    height="352"
-                    allow="encrypted-media; fullscreen"/>
-            </>
-        ]
-    }
-]
-
-const showData = [
+        src: "/images/shows/2023.09.24_the_queen/band3.jpg",
+        srcMobile: "/images/band/mobile/band1.jpg",
+        title: "Live @ The Queen, Sept 24th 2023",
+        alt: "Cherry Park playing in the Crown Room at The Queen, in Wilmington Delaware"
+    },
     {
-        text: "The Queen, Wilmington DE",
-        date: "September 24th, 2023",
-        image: "/images/shows/the_queen.png",
-        imageTitle: "The Queen venue image",
-        imageAlt: "Venue image for The Queen in Wilmington Delaware",
-        url: "https://thequeenwilmington.com/events/cherry-park-secret-garden-album-release-w-rachel-ana-dobken-chvnce/",
-        target: "_blank"
+        src: "/images/band/desktop/band2.jpg",
+        srcMobile: "/images/band/mobile/band2.jpg",
+        title: "Cherry Park",
+        alt: "Cherry Park band members sitting on a picnic blanket"
     }
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
-            <header className="flex-col flex-center">
-                <h1>
-                    Cherry Park
-                </h1>
-                <h2 className="hide-on-small">
-                    East coast indie band
-                </h2>
+            <header>
+                <CherryParkNavbar />
             </header>
 
-            <main className="flex-col">
-                <div className="flex-row flex-wrap flex-center">
-                    {/* Our music */}
-                    <div className="flex-col">
-                        <h3 className="flex-center">
-                            Our Music
-                        </h3>
+            <main>
+                <Container>
+                    <h1 className="flex-center">
+                        Cherry Park, East Coast indie band
+                    </h1>
 
-                        <div className="flex-row">
-                            {albumData.map((album) => (
-                                <>
-                                    <div className="card flex-col flex-center">
-                                        <div className="flex-row flex-center flex-wrap">
-                                            <div className="card-iframe">
-                                                {album.iframes.at(0)}
-                                            </div>
-                                            {(album.iframes) && (album.iframes.length > 1) &&
-                                                <>
-                                                    {album.iframes.slice(1).map((iframe) => (
-                                                        <div className="card-iframe hide-on-small">
-                                                            {iframe}
-                                                        </div>
-                                                    ))}
-                                                </>
-                                            }
-                                            {(album.url) && (album.image) && (!album.iframes) &&
-                                                <a href={album.url} target={album.target}>
-                                                    <img className={album.image.endsWith(".png") ? "card-image png" : "card-image"} src={album.image} title={album.imageTitle} alt={album.imageAlt} />
-                                                </a>
-                                            }
-                                        </div>
+                    {/* Desktop View */}
+                    <div className="d-none d-lg-inline">
+                        <h2 className="flex-center">
+                            Find us on: <ListenIconLinks />
+                        </h2>
 
-                                        <h3 className="card-text">{album.text}</h3>
-
-
-                                        {album.date && 
-                                            <p className="card-text">{album.date}</p>
-                                        }
-                                    </div>
-                                </>
-                            ))}
-                        </div>
+                        {!!carouselSlides.length &&
+                            <Row>
+                                <Col key="carousel-desktop">
+                                    <Carousel touch controls={carouselSlides.length > 1}>
+                                        {carouselSlides.map((thisImage, index) => (
+                                            <Carousel.Item key={`carousel-desktop-item-${index}`}>
+                                                <CarouselImage src={thisImage.src} title={thisImage.title} alt={thisImage.alt} />
+                                                
+                                                {(thisImage.title || thisImage.subtitle) && 
+                                                    <Carousel.Caption>
+                                                        {thisImage.title && 
+                                                            <h3>{thisImage.title}</h3>
+                                                        }
+                                                        {thisImage.subtitle && 
+                                                            <p>{thisImage.subtitle}</p>
+                                                        }
+                                                    </Carousel.Caption>
+                                                }
+                                            </Carousel.Item>
+                                        ))}
+                                    </Carousel>
+                                </Col>
+                            </Row>
+                        }
                     </div>
-                    {/* Our Shows */}
-                    {/* <div className="flex-col">
-                        <h3 className="flex-center">
-                            Live Shows
-                        </h3>
 
-                        <div className="flex-row">
-                            {showData.map((show) => (
-                                <>
-                                    <div className="card flex-col flex-center">
-                                        {(show.url) && (show.image) &&
-                                            <a href={show.url} target={show.target}>
-                                                <img className={show.image.endsWith(".png") ? "card-image png" : "card-image"} src={show.image} title={show.imageTitle} alt={show.imageAlt} />
-                                            </a>
-                                        }
-
-                                        <h3 className="card-text">{show.text}</h3>
-
-                                        {show.date && 
-                                            <p className="card-text">{show.date}</p>
-                                        }
-                                    </div>
-                                </>
-                            ))}
-                        </div>
-                    </div> */}
-                </div>
+                    {/* Mobile View */}
+                    <div className="d-inline d-lg-none">
+                        {!!carouselSlides.length &&
+                            <Row>
+                                <Col key="carousel-mobile">
+                                    <Carousel touch controls={carouselSlides.length > 1}>
+                                        {carouselSlides.map((thisImage, index) => (!!thisImage.srcMobile && 
+                                            <Carousel.Item key={`carousel-mobile-item-${index}`}>
+                                                <CarouselImage src={thisImage.srcMobile} title={thisImage.title} alt={thisImage.alt} />
+                                                
+                                                {(thisImage.title || thisImage.subtitle) && 
+                                                    <Carousel.Caption>
+                                                        {thisImage.title && 
+                                                            <h3>{thisImage.title}</h3>
+                                                        }
+                                                        {thisImage.subtitle && 
+                                                            <p>{thisImage.subtitle}</p>
+                                                        }
+                                                    </Carousel.Caption>
+                                                }
+                                            </Carousel.Item>
+                                        ))}
+                                    </Carousel>
+                                </Col>
+                            </Row>
+                        }
+                        
+                        <h2 className="flex-center">
+                            Find us on: <ListenIconLinks />
+                        </h2>
+                    </div>
+                </Container>
             </main>
-            
-            <StickyFooter />
+                
+            <CherryFooter hideListenIconLinks={true} />
         </>
     )
 }

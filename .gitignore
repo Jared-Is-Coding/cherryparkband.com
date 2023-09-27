@@ -62,6 +62,9 @@ public
 gatsby-types.d.ts
 *.js
 
+# web js
+!static/js/script.js
+
 # Mac files
 .DS_Store
 
