@@ -16,7 +16,6 @@ const config: GatsbyConfig = {
     graphqlTypegen: true,
     plugins: [
         "gatsby-plugin-sitemap",
-        "gatsby-plugin-netlify",
         "gatsby-plugin-sass",
         "gatsby-plugin-robots-txt"
     ]
