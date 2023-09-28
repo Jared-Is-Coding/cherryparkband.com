@@ -15,7 +15,7 @@ const config: GatsbyConfig = {
         {
             resolve: "gatsby-plugin-sitemap",
             options: {
-                exclude: ["/about"],
+                excludes: ["/about"],
                 query: `
                 {
                     site {
