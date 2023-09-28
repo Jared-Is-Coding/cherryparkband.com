@@ -18,9 +18,9 @@ const upcomingShows: showData[] = [
 
 const pastShows: showData[] = [
     {
-        text: "The Queen, Wilmington DE",
-        date: "September 24th, 2023",
-        image: "/images/venues/the_queen.png",
+        showTitle: "The Queen, Wilmington DE",
+        showDate: "September 24th, 2023",
+        imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
         url: "https://thequeenwilmington.com/",
@@ -57,16 +57,16 @@ const IndexPage: React.FC<PageProps> = () => {
                                     <>
                                         {upcomingShows.map((show, index) => (
                                             <Card key={`show-card-item-${index}`}>
-                                                {show.image && 
-                                                    <Card.Img variant="top" src={show.image} className={show.image.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
+                                                {show.imageSrc && 
+                                                    <Card.Img variant="top" src={show.imageSrc} className={show.imageSrc.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
                                                 }
-                                                {show.url && show.text &&
+                                                {show.url && show.showTitle &&
                                                     <Card.Text as="h4">
-                                                        <a href={show.url} target={show.target ?? "_self"}>{show.text}</a>
+                                                        <a href={show.url} target={show.target ?? "_self"}>{show.showTitle}</a>
                                                     </Card.Text>
                                                 }
-                                                {show.date && 
-                                                    <Card.Subtitle>{show.date}</Card.Subtitle>
+                                                {show.showDate && 
+                                                    <Card.Subtitle>{show.showDate}</Card.Subtitle>
                                                 }
                                             </Card>
                                         ))}
@@ -89,16 +89,16 @@ const IndexPage: React.FC<PageProps> = () => {
                                     <>
                                         {pastShows.map((show, index) => (
                                             <Card key={`pastshow-card-item-${index}`}>
-                                                {show.image && 
-                                                    <Card.Img variant="top" src={show.image} className={show.image.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
+                                                {show.imageSrc && 
+                                                    <Card.Img variant="top" src={show.imageSrc} className={show.imageSrc.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
                                                 }
-                                                {show.url && show.text &&
+                                                {show.url && show.showTitle &&
                                                     <Card.Text as="h4">
-                                                        <a href={show.url} target={show.target ?? "_self"}>{show.text}</a>
+                                                        <a href={show.url} target={show.target ?? "_self"}>{show.showTitle}</a>
                                                     </Card.Text>
                                                 }
-                                                {show.date && 
-                                                    <Card.Subtitle>{show.date}</Card.Subtitle>
+                                                {show.showDate && 
+                                                    <Card.Subtitle>{show.showDate}</Card.Subtitle>
                                                 }
                                             </Card>
                                         ))}

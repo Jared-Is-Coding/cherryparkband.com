@@ -12,9 +12,9 @@ $h1-font-size: 200%;
 $h2-font-size: 160%;
 $brand-font-size: 175%;
 
-$primary-color: #B8BAB7;
-$secondary-color: #2F2A27;
-$tertiary-color: #413a36;
+$primary-color: #502030;
+$secondary-color: #ffffff;
+$tertiary-color: #2e2b25;
 
 $card-border-radius: 12px;
 $carousel-border-radius: 40px;
@@ -101,16 +101,17 @@ body {
     color: $secondary-color !important;
 }
 
-a:not(.dropdown-menu a) {
+a:not(.card-text a) {
     color: $secondary-color !important;
 }
 
 .dropdown-menu {
-    background-color: $secondary-color;
+    background-color: $tertiary-color;
 }
 
 .dropdown-menu a:hover {
-    background-color: $tertiary-color;
+    background-color: $primary-color;
+    transition: background-color 0.15s ease-in;
 }
 
 /**
@@ -123,9 +124,41 @@ a:not(.dropdown-menu a) {
     flex-direction: row-reverse;
 }
 
-div#site-navbar.navbar-collapse.collapse.show {
-    border-bottom: dashed 2px;
+@media only screen and (max-width: 991px) {
+    div#site-navbar.navbar-collapse.collapse.show {
+        border-bottom: dashed 2px;
+    }
 }
+
+.dropdown .dropdown-menu {
+    -webkit-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -moz-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -o-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    border: 0;
+}
+
+.dropdown.show .dropdown-menu {
+    -webkit-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -moz-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -ms-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -o-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+
+    max-height: 190px;
+    opacity: 1;
+    visibility: visible;
+    border: solid 1px;
+}
+  
 
 /**
  * ------------------

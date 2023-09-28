@@ -16,16 +16,15 @@ export const Head: HeadFC = () => (
 
 const carouselSlides: carouselSlideData[] = [
     {
-        src: "/images/shows/2023.09.24_the_queen/band3.jpg",
-        srcMobile: "/images/band/mobile/band1.jpg",
-        title: "Live @ The Queen, Sept 24th 2023",
-        alt: "Cherry Park playing in the Crown Room at The Queen, in Wilmington Delaware"
+        imageSrc: "/images/shows/2023.09.24_the_queen/band3.jpg",
+        imageSrcMobile: "/images/band/mobile/band1.jpg",
+        imageTitle: "Live @ The Queen, Sept 24th 2023",
+        imageAlt: "Cherry Park playing in the Crown Room at The Queen, in Wilmington Delaware"
     },
     {
-        src: "/images/band/desktop/band2.jpg",
-        srcMobile: "/images/band/mobile/band2.jpg",
-        title: "Cherry Park",
-        alt: "Cherry Park band members sitting on a picnic blanket"
+        imageSrc: "/images/band/desktop/band2.jpg",
+        imageSrcMobile: "/images/band/mobile/band2.jpg",
+        imageAlt: "Cherry Park band members sitting on a picnic blanket"
     }
 ]
 
@@ -54,15 +53,12 @@ const IndexPage: React.FC<PageProps> = () => {
                                     <Carousel touch controls={carouselSlides.length > 1}>
                                         {carouselSlides.map((thisImage, index) => (
                                             <Carousel.Item key={`carousel-desktop-item-${index}`}>
-                                                <CarouselImage src={thisImage.src} title={thisImage.title} alt={thisImage.alt} />
+                                                <CarouselImage src={thisImage.imageSrc} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
                                                 
-                                                {(thisImage.title || thisImage.subtitle) && 
-                                                    <Carousel.Caption>
-                                                        {thisImage.title && 
-                                                            <h3>{thisImage.title}</h3>
-                                                        }
-                                                        {thisImage.subtitle && 
-                                                            <p>{thisImage.subtitle}</p>
+                                                {thisImage.imageTitle && 
+                                                    <Carousel.Caption style={{color: !!thisImage.darkText ? "black" : "white"}}>
+                                                        {thisImage.imageTitle && 
+                                                            <h3>{thisImage.imageTitle}</h3>
                                                         }
                                                     </Carousel.Caption>
                                                 }
@@ -80,20 +76,9 @@ const IndexPage: React.FC<PageProps> = () => {
                             <Row>
                                 <Col key="carousel-mobile">
                                     <Carousel touch controls={carouselSlides.length > 1}>
-                                        {carouselSlides.map((thisImage, index) => (!!thisImage.srcMobile && 
+                                        {carouselSlides.map((thisImage, index) => (!!thisImage.imageSrcMobile && 
                                             <Carousel.Item key={`carousel-mobile-item-${index}`}>
-                                                <CarouselImage src={thisImage.srcMobile} title={thisImage.title} alt={thisImage.alt} />
-                                                
-                                                {(thisImage.title || thisImage.subtitle) && 
-                                                    <Carousel.Caption>
-                                                        {thisImage.title && 
-                                                            <h3>{thisImage.title}</h3>
-                                                        }
-                                                        {thisImage.subtitle && 
-                                                            <p>{thisImage.subtitle}</p>
-                                                        }
-                                                    </Carousel.Caption>
-                                                }
+                                                <CarouselImage src={thisImage.imageSrcMobile} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
                                             </Carousel.Item>
                                         ))}
                                     </Carousel>

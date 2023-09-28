@@ -13,12 +13,12 @@ export const CherryParkNavbar = () => (
                     {/* <Nav.Link href="/about">About</Nav.Link> */}
                     <Nav.Link href="/shows/">Shows</Nav.Link>
                     <Nav.Link href="/merch/">Merch</Nav.Link>
-                    <NavDropdown title="Listen" id="nav-listen-dropdown">
+                    <NavDropdown title="Listen" renderMenuOnMount={true} focusFirstItemOnShow="keyboard" id="nav-listen-dropdown">
                         <NavDropdown.Item href="https://open.spotify.com/artist/3a8YTU2G2VYGFo0eSLbCFX" target="_blank">Spotify</NavDropdown.Item>
                         <NavDropdown.Item href="https://music.apple.com/us/artist/cherry-park/1696841984" target="_blank">Apple Music</NavDropdown.Item>
                         <NavDropdown.Item href="https://music.youtube.com/channel/UCAHyvdKl3D20ehs0Ajto3OA" target="_blank">YouTube Music</NavDropdown.Item>
                     </NavDropdown>
-                    <NavDropdown title="Socials" id="nav-socials-dropdown">
+                    <NavDropdown title="Socials" renderMenuOnMount={true} focusFirstItemOnShow="keyboard" id="nav-socials-dropdown">
                         <NavDropdown.Item href="https://www.instagram.com/cherryparkband/" target="_blank">Instagram</NavDropdown.Item>
                         <NavDropdown.Item href="https://www.tiktok.com/@cherryparkofficial" target="_blank">TikTok</NavDropdown.Item>
                     </NavDropdown>
