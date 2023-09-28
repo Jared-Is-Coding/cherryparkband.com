@@ -3,6 +3,7 @@ import * as React from "react"
 import { CherryFooter } from "../components/CherryFooter"
 import { CherryParkNavbar } from "../components/CherryNavbar"
 import { MetaData } from "../components/MetaData"
+import { Container } from "react-bootstrap"
 
 export const Head: HeadFC = () => (
     <>
@@ -18,15 +19,20 @@ const NotFoundPage: React.FC<PageProps> = () => {
                 <CherryParkNavbar />
             </header>
             
-            <main className="flex-col">
-                <h1>
-                    404
-                </h1>
+            <main>
+                <Container>
+                    <h1 className="flex-center">
+                        404
+                    </h1>
 
-                <div className="flex-col flex-center">
-                    <h2>That page doesn't exist</h2>
-                    <p><Link to="/">Go back</Link>.</p>
-                </div>
+                    <h2 className="flex-center">
+                        That page doesn't exist
+                    </h2>
+
+                    <div className="flex-center">
+                        <p><Link to="/">Go back</Link>.</p>
+                    </div>
+                </Container>
             </main>
 
             <CherryFooter />
