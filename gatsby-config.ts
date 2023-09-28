@@ -32,6 +32,12 @@ const config: GatsbyConfig = {
                         }
                     }
                 }`,
+                resolvePages: ({ site, allSitePage }: { site: GatsbyConfig["siteMetadata"], allSitePage: Queries.SitePageConnection }) => {
+                    return {
+                        site: site,
+                        allSitePage: allSitePage
+                    }
+                },
                 serialize: ({ site, allSitePage }: { site: GatsbyConfig["siteMetadata"], allSitePage: Queries.SitePageConnection }) => {
                     return allSitePage.edges
                         .filter(({ node }) => (
@@ -44,13 +50,7 @@ const config: GatsbyConfig = {
                                 priority: node.path == "/" ? 1 : 0.7,
                             }
                         })
-                },
-                resolvePages: ({ allSitePage }: { allSitePage: Queries.SitePageConnection }) => {
-            
-                    return allSitePage.edges.map(page => {
-                        return { ...page }
-                    })
-                },
+                }
             }
         },
         {

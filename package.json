@@ -1,6 +1,6 @@
 {
     "name": "cherryparkband.com",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "private": true,
     "description": "cherryparkband.com",
     "author": "Jared H <jared@jarediscoding.com>",
@@ -40,7 +40,7 @@
     "engines": {
         "node": ">=18.0.0"
     },
-    "license": "MIT",
+    "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/Jared-Is-Coding/cherryparkband.com"
