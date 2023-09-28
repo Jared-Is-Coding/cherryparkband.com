@@ -44,7 +44,13 @@ const config: GatsbyConfig = {
                                 priority: node.path == "/" ? 1 : 0.7,
                             }
                         })
-                  },
+                },
+                resolvePages: ({ allSitePage }: { allSitePage: Queries.SitePageConnection }) => {
+            
+                    return allSitePage.edges.map(page => {
+                        return { ...page }
+                    })
+                },
             }
         },
         {
