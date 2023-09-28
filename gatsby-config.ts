@@ -24,26 +24,19 @@ const config: GatsbyConfig = {
                         }
                     }
                     allSitePage {
-                        edges {
-                            node {
-                                path
-                                pageContext
-                            }
+                        nodes {
+                            path
+                            pageContext
                         }
                     }
                 }`,
-                resolvePages: ({ site, allSitePage }: { site: GatsbyConfig["siteMetadata"], allSitePage: Queries.SitePageConnection }) => {
-                    return {
-                        site: site,
-                        allSitePage: allSitePage
-                    }
-                },
+                resolveSiteUrl: ({ site: { siteMetadata: { url } } }: { site: { siteMetadata: { url: string } } }) => url,
                 serialize: ({ site, allSitePage }: { site: GatsbyConfig["siteMetadata"], allSitePage: Queries.SitePageConnection }) => {
-                    return allSitePage.edges
-                        .filter(({ node }) => (
-                            node.pageContext?.isCanonical !== false
+                    return allSitePage.nodes
+                        .filter((node) => (
+                            node.pageContext?.isCanonical ?? true
                         ))
-                        .map(({ node }) => {
+                        .map((node) => {
                             return {
                                 url: site?.siteUrl + node.path,
                                 changefreq: "daily",
