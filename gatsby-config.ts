@@ -12,7 +12,43 @@ const config: GatsbyConfig = {
     },
     graphqlTypegen: true,
     plugins: [
-        "gatsby-plugin-sitemap",
+        {
+            resolve: "gatsby-plugin-sitemap",
+            options: {
+                exclude: ["/about"],
+                query: `
+                {
+                    site {
+                        siteMetadata {
+                            siteUrl
+                        }
+                    }
+                    allSitePage {
+                        edges {
+                            node {
+                                path
+                                context {
+                                    isCanonical
+                                }
+                            }
+                        }
+                    }
+                }`,
+                serialize: ({ site, allSitePage }) => {
+                    return allSitePage.edges
+                        .filter(({ node }) => (
+                            node.context.isCanonical !== false
+                        ))
+                        .map(({ node }) => {
+                            return {
+                                url: site.siteMetadata.siteUrl + node.path,
+                                changefreq: "daily",
+                                priority: node.path == "/" ? 1 : 0.7,
+                            };
+                        });
+                  },
+            }
+        },
         "gatsby-plugin-sass",
         "gatsby-plugin-robots-txt"
     ]
