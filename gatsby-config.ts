@@ -1,5 +1,5 @@
-import type { GatsbyConfig } from "gatsby";
-import * as dotenv from "dotenv";
+import type { GatsbyConfig } from "gatsby"
+import * as dotenv from "dotenv"
 
 dotenv.config()
 
@@ -27,31 +27,42 @@ const config: GatsbyConfig = {
                         edges {
                             node {
                                 path
-                                context {
-                                    isCanonical
-                                }
+                                pageContext
                             }
                         }
                     }
                 }`,
-                serialize: ({ site, allSitePage }) => {
+                serialize: ({ site, allSitePage }: { site: GatsbyConfig["siteMetadata"], allSitePage: Queries.SitePageConnection }) => {
                     return allSitePage.edges
                         .filter(({ node }) => (
-                            node.context.isCanonical !== false
+                            node.pageContext?.isCanonical !== false
                         ))
                         .map(({ node }) => {
                             return {
-                                url: site.siteMetadata.siteUrl + node.path,
+                                url: site?.siteUrl + node.path,
                                 changefreq: "daily",
                                 priority: node.path == "/" ? 1 : 0.7,
-                            };
-                        });
+                            }
+                        })
                   },
             }
         },
+        {
+            resolve: 'gatsby-plugin-typegen',
+            options: {
+                outputPath: 'src/_generated/gatsby-types.d.ts',
+                emitSchema: {
+                    'src/_generated/gatsby-introspection.json': true,
+                    'src/_generated/gatsby-schema.graphql': true,
+                },
+                emitPluginDocument: {
+                    'src/_generated/gatsby-plugin-documents.graphql': true,
+                }
+            }
+        },
         "gatsby-plugin-sass",
-        "gatsby-plugin-robots-txt"
+        "gatsby-plugin-robots-txt",
     ]
-};
+}
 
-export default config;
+export default config
