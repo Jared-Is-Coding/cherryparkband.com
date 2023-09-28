@@ -18,39 +18,39 @@ const config: GatsbyConfig = {
                 excludes: ["/about"],
                 query: `{
                     site {
-                      siteMetadata {
-                        siteUrlNoSlash
-                      }
+                        siteMetadata {
+                            siteUrl
+                        }
                     }
                     allSitePage {
-                      edges {
-                        node {
-                          path
+                        edges {
+                            node {
+                                path
+                            }
                         }
-                      }
                     }
                     allMarkdownRemark {
-                      edges {
-                        node {
-                          fields {
-                            slug
-                          }
+                        edges {
+                            node {
+                                fields {
+                                    slug
+                                }
+                            }
                         }
-                      }
                     }
                 }`,
                 serialize: ({ site, allSitePage, allMarkdownRemark }) => {
                     let pages = []
                     allSitePage.edges.map(edge => {
                         pages.push({
-                            url: site.siteMetadata.siteUrlNoSlash + edge.node.path,
+                            url: site.siteMetadata.siteUrl + edge.node.path,
                             changefreq: `daily`,
                             priority: 0.7,
                         })
                     })
                     allMarkdownRemark.edges.map(edge => {
                         pages.push({
-                        url: `${site.siteMetadata.siteUrlNoSlash}/${
+                        url: `${site.siteMetadata.siteUrl}/${
                             edge.node.fields.slug
                         }`,
                         changefreq: `daily`,
