@@ -16,34 +16,50 @@ const config: GatsbyConfig = {
             resolve: "gatsby-plugin-sitemap",
             options: {
                 excludes: ["/about"],
-                query: `
-                {
+                query: `{
                     site {
-                        siteMetadata {
-                            siteUrl
-                        }
+                      siteMetadata {
+                        siteUrlNoSlash
+                      }
                     }
                     allSitePage {
-                        nodes {
-                            path
-                            pageContext
+                      edges {
+                        node {
+                          path
                         }
+                      }
+                    }
+                    allMarkdownRemark {
+                      edges {
+                        node {
+                          fields {
+                            slug
+                          }
+                        }
+                      }
                     }
                 }`,
-                resolveSiteUrl: ({ site: { siteMetadata: { url } } }: { site: { siteMetadata: { url: string } } }) => url,
-                serialize: ({ site, allSitePage }: { site: GatsbyConfig["siteMetadata"], allSitePage: Queries.SitePageConnection }) => {
-                    return allSitePage.nodes
-                        .filter((node) => (
-                            node.pageContext?.isCanonical ?? true
-                        ))
-                        .map((node) => {
-                            return {
-                                url: site?.siteUrl + node.path,
-                                changefreq: "daily",
-                                priority: node.path == "/" ? 1 : 0.7,
-                            }
+                serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+                    let pages = []
+                    allSitePage.edges.map(edge => {
+                        pages.push({
+                            url: site.siteMetadata.siteUrlNoSlash + edge.node.path,
+                            changefreq: `daily`,
+                            priority: 0.7,
                         })
-                }
+                    })
+                    allMarkdownRemark.edges.map(edge => {
+                        pages.push({
+                        url: `${site.siteMetadata.siteUrlNoSlash}/${
+                            edge.node.fields.slug
+                        }`,
+                        changefreq: `daily`,
+                        priority: 0.7,
+                        })
+                    })
+        
+                    return pages
+                },
             }
         },
         {
