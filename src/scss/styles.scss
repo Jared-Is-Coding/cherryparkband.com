@@ -1,125 +1,6 @@
-/**
- * ------------------
- *   Root Variables
- * ------------------
- **/
-
-$root-font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, -apple-system, BlinkMacSystemFont;
-$site-font-family: "EB Garamond", $root-font-family;
-$h1-font-family: "Creampuff", $site-font-family;
-$site-font-size: calc(16px + 0.390625vw);
-$h1-font-size: 200%;
-$h2-font-size: 160%;
-$h3-font-size: 130%;
-$brand-font-size: 175%;
-
-$primary-color: #502030;
-$secondary-color: #ffffff;
-$tertiary-color: #2e2b25;
-
-$card-border-radius: 12px;
-$carousel-border-radius: 40px;
-
-/**
- * ------------------
- *       Fonts
- * ------------------
- **/
-
-@font-face {
-    font-family: "Creampuff";
-    src: url("../fonts/creampuff.eot?") format("eot"),
-        url("../fonts/creampuff.woff") format("woff"),
-        url("../fonts/creampuff.ttf") format("truetype"),
-        url("../fonts/creampuff.svg#Creampuff") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-    font-family: $site-font-family !important;
-    font-size: $site-font-size !important;
-}
-
-h1 {
-    font-family: $h1-font-family !important;
-    font-size: $h1-font-size !important;
-}
-
-h2 {
-    font-size: $h2-font-size !important;
-}
-
-h3 {
-    font-size: $h3-font-size !important;
-    font-weight: bold !important;
-    text-decoration: underline;
-}
-
-.navbar-brand {
-    font-family: $h1-font-family !important;
-    font-size: $brand-font-size !important;
-}
-
-/**
- * ------------------
- *       Sizing
- * ------------------
- **/
-
-h1 {
-    padding-top: 50px;
-}
-
-h2 {
-    padding-top: 0;
-    margin-top: calc(20px + 1em) !important;
-    margin-bottom: calc(20px + 1em) !important;
-}
-
-h3 {
-    padding-top: 25px;
-}
-
-footer {
-    height: 10%;
-    margin-top: calc(20px + 1.2vh);
-    margin-bottom: 2%;
-}
-
-
-/**
- * ------------------
- *       Colors
- * ------------------
- **/
-
-body {
-    background-color: $primary-color !important;
-    color: $secondary-color !important;
-}
-
-a:not(.card-text a) {
-    color: $secondary-color !important;
-}
-
-.dropdown-menu {
-    background-color: $tertiary-color;
-}
-
-.dropdown-menu a:hover {
-    background-color: $primary-color;
-    transition: background-color 0.15s ease-in;
-}
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./colors.scss";
 
 /**
  * ------------------
@@ -176,11 +57,19 @@ a:not(.card-text a) {
 .flex-col {
 	display : flex;
 	flex-direction : column;
+
+    > * {
+        padding: 5px;
+    }
 }
 
 .flex-row {
 	display : flex;
 	flex-direction : row;
+
+    > * {
+        padding: 5px;
+    }
 }
 
 .flex-wrap {
@@ -196,14 +85,6 @@ a:not(.card-text a) {
     text-align: center;
 }
 
-.flex-col > * {
-    padding: 5px;
-}
-
-.flex-row > * {
-    padding: 5px;
-}
-  
 .row-item {
     &:not(:first-child) {
         margin-left: 15px;

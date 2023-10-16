@@ -1,6 +1,6 @@
 import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import { FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
+import { FaInstagram, FaMusic, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa"
 
 type CherryFooterProps = {
     hideListenIconLinks?: boolean
@@ -28,6 +28,11 @@ export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
                 <Col xs="auto">
                     <a href="https://www.instagram.com/cherryparkband/" target="_blank" title="Link to Cherry Park on Instagram.com">
                         <FaInstagram size="1.7em" title="Instagram" />
+                    </a>
+                </Col>
+                <Col xs="auto">
+                    <a href="https://www.tiktok.com/@cherryparkofficial" target="_blank" title="Link to Cherry Park on Tiktok.com">
+                        <FaTiktok size="1.7em" title="Tiktok" />
                     </a>
                 </Col>
             </Row>

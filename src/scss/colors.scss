@@ -1,0 +1,23 @@
+/**
+ * ------------------
+ *       Colors
+ * ------------------
+ **/
+
+body {
+    background-color: $primary-color !important;
+    color: $secondary-color !important;
+}
+
+a:not(.card-text a) {
+    color: $secondary-color !important;
+}
+
+.dropdown-menu {
+    background-color: $tertiary-color;
+
+    a:hover {
+        background-color: $primary-color;
+        transition: background-color 0.15s ease-in;
+    }
+}

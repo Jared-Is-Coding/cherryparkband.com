@@ -1,5 +1,5 @@
 import React from "react"
-import { FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
+import { FaInstagram, FaMusic, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa"
 
 export const ListenIconLinks = () => (
     <>
@@ -14,6 +14,9 @@ export const ListenIconLinks = () => (
         </a>
         <a style={{padding: "0 5px"}} href="https://www.instagram.com/cherryparkband/" target="_blank" title="Link to Cherry Park on Instagram.com">
             <FaInstagram size="1.5em" title="Instagram" />
+        </a>
+        <a style={{padding: "0 5px"}} href="https://www.tiktok.com/@cherryparkofficial" target="_blank" title="Link to Cherry Park on Tiktok.com">
+            <FaTiktok size="1.5em" title="Tiktok" />
         </a>
     </>
 )
