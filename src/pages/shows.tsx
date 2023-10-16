@@ -2,9 +2,9 @@ import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Card, Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
+import { CherryFooter } from "../components/CherryFooter"
 import { CherryParkNavbar } from "../components/CherryNavbar"
 import { MetaData } from "../components/MetaData"
-import { CherryFooter } from "../components/CherryFooter"
 
 export const Head: HeadFC = () => (
     <>
@@ -42,7 +42,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </h1>
 
                     <Row>
-                        <Col sm="12" md="6">
+                        <Col sm={{span: 12}} md={{span: 6}}>
                             <h2 className="flex-center">
                                 Upcoming Shows
                             </h2>
@@ -74,7 +74,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 }
                             </div>
                         </Col>
-                        <Col sm="12" md="6">
+                        <Col sm={{span: 12}} md={{span: 6}}>
                             <h2 className="flex-center">
                                 Past Shows
                             </h2>

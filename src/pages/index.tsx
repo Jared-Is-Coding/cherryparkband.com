@@ -1,11 +1,11 @@
-import { Script, type HeadFC, type PageProps } from "gatsby"
+import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Carousel, Col, Container, Row } from "react-bootstrap"
-import { CherryParkNavbar } from "../components/CherryNavbar"
-import { MetaData } from "../components/MetaData"
-import { CherryFooter } from "../components/CherryFooter"
 import { CarouselImage } from "../components/CarouselImage"
+import { CherryFooter } from "../components/CherryFooter"
+import { CherryParkNavbar } from "../components/CherryNavbar"
 import { ListenIconLinks } from "../components/ListenIconLinks"
+import { MetaData } from "../components/MetaData"
 
 export const Head: HeadFC = () => (
     <>

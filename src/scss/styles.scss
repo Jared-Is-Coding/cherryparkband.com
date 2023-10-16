@@ -10,6 +10,7 @@ $h1-font-family: "Creampuff", $site-font-family;
 $site-font-size: calc(16px + 0.390625vw);
 $h1-font-size: 200%;
 $h2-font-size: 160%;
+$h3-font-size: 130%;
 $brand-font-size: 175%;
 
 $primary-color: #502030;
@@ -56,6 +57,12 @@ h1 {
 
 h2 {
     font-size: $h2-font-size !important;
+}
+
+h3 {
+    font-size: $h3-font-size !important;
+    font-weight: bold !important;
+    text-decoration: underline;
 }
 
 .navbar-brand {

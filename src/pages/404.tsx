@@ -30,7 +30,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
                     </h2>
 
                     <div className="flex-center">
-                        <p><Link to="/">Go back</Link>.</p>
+                        <p><Link to="/">ᐊ Home</Link>.</p>
                     </div>
                 </Container>
             </main>
