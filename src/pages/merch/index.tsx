@@ -19,14 +19,14 @@ const IndexPage: React.FC<PageProps> = () => {
         <>
             <header>
                 <CherryParkNavbar />
+
+                <h1 className="flex-center">
+                    Merch
+                </h1>
             </header>
 
             <main>
                 <Container>
-                    <h1 className="flex-center">
-                        Merch
-                    </h1>
-
                     <h2 className="flex-center">
                         Currently Available
                     </h2>

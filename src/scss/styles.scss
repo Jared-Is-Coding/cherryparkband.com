@@ -8,6 +8,10 @@
  * ------------------
  **/
 
+nav.navbar {
+    background: $primary-color;
+}
+
 #site-navbar {
     flex-direction: row-reverse;
 }
@@ -45,6 +49,29 @@
     opacity: 1;
     visibility: visible;
     border: solid 1px;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+
+    .tagline {
+        font-weight: bold;
+    }
+}
+
+body {
+    padding-top: 70px;
+}
+
+main {
+    padding-bottom: 10px;
+}
+
+footer {
+    .footerTopBar {
+        border-top: solid 3px white;
+    }
 }
   
 

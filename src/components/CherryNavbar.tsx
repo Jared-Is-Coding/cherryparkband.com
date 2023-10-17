@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
 
 export const CherryParkNavbar = () => (
-    <Navbar sticky="top" expand="lg" data-bs-theme="dark">
+    <Navbar fixed="top" expand="lg" data-bs-theme="dark">
         <Container>
             <Navbar.Brand href="/">Cherry Park</Navbar.Brand>
             <Navbar.Toggle label="Menu toggle" aria-controls="site-navbar" />

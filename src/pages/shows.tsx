@@ -33,14 +33,15 @@ const IndexPage: React.FC<PageProps> = () => {
         <>
             <header>
                 <CherryParkNavbar />
+
+                <h1 className="flex-center">
+                    Shows
+                    <p className="tagline">Come see us live!</p>
+                </h1>
             </header>
 
             <main>
                 <Container>
-                    <h1 className="flex-center">
-                        Shows
-                    </h1>
-
                     <Row>
                         <Col sm={{span: 12}} md={{span: 6}}>
                             <h2 className="flex-center">

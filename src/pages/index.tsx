@@ -33,14 +33,15 @@ const IndexPage: React.FC<PageProps> = () => {
         <>
             <header>
                 <CherryParkNavbar />
+
+                <h1 className="flex-center">
+                    Cherry Park
+                    <p className="tagline">East Coast indie band</p>
+                </h1>
             </header>
 
             <main>
                 <Container>
-                    <h1 className="flex-center">
-                        Cherry Park, East Coast indie band
-                    </h1>
-
                     {/* Desktop View */}
                     <div className="d-none d-lg-inline">
                         <h2 className="flex-center">
@@ -58,7 +59,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                                 {thisImage.imageTitle && 
                                                     <Carousel.Caption style={{color: !!thisImage.darkText ? "black" : "white"}}>
                                                         {thisImage.imageTitle && 
-                                                            <h3>{thisImage.imageTitle}</h3>
+                                                            <p>{thisImage.imageTitle}</p>
                                                         }
                                                     </Carousel.Caption>
                                                 }

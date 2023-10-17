@@ -17,18 +17,15 @@ const NotFoundPage: React.FC<PageProps> = () => {
         <>
             <header>
                 <CherryParkNavbar />
+
+                <h1 className="flex-center">
+                    404
+                    <p className="tagline">That page doesn't exist</p>
+                </h1>
             </header>
             
             <main>
                 <Container>
-                    <h1 className="flex-center">
-                        404
-                    </h1>
-
-                    <h2 className="flex-center">
-                        That page doesn't exist
-                    </h2>
-
                     <div className="flex-center">
                         <p><Link to="/">ᐊ Home</Link>.</p>
                     </div>
