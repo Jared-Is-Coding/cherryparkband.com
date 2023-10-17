@@ -35,6 +35,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <Col xs={{span: 10, offset: 1}} md={{span: 5, offset: 1}} lg={{span: 4, offset: 2}} className="flex-center">
                             <div className="parent">
                                 <div className="child">
+                                    <p>Pictures coming soon...</p>
                                     <p>Secret Garden Tee</p>
                                     <p>$22.00 - $25.00</p>
                                     <a target="_blank" href="https://square.link/u/aMBuK2ZP?src=embed">
@@ -49,6 +50,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <Col xs={{span: 10, offset: 1}} md={{span: 5, offset: 0}} lg={{span: 4, offset: 0}} className="flex-center">
                             <div className="parent">
                                 <div className="child">
+                                    <p>Pictures coming soon...</p>
                                     <p>Secret Garden Long Sleeve</p>
                                     <p>$32.00 - $35.00</p>
                                     <a target="_blank" href="https://square.link/u/KCjEsfoc?src=embed">

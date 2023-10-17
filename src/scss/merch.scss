@@ -15,7 +15,11 @@
     line-height: 20px;
     color: black !important;
 
-    p:not(:first-child) {
+    p:nth-child(1) {
+        font-style: italic;
+    }
+
+    p:not(:first-child):not(:nth-child(2)) {
         font-weight: bold;
     }
 
