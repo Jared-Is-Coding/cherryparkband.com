@@ -2,9 +2,9 @@ import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
+import { CherryFooter } from "../components/CherryFooter"
 import { CherryParkNavbar } from "../components/CherryNavbar"
 import { MetaData } from "../components/MetaData"
-import { CherryFooter } from "../components/CherryFooter"
 
 export const Head: HeadFC = () => (
     <>
