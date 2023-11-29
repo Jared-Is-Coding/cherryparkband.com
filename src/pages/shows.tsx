@@ -16,7 +16,7 @@ export const Head: HeadFC = () => (
 const upcomingShows: showData[] = [
     {
         showTitle: "Elkton Music Hall, Elkton MD",
-        showDate: "December 3rd, 2023",
+        showDate: "December 2nd, 2023",
         otherPerformers: "Kendra Morris",
         imageSrc: "/images/venues/elkton_music_hall.jpg",
         imageTitle: "Elkton Music Hall venue image",
