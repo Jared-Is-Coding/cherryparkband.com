@@ -15,12 +15,17 @@ const AlertDisplay = () => {
         window.sessionStorage.removeItem("alert-closed")
     }
 
+    const isBrowser = () => typeof window !== "undefined"
+
     // Otherwise check if this alert has been hidden already
-    const alertClosed = window.sessionStorage.getItem("alert-closed") === alertTag
+    const alertClosed = isBrowser() && window.sessionStorage.getItem("alert-closed") === alertTag
 
     const hideAlert = () => {
         setShow(false)
-        window.sessionStorage.setItem("alert-closed", alertTag)
+       
+        if (isBrowser()) {
+            window.sessionStorage.setItem("alert-closed", alertTag)
+        }
     }
 
     if (!alertClosed && show) {
