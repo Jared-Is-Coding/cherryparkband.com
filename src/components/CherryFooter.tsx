@@ -9,23 +9,21 @@ type CherryFooterProps = {
 const AlertDisplay = () => {
     const [show, setShow] = useState(true)
     const alertTag = "elkton-show-and-merch"
+    const isBrowser = () => typeof window !== "undefined"
     
+    if (!isBrowser()) return
+
     // Clear old alert hiding
     if (window.sessionStorage.getItem("alert-closed") !== alertTag) {
         window.sessionStorage.removeItem("alert-closed")
     }
 
-    const isBrowser = () => typeof window !== "undefined"
-
     // Otherwise check if this alert has been hidden already
-    const alertClosed = isBrowser() && window.sessionStorage.getItem("alert-closed") === alertTag
+    const alertClosed = window.sessionStorage.getItem("alert-closed") === alertTag
 
     const hideAlert = () => {
         setShow(false)
-       
-        if (isBrowser()) {
-            window.sessionStorage.setItem("alert-closed", alertTag)
-        }
+        window.sessionStorage.setItem("alert-closed", alertTag)
     }
 
     if (!alertClosed && show) {
