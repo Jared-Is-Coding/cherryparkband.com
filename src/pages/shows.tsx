@@ -14,12 +14,23 @@ export const Head: HeadFC = () => (
 )
 
 const upcomingShows: showData[] = [
+    {
+        showTitle: "Elkton Music Hall, Elkton MD",
+        showDate: "December 3rd, 2023",
+        otherPerformers: "Kendra Morris",
+        imageSrc: "/images/venues/elkton_music_hall.jpg",
+        imageTitle: "Elkton Music Hall venue image",
+        imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
+        url: "https://dice.fm/partner/facebook-event/event/p8q9k/",
+        target: "_blank"
+    }
 ]
 
 const pastShows: showData[] = [
     {
         showTitle: "The Queen, Wilmington DE",
         showDate: "September 24th, 2023",
+        otherPerformers: "Chvnce | Rachel Ana Dobken",
         imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
@@ -27,6 +38,25 @@ const pastShows: showData[] = [
         target: "_blank"
     }
 ]
+
+const mapShows = (show: showData, index: number) => (
+    <Card key={`show-card-item-${show.showTitle}-${index}`}>
+        {show.imageSrc && 
+            <Card.Img variant="top" src={show.imageSrc} className={show.imageSrc.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
+        }
+        {show.url && show.showTitle &&
+            <Card.Text as="h4">
+                <a href={show.url} target={show.target ?? "_self"}>{show.showTitle}</a>
+            </Card.Text>
+        }
+        {show.otherPerformers && 
+            <Card.Text>ft. {show.otherPerformers}</Card.Text>
+        }
+        {show.showDate && 
+            <Card.Subtitle>{show.showDate}</Card.Subtitle>
+        }
+    </Card>
+)
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
@@ -50,28 +80,10 @@ const IndexPage: React.FC<PageProps> = () => {
 
                             <div className="flex-center">
                                 {!upcomingShows.length &&
-                                    <>
-                                        <p>No shows are currently scheduled.</p>
-                                    </>
+                                    <p>No shows are currently scheduled.</p>
                                 }
                                 {!!upcomingShows.length &&
-                                    <>
-                                        {upcomingShows.map((show, index) => (
-                                            <Card key={`show-card-item-${index}`}>
-                                                {show.imageSrc && 
-                                                    <Card.Img variant="top" src={show.imageSrc} className={show.imageSrc.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
-                                                }
-                                                {show.url && show.showTitle &&
-                                                    <Card.Text as="h4">
-                                                        <a href={show.url} target={show.target ?? "_self"}>{show.showTitle}</a>
-                                                    </Card.Text>
-                                                }
-                                                {show.showDate && 
-                                                    <Card.Subtitle>{show.showDate}</Card.Subtitle>
-                                                }
-                                            </Card>
-                                        ))}
-                                    </>
+                                    upcomingShows.map(mapShows)
                                 }
                             </div>
                         </Col>
@@ -82,28 +94,10 @@ const IndexPage: React.FC<PageProps> = () => {
 
                             <div className="flex-center">
                                 {!pastShows.length &&
-                                    <>
-                                        <p>No recent shows found.</p>
-                                    </>
+                                    <p>No recent shows found.</p>
                                 }
                                 {!!pastShows.length &&
-                                    <>
-                                        {pastShows.map((show, index) => (
-                                            <Card key={`pastshow-card-item-${index}`}>
-                                                {show.imageSrc && 
-                                                    <Card.Img variant="top" src={show.imageSrc} className={show.imageSrc.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
-                                                }
-                                                {show.url && show.showTitle &&
-                                                    <Card.Text as="h4">
-                                                        <a href={show.url} target={show.target ?? "_self"}>{show.showTitle}</a>
-                                                    </Card.Text>
-                                                }
-                                                {show.showDate && 
-                                                    <Card.Subtitle>{show.showDate}</Card.Subtitle>
-                                                }
-                                            </Card>
-                                        ))}
-                                    </>
+                                    pastShows.map(mapShows)
                                 }
                             </div>
                         </Col>

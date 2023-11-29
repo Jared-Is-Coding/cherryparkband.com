@@ -1,4 +1,4 @@
-import { type HeadFC, type PageProps } from "gatsby"
+import { Link, type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Carousel, Col, Container, Row } from "react-bootstrap"
 import { CarouselImage } from "../components/CarouselImage"
@@ -47,7 +47,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <h2 className="flex-center">
                             Find us on: <ListenIconLinks />
                         </h2>
-
+                        
                         {!!carouselSlides.length &&
                             <Row>
                                 <Col key="carousel-desktop">

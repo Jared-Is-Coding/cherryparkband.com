@@ -120,6 +120,28 @@ footer {
 
 /**
  * ------------------
+ *       Alerts
+ * ------------------
+ **/
+ 
+.alert.floating {
+    position: fixed;
+    bottom: 5px;
+    right: 25px;
+    z-index: 1000;
+    max-width: 40%;
+}
+
+@media only screen and (max-width: 991px) {
+    .alert.floating {
+        right: 5%;
+        max-width: 90%;
+    }
+}
+
+
+/**
+ * ------------------
  *     Carousels
  * ------------------
  **/

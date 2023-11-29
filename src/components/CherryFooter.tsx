@@ -1,13 +1,48 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
+import React, { useState } from "react"
+import { Alert, Col, Container, Row } from "react-bootstrap"
 import { FaInstagram, FaMusic, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa"
 
 type CherryFooterProps = {
     hideListenIconLinks?: boolean
 }
 
+const AlertDisplay = () => {
+    const [show, setShow] = useState(true)
+    const alertTag = "elkton-show-and-merch"
+    
+    // Clear old alert hiding
+    if (window.sessionStorage.getItem("alert-closed") !== alertTag) {
+        window.sessionStorage.removeItem("alert-closed")
+    }
+
+    // Otherwise check if this alert has been hidden already
+    const alertClosed = window.sessionStorage.getItem("alert-closed") === alertTag
+
+    const hideAlert = () => {
+        setShow(false)
+        window.sessionStorage.setItem("alert-closed", alertTag)
+    }
+
+    if (!alertClosed && show) {
+        return (
+            <Alert className="floating" variant="dark" onClose={hideAlert} dismissible>
+                <Alert.Heading>New Upcoming Shows</Alert.Heading>
+                <p>We're performing in <Alert.Link href="/shows">Elkton, MD on December 3rd</Alert.Link>!</p>
+                <hr />
+                <Alert.Heading>Merch Now Available</Alert.Heading>
+                <p>You can check out what's available <Alert.Link href="/merch">here</Alert.Link>.</p>
+            </Alert>
+        )
+    } else {
+        return <></>
+    }
+}
+
+
 export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
+        <AlertDisplay />
+
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
                 {/* Footer top bar with spacing */}

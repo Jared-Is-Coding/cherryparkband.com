@@ -9,7 +9,7 @@ body {
     color: $secondary-color !important;
 }
 
-a:not(.card-text a) {
+a:not(.card-text a):not(a.alert-link) {
     color: $secondary-color !important;
 }
 

@@ -8,6 +8,10 @@ type showData = {
      */
     showDate: string
     /**
+     * Other performers list text
+     */
+    otherPerformers?: string
+    /**
      * Image title text
      */
     imageSrc: string
