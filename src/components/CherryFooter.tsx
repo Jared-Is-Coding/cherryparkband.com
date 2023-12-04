@@ -8,7 +8,7 @@ type CherryFooterProps = {
 
 const AlertDisplay = () => {
     const [show, setShow] = useState(true)
-    const alertTag = "elkton-show-and-merch-2"
+    const alertTag = "merch-new"
     const isBrowser = () => typeof window !== "undefined"
     
     if (!isBrowser()) return
@@ -29,11 +29,8 @@ const AlertDisplay = () => {
     if (!alertClosed && show) {
         return (
             <Alert className="floating" variant="dark" onClose={hideAlert} dismissible>
-                <Alert.Heading>New Upcoming Shows</Alert.Heading>
-                <p>We're performing in <Alert.Link href="/shows">Elkton, MD on December 2nd</Alert.Link>!</p>
-                <hr />
-                <Alert.Heading>Merch Now Available</Alert.Heading>
-                <p>You can check out what's available <Alert.Link href="/merch">here</Alert.Link>.</p>
+                <Alert.Heading>T-Shirts and long-sleeves!</Alert.Heading>
+                <p>You can check out our available merch <Alert.Link href="/merch">here</Alert.Link>.</p>
             </Alert>
         )
     } else {

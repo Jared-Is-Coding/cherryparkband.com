@@ -14,19 +14,20 @@ export const Head: HeadFC = () => (
 )
 
 const upcomingShows: showData[] = [
+    
+]
+
+const pastShows: showData[] = [
     {
         showTitle: "Elkton Music Hall, Elkton MD",
-        showDate: "December 2nd, 2023 @ 8pm",
+        showDate: "December 2nd, 2023",
         otherPerformers: "Kendra Morris",
         imageSrc: "/images/venues/elkton_music_hall.jpg",
         imageTitle: "Elkton Music Hall venue image",
         imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
-        url: "https://dice.fm/partner/facebook-event/event/p8q9k/",
+        url: "https://www.elktonmusichall.com/",
         target: "_blank"
-    }
-]
-
-const pastShows: showData[] = [
+    },
     {
         showTitle: "The Queen, Wilmington DE",
         showDate: "September 24th, 2023",
