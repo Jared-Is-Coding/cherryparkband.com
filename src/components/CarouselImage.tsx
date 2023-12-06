@@ -1,7 +1,7 @@
 import React from "react"
 import { Image } from "react-bootstrap"
 
-type carouselImageProps = {
+type CarouselImageProps = {
     src: string
     title?: string
     alt?: string
@@ -11,7 +11,7 @@ type carouselImageProps = {
     thumbnail?: boolean
 }
 
-export const CarouselImage = ({ src, title, alt, fluid, rounded, roundedCircle, thumbnail }: carouselImageProps) => (
+export const CarouselImage = ({ src, title, alt, fluid, rounded, roundedCircle, thumbnail }: CarouselImageProps) => (
     <Image
         src={src}
         title={title}
