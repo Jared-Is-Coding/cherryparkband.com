@@ -13,14 +13,10 @@ export const Head: HeadFC = () => (
     </>
 )
 
-const upcomingShows: showData[] = [
-    
-]
-
-const pastShows: showData[] = [
+const allShows: showData[] = [
     {
         showTitle: "Elkton Music Hall, Elkton MD",
-        showDate: "December 2nd, 2023",
+        showDate: "December 2, 2023",
         otherPerformers: "Kendra Morris",
         imageSrc: "/images/venues/elkton_music_hall.jpg",
         imageTitle: "Elkton Music Hall venue image",
@@ -30,7 +26,7 @@ const pastShows: showData[] = [
     },
     {
         showTitle: "The Queen, Wilmington DE",
-        showDate: "September 24th, 2023",
+        showDate: "September 24, 2023",
         otherPerformers: "Chvnce | Rachel Ana Dobken",
         imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
@@ -39,6 +35,10 @@ const pastShows: showData[] = [
         target: "_blank"
     }
 ]
+
+const today = new Date().valueOf()
+const upcomingShows = allShows.filter((show) => new Date(show.showDate + " 23:59:59").valueOf() >= today)
+const pastShows = allShows.filter((show) => new Date(show.showDate + " 23:59:59").valueOf() < today)
 
 const mapShows = (show: showData, index: number) => (
     <Card key={`show-card-item-${show.showTitle}-${index}`}>

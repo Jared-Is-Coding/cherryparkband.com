@@ -1,47 +1,24 @@
-import React, { useState } from "react"
+import React from "react"
 import { Alert, Col, Container, Row } from "react-bootstrap"
 import { FaInstagram, FaMusic, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa"
+import { AlertPopup } from "./AlertPopup"
 
 type CherryFooterProps = {
     hideListenIconLinks?: boolean
 }
 
-const AlertDisplay = () => {
-    const [show, setShow] = useState(true)
-    const alertTag = "merch-new"
-    const isBrowser = () => typeof window !== "undefined"
-    
-    if (!isBrowser()) return
-
-    // Clear old alert hiding
-    if (window.sessionStorage.getItem("alert-closed") !== alertTag) {
-        window.sessionStorage.removeItem("alert-closed")
-    }
-
-    // Otherwise check if this alert has been hidden already
-    const alertClosed = window.sessionStorage.getItem("alert-closed") === alertTag
-
-    const hideAlert = () => {
-        setShow(false)
-        window.sessionStorage.setItem("alert-closed", alertTag)
-    }
-
-    if (!alertClosed && show) {
-        return (
-            <Alert className="floating" variant="dark" onClose={hideAlert} dismissible>
-                <Alert.Heading>T-Shirts and long-sleeves!</Alert.Heading>
-                <p>You can check out our available merch <Alert.Link href="/merch">here</Alert.Link>.</p>
-            </Alert>
-        )
-    } else {
-        return <></>
-    }
-}
-
-
 export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
-        <AlertDisplay />
+        <AlertPopup
+            alertTag="merch-new-2"
+            AlertContent={(
+                <>
+                    <Alert.Heading>T-Shirts and long-sleeves!</Alert.Heading>
+                    <p>You can check out our available merch <Alert.Link href="/merch">here</Alert.Link>.</p>
+                </>
+            )}
+            validFrom={new Date("December 1, 2023 00:00:00").valueOf()}
+            validUntil={new Date("January 1, 2024 00:00:00").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
