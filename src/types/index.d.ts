@@ -26,7 +26,7 @@ type showData = {
     /**
      * Show URL
      */
-    url: string
+    url?: string
     /**
      * Show URL target
      */

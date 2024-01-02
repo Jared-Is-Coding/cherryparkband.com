@@ -10,15 +10,18 @@ type CherryFooterProps = {
 export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="merch-new-2"
+            alertTag="show-new"
             AlertContent={(
                 <>
-                    <Alert.Heading>T-Shirts and long-sleeves!</Alert.Heading>
-                    <p>You can check out our available merch <Alert.Link href="/merch">here</Alert.Link>.</p>
+                    <Alert.Heading>New Upcoming Shows</Alert.Heading>
+                    <p>We're performing in <Alert.Link href="/shows">Elkton, MD on February 17th</Alert.Link>!</p>
+                    <hr />
+                    <Alert.Heading>Merch Now Available</Alert.Heading>
+                    <p>You can check out what's available <Alert.Link href="/merch">here</Alert.Link>.</p>
                 </>
             )}
-            validFrom={new Date("December 1, 2023 00:00:00").valueOf()}
-            validUntil={new Date("January 1, 2024 00:00:00").valueOf()} />
+            validFrom={new Date("January 1, 2024 00:00:00").valueOf()}
+            validUntil={new Date("February 18, 2024 00:00:00").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">

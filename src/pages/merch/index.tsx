@@ -79,7 +79,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </h2>
 
                     <Row>
-                        <Col sm={{span: 12}} className="flex-center flex-col">
+                        <Col xs={{span: 12}} className="flex-center flex-col">
                             <h3>Order Fulfillment</h3>
                             <p>
                                 Orders will be fulfilled as soon as we're reasonably able.
@@ -87,14 +87,14 @@ const IndexPage: React.FC<PageProps> = () => {
                                 <br /><br />If you run into any issues or have still not received your order by then, please send us an email.
                             </p>
                         </Col>
-                        <Col sm={{span: 12}} className="flex-center flex-col">
+                        <Col xs={{span: 12}} className="flex-center flex-col">
                             <h3>Return Policy</h3>
                             <p>
                                 If an item you received is severely damaged or otherwise unusable for its purpose on arrival, please send us an email within 3 days of receiving it.
                                 <br /><br />Otherwise, returns, refunds and exchanges are not available. Thank you!
                             </p>
                         </Col>
-                        <Col sm={{span: 12}} className="flex-center flex-col">
+                        <Col xs={{span: 12}} className="flex-center flex-col">
                             <h3>Problems or Questions</h3>
                             <p>For questions about Cherry Park merchandise or issues with a past sale, please <a href="mailto:thecherryparkband@gmail.com?subject=Cherry Park | Merch Related Question">send us an email</a> and we can help you out!</p>
                         </Col>

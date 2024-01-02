@@ -1,10 +1,11 @@
 import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
-import { Card, Col, Row } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
 import { CherryFooter } from "../components/CherryFooter"
 import { CherryParkNavbar } from "../components/CherryNavbar"
 import { MetaData } from "../components/MetaData"
+import { ShowCard } from "../components/ShowCard"
 
 export const Head: HeadFC = () => (
     <>
@@ -14,6 +15,14 @@ export const Head: HeadFC = () => (
 )
 
 const allShows: showData[] = [
+    {
+        showTitle: "Elkton Music Hall, Elkton MD",
+        showDate: "February 17, 2024",
+        imageSrc: "/images/venues/elkton_music_hall.jpg",
+        imageTitle: "Elkton Music Hall venue image",
+        imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
+        target: "_blank"
+    },
     {
         showTitle: "Elkton Music Hall, Elkton MD",
         showDate: "December 2, 2023",
@@ -39,24 +48,14 @@ const allShows: showData[] = [
 const today = new Date().valueOf()
 const upcomingShows = allShows.filter((show) => new Date(show.showDate + " 23:59:59").valueOf() >= today)
 const pastShows = allShows.filter((show) => new Date(show.showDate + " 23:59:59").valueOf() < today)
-
-const mapShows = (show: showData, index: number) => (
-    <Card key={`show-card-item-${show.showTitle}-${index}`}>
-        {show.imageSrc && 
-            <Card.Img variant="top" src={show.imageSrc} className={show.imageSrc.endsWith(".png") ? "flex-center card-image png" : "flex-center card-image"} title={show.imageTitle} alt={show.imageAlt} />
-        }
-        {show.url && show.showTitle &&
-            <Card.Text as="h4">
-                <a href={show.url} target={show.target ?? "_self"}>{show.showTitle}</a>
-            </Card.Text>
-        }
-        {show.otherPerformers && 
-            <Card.Text>ft. {show.otherPerformers}</Card.Text>
-        }
-        {show.showDate && 
-            <Card.Subtitle>{show.showDate}</Card.Subtitle>
-        }
-    </Card>
+const mapShow = (show: showData, index: number) => (
+    <Col
+        xs={{span: 10, offset: 1}}
+        md={{span: 10, offset: 1}}
+        className="show-card"
+        key={`show-card-item-${show.showDate}-${index}`}>
+        <ShowCard show={show} />
+    </Col>
 )
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -74,33 +73,37 @@ const IndexPage: React.FC<PageProps> = () => {
             <main>
                 <Container>
                     <Row>
-                        <Col sm={{span: 12}} md={{span: 6}}>
+                        <Col xs={{span: 12}} lg={{span: 6}}>
                             <h2 className="flex-center">
                                 Upcoming Shows
                             </h2>
 
-                            <div className="flex-center">
+                            <Row>
                                 {!upcomingShows.length &&
-                                    <p>No shows are currently scheduled.</p>
+                                    <Col xs={{span: 12}}>
+                                        <p>No shows are currently scheduled.</p>
+                                    </Col>
                                 }
                                 {!!upcomingShows.length &&
-                                    upcomingShows.map(mapShows)
+                                    upcomingShows.map(mapShow)
                                 }
-                            </div>
+                            </Row>
                         </Col>
-                        <Col sm={{span: 12}} md={{span: 6}}>
+                        <Col xs={{span: 12}} lg={{span: 6}}>
                             <h2 className="flex-center">
                                 Past Shows
                             </h2>
 
-                            <div className="flex-center">
+                            <Row>
                                 {!pastShows.length &&
-                                    <p>No recent shows found.</p>
+                                    <Col xs={{span: 12}}>
+                                        <p>No recent shows found.</p>
+                                    </Col>
                                 }
                                 {!!pastShows.length &&
-                                    pastShows.map(mapShows)
+                                    pastShows.map(mapShow)
                                 }
-                            </div>
+                            </Row>
                         </Col>
                     </Row>
                 </Container>

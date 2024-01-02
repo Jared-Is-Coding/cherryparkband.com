@@ -159,15 +159,48 @@ footer {
 
 .card {
     padding: 5px;
+    text-wrap: pretty;
 }
 
 .card-image {
     max-height: 300px;
+    width: 100%;
     max-width: 300px;
-    width: calc(.25 * 100vw);
 }
 
 .card-image.png {
     background-color: white;
     border-radius: $card-border-radius;
+}
+
+/**
+ * ------------------
+ *      Show Cards
+ * ------------------
+ **/
+
+.show-card {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: $card-border-radius;
+    color: $primary-color;
+
+    hr {
+        margin: 5px 0 5px 0;
+    }
+    
+    .show-card-image {
+        max-height: 300px;
+        width: 100%;
+        max-width: 300px;
+    }
+    .show-card-image.png {
+        background-color: white;
+        border-radius: $card-border-radius;
+    }
+
+    .show-card-data {
+        padding-top: 5px;
+    }
 }
