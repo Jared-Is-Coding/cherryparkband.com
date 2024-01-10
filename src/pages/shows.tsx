@@ -18,9 +18,11 @@ const allShows: showData[] = [
     {
         showTitle: "Elkton Music Hall, Elkton MD",
         showDate: "February 17, 2024",
+        otherPerformers: "Syd Lynrowe",
         imageSrc: "/images/venues/elkton_music_hall.jpg",
         imageTitle: "Elkton Music Hall venue image",
         imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
+        url: "https://dice.fm/event/o779a/",
         target: "_blank"
     },
     {
