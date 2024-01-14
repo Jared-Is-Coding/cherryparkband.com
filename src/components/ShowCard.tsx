@@ -17,6 +17,11 @@ export const ShowCard = ({show}: ShowCardProps) => (
             {show.showDate && 
                 <Card.Subtitle>
                     {show.showDate}
+
+                    {/* Age requirement */}
+                    {show.ageRequirement &&
+                        <span className="twenty-one float-end">21+</span>
+                    }
                 </Card.Subtitle>
             }
             <hr />

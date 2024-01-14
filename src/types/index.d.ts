@@ -31,6 +31,10 @@ type showData = {
      * Show URL target
      */
     target?: string
+    /**
+     * Is the show 21 and up?
+     */ 
+    ageRequirement?: boolean
 }
 
 type carouselSlideData = {

@@ -16,6 +16,14 @@ export const Head: HeadFC = () => (
 
 const allShows: showData[] = [
     {
+        showTitle: "The Queen, Wilmington DE",
+        showDate: "April, 2024",
+        imageSrc: "/images/venues/the_queen.png",
+        imageTitle: "The Queen venue image",
+        imageAlt: "Venue image for The Queen in Wilmington Delaware",
+        target: "_blank"
+    },
+    {
         showTitle: "Elkton Music Hall, Elkton MD",
         showDate: "February 17, 2024",
         otherPerformers: "Syd Lynrowe",
@@ -23,7 +31,8 @@ const allShows: showData[] = [
         imageTitle: "Elkton Music Hall venue image",
         imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
         url: "https://dice.fm/event/o779a/",
-        target: "_blank"
+        target: "_blank",
+        ageRequirement: true
     },
     {
         showTitle: "Elkton Music Hall, Elkton MD",
@@ -33,7 +42,8 @@ const allShows: showData[] = [
         imageTitle: "Elkton Music Hall venue image",
         imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
         url: "https://www.elktonmusichall.com/",
-        target: "_blank"
+        target: "_blank",
+        ageRequirement: true
     },
     {
         showTitle: "The Queen, Wilmington DE",
@@ -48,8 +58,15 @@ const allShows: showData[] = [
 ]
 
 const today = new Date().valueOf()
-const upcomingShows = allShows.filter((show) => new Date(show.showDate + " 23:59:59").valueOf() >= today)
-const pastShows = allShows.filter((show) => new Date(show.showDate + " 23:59:59").valueOf() < today)
+const dateStringValue = (d: string) => new Date(d + " 23:59:59").valueOf()
+
+const upcomingShows = allShows
+    .filter((show) => dateStringValue(show.showDate) >= today)
+    .sort((a, b) => dateStringValue(a.showDate) - dateStringValue(b.showDate))
+const pastShows = allShows
+    .filter((show) => dateStringValue(show.showDate) < today)
+    .sort((a, b) => dateStringValue(b.showDate) - dateStringValue(a.showDate))
+
 const mapShow = (show: showData, index: number) => (
     <Col
         xs={{span: 10, offset: 1}}

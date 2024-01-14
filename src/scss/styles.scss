@@ -192,8 +192,8 @@ footer {
     
     .show-card-image {
         max-height: 300px;
-        width: 100%;
         max-width: 300px;
+        width: 100%;
     }
     .show-card-image.png {
         background-color: white;
@@ -202,5 +202,14 @@ footer {
 
     .show-card-data {
         padding-top: 5px;
+    }
+
+    .twenty-one {
+        padding: 0 6px;
+        color: white;
+        text-align: center;
+        background: $primary-color;
+        border: solid $primary-color 1px;
+        border-radius: $card-border-radius;
     }
 }
