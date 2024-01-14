@@ -84,14 +84,14 @@ const IndexPage: React.FC<PageProps> = () => {
                             <p>
                                 Orders will be fulfilled as soon as we're reasonably able.
                                 <br />You can expect single items within 1-2 weeks, and larger orders within 2-3 weeks (we make these to-order!).
-                                <br /><br />If you run into any issues or have still not received your order by then, please send us an email.
+                                <br /><br />If you run into any issues or have still not received your order by then, please <a href="mailto:thecherryparkband@gmail.com?subject=Cherry Park | Merch Related Question">send us an email</a>.
                             </p>
                         </Col>
                         <Col xs={{span: 12}} className="flex-center flex-col">
                             <h3>Return Policy</h3>
                             <p>
-                                If an item you received is severely damaged or otherwise unusable for its purpose on arrival, please send us an email within 3 days of receiving it.
-                                <br /><br />Otherwise, returns, refunds and exchanges are not available. Thank you!
+                                If an item you received is severely damaged or otherwise unusable for its purpose on arrival, please <a href="mailto:thecherryparkband@gmail.com?subject=Cherry Park | Merch Related Question">send us an email</a> within 3 days of receiving it.
+                                <br /><br />Otherwise, returns, refunds and exchanges are not able to be processed at this time. Thank you!
                             </p>
                         </Col>
                         <Col xs={{span: 12}} className="flex-center flex-col">
