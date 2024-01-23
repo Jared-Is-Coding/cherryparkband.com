@@ -22,14 +22,25 @@ const carouselSlides: carouselSlideData[] = [
         imageAlt: "Painted album art of a chair in a window's light, for the Cherry Park EP, Antidote"
     },
     {
+        imageSrc: "/images/band/desktop/winter_2.jpg",
+        imageSrcMobile: "/images/band/mobile/winter_3.jpg",
+        imageAlt: "Cherry Park band members in front of a brick wall"
+    },
+    {
+        imageSrc: "/images/albums/secret_garden/icon_wide.png",
+        imageSrcMobile: "/images/albums/secret_garden/icon.png",
+        imageTitle: "Cherry Park's EP, Secret Garden",
+        imageAlt: "Painted album art of an archway leading to water with the moon over it, for the Cherry Park EP, Secret Garden"
+    },
+    {
         imageSrc: "/images/shows/2023.09.24_the_queen/band3.jpg",
-        imageSrcMobile: "/images/band/mobile/band1.jpg",
+        imageSrcMobile: "/images/band/mobile/summer_2.jpg",
         imageTitle: "Live @ The Queen, Sept 24th 2023",
         imageAlt: "Cherry Park playing in the Crown Room at The Queen, in Wilmington Delaware"
     },
     {
-        imageSrc: "/images/band/desktop/band2.jpg",
-        imageSrcMobile: "/images/band/mobile/band2.jpg",
+        imageSrc: "/images/band/desktop/summer_2.jpg",
+        imageSrcMobile: "/images/band/mobile/summer_1.jpg",
         imageAlt: "Cherry Park band members sitting on a picnic blanket"
     }
 ]

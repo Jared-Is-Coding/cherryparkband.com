@@ -10,7 +10,7 @@ type CherryFooterProps = {
 export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="ep"
+            alertTag="ep-new"
             AlertContent={(
                 <>
                     <Alert.Heading>Upcoming Release</Alert.Heading>
