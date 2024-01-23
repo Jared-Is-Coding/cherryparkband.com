@@ -13,6 +13,10 @@ a:not(.card-text a):not(a.alert-link) {
     color: $secondary-color !important;
 }
 
+.card-text a {
+    color: $link-color !important;
+}
+
 .dropdown-menu {
     background-color: $tertiary-color;
 
