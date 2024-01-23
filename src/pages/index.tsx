@@ -16,6 +16,12 @@ export const Head: HeadFC = () => (
 
 const carouselSlides: carouselSlideData[] = [
     {
+        imageSrc: "/images/albums/antidote/icon_widescreen.jpg",
+        imageSrcMobile: "/images/albums/antidote/icon.jpg",
+        imageTitle: "Cherry Park's upcoming EP, Antidote, available February 16th, 2024",
+        imageAlt: "Painted album art of a chair in a window's light, for the Cherry Park EP, Antidote"
+    },
+    {
         imageSrc: "/images/shows/2023.09.24_the_queen/band3.jpg",
         imageSrcMobile: "/images/band/mobile/band1.jpg",
         imageTitle: "Live @ The Queen, Sept 24th 2023",

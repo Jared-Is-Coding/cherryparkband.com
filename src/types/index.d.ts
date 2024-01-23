@@ -1,3 +1,30 @@
+type albumData = {
+    /**
+     * Album title text
+     */
+    albumTitle: string
+    /**
+     * Album release date text
+     */
+    releaseDate: string
+    /**
+     * Image source url
+     */
+    imageSrc: string
+    /**
+     * Image title text
+     */
+    imageTitle: string
+    /**
+     * Image alt text
+     */
+    imageAlt: string
+    /**
+     * Album URL
+     */
+    url?: string
+}
+
 type showData = {
     /**
      * Show title text
@@ -12,7 +39,7 @@ type showData = {
      */
     otherPerformers?: string
     /**
-     * Image title text
+     * Image source URL
      */
     imageSrc: string
     /**

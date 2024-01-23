@@ -10,9 +10,12 @@ type CherryFooterProps = {
 export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="show-new-2"
+            alertTag="ep"
             AlertContent={(
                 <>
+                    <Alert.Heading>Upcoming Release</Alert.Heading>
+                    <p>We are so excited to officially announce the release of our latest project, "Antidote", available February 16th, 2024. <Alert.Link href="https://distrokid.com/hyperfollow/cherrypark/antidote-single-version-2" target="_blank">Presave it here</Alert.Link>!</p>
+                    <hr />
                     <Alert.Heading>New Upcoming Shows</Alert.Heading>
                     <p>We're performing in <Alert.Link href="/shows">Elkton, MD on February 17th</Alert.Link>!</p>
                     <hr />
