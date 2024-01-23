@@ -70,7 +70,7 @@ main {
 
 footer {
     .footerTopBar {
-        border-top: solid 3px white;
+        border-top: solid 3px $card-background-color;
     }
 }
   
@@ -182,7 +182,7 @@ footer {
 .show-card {
     padding: 5px;
     margin-bottom: 5px;
-    background-color: white;
+    background-color: $card-background-color;
     border-radius: $card-border-radius;
     color: $primary-color;
 
@@ -194,10 +194,11 @@ footer {
         max-height: 300px;
         max-width: 300px;
         width: 100%;
+        background-color: $card-background-color;
     }
 
     .show-card-image.png {
-        background-color: white;
+        background-color: $card-background-color;
         border-radius: $card-border-radius;
     }
 
@@ -207,7 +208,7 @@ footer {
 
     .twenty-one {
         padding: 0 6px;
-        color: white;
+        color: $card-background-color;
         text-align: center;
         background: $primary-color;
         border: solid $primary-color 1px;
