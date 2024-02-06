@@ -6,11 +6,55 @@ import { CherryFooter } from "../../components/CherryFooter"
 import { CherryParkNavbar } from "../../components/CherryNavbar"
 import { MetaData } from "../../components/MetaData"
 import "../../scss/merch.scss"
+import { MerchCard } from "../../components/MerchCard"
 
 export const Head: HeadFC = () => (
     <>
         <html lang="en" />
         <MetaData title="Merch | Cherry Park" />
+    </>
+)
+
+const allMerch: merchData[] = [
+    {
+        title: "Cherry Park Tee",
+        price: "$22.00 - $28.00",
+        imageSrc: "/images/merch/tee_collage.jpg",
+        url: "https://square.link/u/p7Xu6VAp?src=embed"
+    },
+    {
+        title: "Cherry Park Long Sleeve",
+        price: "$32.00 - $38.00",
+        imageSrc: "/images/merch/long_sleeve_collage.jpg",
+        url: "https://square.link/u/KCjEsfoc?src=embed"
+    },
+    /* {
+        dateAvailable: "February 16, 2024",
+        title: "Cherry Park Hoodie",
+        price: "$42.00 - $48.00",
+        imageSrc: "",
+        url: "https://square.link/u/zvcgoIlW?src=embed"
+    } */
+]
+
+const mapMerch = (item: merchData, index: number) => (
+    <>
+        <Col
+            xs={{span: 10, offset: 1}}
+            md={{span: 5, offset: index % 2 == 0 ? 1 : 0}}
+            lg={{span: 4, offset: index % 2 == 0 ? 2 : 0}}
+            className="flex-center"
+            key={`merch-card-item-${item.title}-${index}`}>
+            <MerchCard item={item} />
+        </Col>
+
+        {index % 2 == 0 && 
+            <Col xs={{span: 12}} className="d-sm-inline d-md-none"><br /></Col>
+        }
+
+        {index % 2 !== 0 && 
+            <Col xs={{span: 12}} className="d-sm-inline"><br /></Col>
+        }
     </>
 )
 
@@ -32,50 +76,20 @@ const IndexPage: React.FC<PageProps> = () => {
                     </h2>
 
                     <Row>
-                        <Col xs={{span: 10, offset: 1}} md={{span: 5, offset: 1}} lg={{span: 4, offset: 2}} className="flex-center">
-                            <div className="parent">
-                                <div className="child">
-                                    <p>Pictures coming soon...</p>
-                                    <p>Secret Garden Tee</p>
-                                    <p>$22.00 - $25.00</p>
-                                    <a target="_blank" href="https://square.link/u/aMBuK2ZP?src=embed">
-                                        Get it!
-                                    </a>
-                                </div>
-                            </div>
-                        </Col>
-
-                        <Col xs={{span: 12}} className="d-sm-inline d-md-none"><br /></Col>
-                        
-                        <Col xs={{span: 10, offset: 1}} md={{span: 5, offset: 0}} lg={{span: 4, offset: 0}} className="flex-center">
-                            <div className="parent">
-                                <div className="child">
-                                    <p>Pictures coming soon...</p>
-                                    <p>Secret Garden Long Sleeve</p>
-                                    <p>$32.00 - $35.00</p>
-                                    <a target="_blank" href="https://square.link/u/KCjEsfoc?src=embed">
-                                        Heck yeah!
-                                    </a>
-                                </div>
-                            </div>
-                        </Col>
+                        {!allMerch.length &&
+                            <Col xs={{span: 12}}>
+                                <p>No merch is currently available.</p>
+                            </Col>
+                        }
+                        {!!allMerch.length &&
+                            allMerch.map(mapMerch)
+                        }
                     </Row>
 
                     <br />
 
-                    <Row className="d-none d-md-inline">
-                        <Col xs={{span: 10, offset: 1}} md={{span: 6, offset: 3}} lg={{span: 4, offset: 4}} className="flex-center">
-                            <Image
-                                src="/images/shows/2023.09.24_the_queen/merch.jpg"
-                                title="Merch Table"
-                                alt="Band member standing behind merchandise table, looking at the camera"
-                                fluid
-                                roundedCircle />
-                        </Col>
-                    </Row>
-
                     <h2 className="flex-center">
-                        Other Information
+                        Information
                     </h2>
 
                     <Row>

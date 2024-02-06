@@ -64,6 +64,37 @@ type showData = {
     ageRequirement?: boolean
 }
 
+type merchData = {
+    /**
+     * Merch title text
+     */
+    title: string
+    /**
+     * Merch price text
+     */ 
+    price: string
+    /**
+     * Image source url
+     */
+    imageSrc: string
+    /**
+     * Image title text
+     */
+    imageTitle?: string
+    /**
+     * Image alt text
+     */
+    imageAlt?: string
+    /**
+     * Merch release date text
+     */
+    dateAvailable?: string
+    /**
+     * Merch URL
+     */
+    url?: string
+}
+
 type carouselSlideData = {
     /**
      * Desktop image source for the slide
