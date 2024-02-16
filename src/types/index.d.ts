@@ -116,4 +116,8 @@ type carouselSlideData = {
      * Empty or false will make text white
      */
     darkText?: boolean
+    /**
+     * Where this carousel slide should link to
+     */
+    url?: string
 }

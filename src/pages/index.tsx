@@ -19,7 +19,8 @@ const carouselSlides: carouselSlideData[] = [
         imageSrc: "/images/albums/antidote/icon_widescreen.jpg",
         imageSrcMobile: "/images/albums/antidote/icon.jpg",
         imageTitle: "Cherry Park's upcoming EP, Antidote, available February 16th, 2024",
-        imageAlt: "Painted album art of a chair in a window's light, for the Cherry Park EP, Antidote"
+        imageAlt: "Painted album art of a chair in a window's light, for the Cherry Park EP, Antidote",
+        url: "https://open.spotify.com/album/5XcJP9bbWJaEwOlwjLzMFa"
     },
     {
         imageSrc: "/images/band/desktop/winter_2.jpg",
@@ -71,7 +72,17 @@ const IndexPage: React.FC<PageProps> = () => {
                                     <Carousel touch controls={carouselSlides.length > 1}>
                                         {carouselSlides.map((thisImage, index) => (
                                             <Carousel.Item key={`carousel-desktop-item-${index}`}>
-                                                <CarouselImage src={thisImage.imageSrc} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
+                                                {/* URL is present */}
+                                                {thisImage.url && 
+                                                    <a href={thisImage.url} title={thisImage.imageTitle}>
+                                                        <CarouselImage src={thisImage.imageSrc} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
+                                                    </a>
+                                                }
+
+                                                {/* No URL is present */}
+                                                {!thisImage.url &&
+                                                    <CarouselImage src={thisImage.imageSrc} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
+                                                }
                                                 
                                                 {thisImage.imageTitle && 
                                                     <Carousel.Caption style={{color: !!thisImage.darkText ? "black" : "white"}}>
