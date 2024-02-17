@@ -1,4 +1,4 @@
-import { Link, type HeadFC, type PageProps } from "gatsby"
+import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Carousel, Col, Container, Row } from "react-bootstrap"
 import { CarouselImage } from "../components/CarouselImage"
@@ -54,8 +54,11 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <h1 className="flex-center">
                     Cherry Park
-                    <p className="tagline">East Coast indie band</p>
                 </h1>
+
+                <p className="tagline flex-center">
+                    East Coast indie band
+                </p>
             </header>
 
             <main>
