@@ -1,6 +1,6 @@
 import React from "react"
 import { Alert, Col, Container, Row } from "react-bootstrap"
-import { FaInstagram, FaMusic, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa"
+import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa"
 import { AlertPopup } from "./AlertPopup"
 
 type CherryFooterProps = {
@@ -71,6 +71,11 @@ export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
                 <Col xs={{span: "auto"}}>
                     <a href="https://music.youtube.com/channel/UCAHyvdKl3D20ehs0Ajto3OA" target="_blank" title="Link to Cherry Park on music.youtube.com">
                         <FaYoutube size="1.7em" title="YouTube Music" />
+                    </a>
+                </Col>
+                <Col xs={{span: "auto"}}>
+                    <a href="https://www.amazon.com/music/player/artists/B0CBLPT7QD" target="_blank" title="Link to Cherry Park on amazon.com/music">
+                        <FaAmazon size="1.7em" title="Amazon Music" />
                     </a>
                 </Col>
                 <Col xs={{span: "auto"}}>

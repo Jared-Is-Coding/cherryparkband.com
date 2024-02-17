@@ -60,12 +60,12 @@ const IndexPage: React.FC<PageProps> = () => {
 
             <main>
                 <Container>
+                    <h2 className="flex-center">
+                        Find us on: <ListenIconLinks />
+                    </h2>
+                    
                     {/* Desktop View */}
                     <div className="d-none d-lg-inline">
-                        <h2 className="flex-center">
-                            Find us on: <ListenIconLinks />
-                        </h2>
-                        
                         {!!carouselSlides.length &&
                             <Row>
                                 <Col key="carousel-desktop">
@@ -114,10 +114,6 @@ const IndexPage: React.FC<PageProps> = () => {
                                 </Col>
                             </Row>
                         }
-                        
-                        <h2 className="flex-center">
-                            Find us on: <ListenIconLinks />
-                        </h2>
                     </div>
                 </Container>
             </main>

@@ -11,13 +11,14 @@ export const CherryParkNavbar = () => (
                 <Nav variant="underline" justify>
                     <Nav.Link href="/">Home</Nav.Link>
                     {/* <Nav.Link href="/about">About</Nav.Link> */}
-                    <Nav.Link href="/shows/">Shows</Nav.Link>
-                    <Nav.Link href="/merch/">Merch</Nav.Link>
                     <NavDropdown title="Listen" renderMenuOnMount={true} focusFirstItemOnShow="keyboard" id="nav-listen-dropdown">
                         <NavDropdown.Item href="https://open.spotify.com/artist/3a8YTU2G2VYGFo0eSLbCFX" target="_blank">Spotify</NavDropdown.Item>
                         <NavDropdown.Item href="https://music.apple.com/us/artist/cherry-park/1696841984" target="_blank">Apple Music</NavDropdown.Item>
                         <NavDropdown.Item href="https://music.youtube.com/channel/UCAHyvdKl3D20ehs0Ajto3OA" target="_blank">YouTube Music</NavDropdown.Item>
+                        <NavDropdown.Item href="https://www.amazon.com/music/player/artists/B0CBLPT7QD/" target="_blank">Amazon Music</NavDropdown.Item>
                     </NavDropdown>
+                    <Nav.Link href="/shows/">Shows</Nav.Link>
+                    <Nav.Link href="/merch/">Merch</Nav.Link>
                     <NavDropdown title="Socials" renderMenuOnMount={true} focusFirstItemOnShow="keyboard" id="nav-socials-dropdown">
                         <NavDropdown.Item href="https://www.instagram.com/cherryparkband/" target="_blank">Instagram</NavDropdown.Item>
                         <NavDropdown.Item href="https://www.tiktok.com/@cherryparkofficial" target="_blank">TikTok</NavDropdown.Item>
