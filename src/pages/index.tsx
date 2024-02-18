@@ -23,9 +23,10 @@ const carouselSlides: carouselSlideData[] = [
         url: "https://open.spotify.com/album/5XcJP9bbWJaEwOlwjLzMFa"
     },
     {
-        imageSrc: "/images/band/desktop/winter_2.jpg",
-        imageSrcMobile: "/images/band/mobile/winter_3.jpg",
-        imageAlt: "Cherry Park band members in front of a brick wall"
+        imageSrc: "/images/shows/2024.02.17_elkton_music_hall/band1.jpg",
+        imageSrcMobile: "/images/shows/2024.02.17_elkton_music_hall/band3.jpg",
+        imageTitle: "Live @ Elkton Music Hall, Sept 17th 2024",
+        imageAlt: "Cherry Park playing at Elkton Music Hall, in Elkton Maryland"
     },
     {
         imageSrc: "/images/albums/secret_garden/icon_wide.png",
@@ -34,10 +35,9 @@ const carouselSlides: carouselSlideData[] = [
         imageAlt: "Painted album art of an archway leading to water with the moon over it, for the Cherry Park EP, Secret Garden"
     },
     {
-        imageSrc: "/images/shows/2024.02.17_elkton_music_hall/band1.jpg",
-        imageSrcMobile: "/images/shows/2024.02.17_elkton_music_hall/band4.jpg",
-        imageTitle: "Live @ Elkton Music Hall, Sept 17th 2024",
-        imageAlt: "Cherry Park playing at Elkton Music Hall, in Elkton Maryland"
+        imageSrc: "/images/band/desktop/winter_2.jpg",
+        imageSrcMobile: "/images/band/mobile/winter_3.jpg",
+        imageAlt: "Cherry Park band members in front of a brick wall"
     },
     {
         imageSrc: "/images/band/desktop/summer_2.jpg",
