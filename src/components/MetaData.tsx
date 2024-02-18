@@ -25,7 +25,7 @@ export const MetaData = ({ title, description, image }: MetaDataProps) => {
 
             {/* Site description */}
             <meta name="description" content={description || defaultDescription} />
-            <meta name="keywords" content="cherry park, indie, east, coast, band"/>
+            <meta name="keywords" content="cherry park, indie, east, coast, band, dream, pop, antidote, secret, garden"/>
             
             {/* Site properties */}
             <meta property="og:type" content="website" />

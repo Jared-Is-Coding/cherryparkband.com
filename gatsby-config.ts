@@ -6,7 +6,7 @@ dotenv.config()
 const config: GatsbyConfig = {
     siteMetadata: {
         title: "Cherry Park | East Coast indie band",
-        description: "Cherry Park is an east Coast indie group writing music. There is sure to be something for every music lover within their debut EP, Secret Garden. Now available on all streaming platforms.",
+        description: "Cherry Park is a Delaware based dream pop group. There is sure to be something for every music lover within their latest EP, Antidote. Now available on all streaming platforms.",
         image: "/images/logo.png",
         siteUrl: process.env.SITE_URL
     },
