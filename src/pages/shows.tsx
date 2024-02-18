@@ -17,10 +17,12 @@ export const Head: HeadFC = () => (
 const allShows: showData[] = [
     {
         showTitle: "The Queen, Wilmington DE",
-        showDate: "April, 2024",
+        showDate: "April 5, 2024",
+        otherPerformers: "The Carraways | Avery Hirsch",
         imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
+        url: "https://www.ticketmaster.com/event/02006047807D157A",
         target: "_blank"
     },
     {
@@ -30,7 +32,7 @@ const allShows: showData[] = [
         imageSrc: "/images/venues/elkton_music_hall.png",
         imageTitle: "Elkton Music Hall venue image",
         imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
-        url: "https://dice.fm/event/o779a/",
+        url: "https://www.elktonmusichall.com/",
         target: "_blank",
         ageRequirement: true
     },
