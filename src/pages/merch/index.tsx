@@ -28,6 +28,12 @@ const allMerch: merchData[] = [
         imageSrc: "/images/merch/long_sleeve_collage.jpg",
         url: "https://square.link/u/KCjEsfoc?src=embed"
     },
+    {
+        title: "Cherry Park Beanie",
+        price: "$30.00",
+        imageSrc: "/images/merch/beanie.jpg",
+        url: "https://square.link/u/BcqKDEn0?src=embed"
+    },
     /* {
         dateAvailable: "February 16, 2024",
         title: "Cherry Park Hoodie",
@@ -93,11 +99,18 @@ const IndexPage: React.FC<PageProps> = () => {
                     </h2>
 
                     <Row>
+                        <Col xs={{span: 12}} className="flex-col">
+                            <h3>Purchasing Multiple Items</h3>
+                            <p>
+                            Due to technical constraints, we cannot currently process multiple items in one order. If you would like to order multiple items, please pay for shipping on one of them, then use coupon code "<b>MULTI</b>" to waive the shipping cost on additional items. Thank you!
+                            </p>
+                            <br />
+                        </Col>
                         <Col xs={{span: 12}} md={{span: 4}} className="flex-col">
                             <h3>Order Fulfillment</h3>
                             <p>
                                 Orders will be fulfilled as soon as we're reasonably able.
-                                <br />You can expect single items within 1-2 weeks, and larger orders within 2-3 weeks (we make these to-order!).
+                                <br /><br />You can expect single items within 1-2 weeks, and larger orders within 2-3 weeks (we make these to-order!).
                                 <br /><br />If you run into any issues or have still not received your order by then, please <a href="mailto:thecherryparkband@gmail.com?subject=Cherry Park | Merch Related Question">send us an email</a>.
                             </p>
                         </Col>
