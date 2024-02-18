@@ -18,7 +18,7 @@ const carouselSlides: carouselSlideData[] = [
     {
         imageSrc: "/images/albums/antidote/icon_widescreen.jpg",
         imageSrcMobile: "/images/albums/antidote/icon.jpg",
-        imageTitle: "Cherry Park's upcoming EP, Antidote, available February 16th, 2024",
+        imageTitle: "Cherry Park's newly released EP, Antidote",
         imageAlt: "Painted album art of a chair in a window's light, for the Cherry Park EP, Antidote",
         url: "https://open.spotify.com/album/5XcJP9bbWJaEwOlwjLzMFa"
     },
@@ -34,10 +34,10 @@ const carouselSlides: carouselSlideData[] = [
         imageAlt: "Painted album art of an archway leading to water with the moon over it, for the Cherry Park EP, Secret Garden"
     },
     {
-        imageSrc: "/images/shows/2023.09.24_the_queen/band3.jpg",
-        imageSrcMobile: "/images/band/mobile/summer_2.jpg",
-        imageTitle: "Live @ The Queen, Sept 24th 2023",
-        imageAlt: "Cherry Park playing in the Crown Room at The Queen, in Wilmington Delaware"
+        imageSrc: "/images/shows/2024.02.17_elkton_music_hall/band1.jpg",
+        imageSrcMobile: "/images/shows/2024.02.17_elkton_music_hall/band4.jpg",
+        imageTitle: "Live @ Elkton Music Hall, Sept 17th 2024",
+        imageAlt: "Cherry Park playing at Elkton Music Hall, in Elkton Maryland"
     },
     {
         imageSrc: "/images/band/desktop/summer_2.jpg",
