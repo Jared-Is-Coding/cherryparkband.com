@@ -23,6 +23,8 @@ const IndexPage: React.FC<PageProps> = () => {
                 <h1 className="flex-center">
                     Thank you!
                 </h1>
+
+                <p className="tagline flex-center">We appreciate your support!</p>
             </header>
 
             <main>

@@ -20,8 +20,9 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
                 <h1 className="flex-center">
                     404
-                    <p className="tagline">That page doesn't exist</p>
                 </h1>
+
+                <p className="tagline flex-center">That page doesn't exist</p>
             </header>
             
             <main>
@@ -32,7 +33,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
                 </Container>
             </main>
 
-            <CherryFooter />
+            <CherryFooter hideListenIconLinks={true} />
         </>
     )
 }
