@@ -32,9 +32,6 @@ export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
                 </Col>
                 <Col xs={{span: 3}}></Col>
 
-                {/* Mobile spacer */}
-                <Col xs={{span: 12}} className="d-md-none"><br /></Col>
-                
                 {/* Footer content */}
                 <Col xs={{span: "auto"}}>
                     <a href={AppleMusicLink} target="_blank" title="Link to Cherry Park on music.apple.com">
