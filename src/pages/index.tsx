@@ -32,7 +32,8 @@ const carouselSlides: carouselSlideData[] = [
         imageSrc: "/images/albums/secret_garden/icon_wide.png",
         imageSrcMobile: "/images/albums/secret_garden/icon.png",
         imageTitle: "Cherry Park's EP, Secret Garden",
-        imageAlt: "Painted album art of an archway leading to water with the moon over it, for the Cherry Park EP, Secret Garden"
+        imageAlt: "Painted album art of an archway leading to water with the moon over it, for the Cherry Park EP, Secret Garden",
+        url: "https://open.spotify.com/album/4uxRAidPaTHs8qcvYajCHb"
     },
     {
         imageSrc: "/images/band/desktop/winter_2.jpg",
@@ -110,7 +111,18 @@ const IndexPage: React.FC<PageProps> = () => {
                                     <Carousel touch controls={carouselSlides.length > 1}>
                                         {carouselSlides.map((thisImage, index) => (!!thisImage.imageSrcMobile && 
                                             <Carousel.Item key={`carousel-mobile-item-${index}`}>
-                                                <CarouselImage src={thisImage.imageSrcMobile} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
+                                                {/* URL is present */}
+                                                {thisImage.url && 
+                                                    <a href={thisImage.url} title={thisImage.imageTitle}>
+                                                        <CarouselImage src={thisImage.imageSrcMobile} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
+                                                    </a>
+                                                }
+
+                                                {/* No URL is present */}
+                                                {!thisImage.url &&
+                                                    <CarouselImage src={thisImage.imageSrcMobile} title={thisImage.imageTitle} alt={thisImage.imageAlt} />
+                                                }
+                                                
                                             </Carousel.Item>
                                         ))}
                                     </Carousel>
