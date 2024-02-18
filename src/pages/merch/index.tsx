@@ -7,6 +7,7 @@ import { CherryParkNavbar } from "../../components/CherryNavbar"
 import { MerchCard } from "../../components/MerchCard"
 import { MetaData } from "../../components/MetaData"
 import "../../scss/merch.scss"
+import { BandEmail } from "../../util/SiteVariables"
 
 export const Head: HeadFC = () => (
     <>
@@ -95,7 +96,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <br />
 
                     <h2 className="flex-center">
-                        Information
+                        Orders Information
                     </h2>
 
                     <Row>
@@ -111,19 +112,19 @@ const IndexPage: React.FC<PageProps> = () => {
                             <p>
                                 Orders will be fulfilled as soon as we're reasonably able.
                                 <br /><br />You can expect single items within 1-2 weeks, and larger orders within 2-3 weeks (we make these to-order!).
-                                <br /><br />If you run into any issues or have still not received your order by then, please <a href="mailto:thecherryparkband@gmail.com?subject=Cherry Park | Merch Related Question">send us an email</a>.
+                                <br /><br />If you run into any issues or have still not received your order by then, please <a href={`mailto:${BandEmail}?subject=Cherry Park | Merch Related Question`}>send us an email</a>.
                             </p>
                         </Col>
                         <Col xs={{span: 12}} md={{span: 4}} className="flex-col">
                             <h3>Return Policy</h3>
                             <p>
-                                If an item you received is severely damaged or otherwise unusable for its purpose on arrival, please <a href="mailto:thecherryparkband@gmail.com?subject=Cherry Park | Merch Related Question">send us an email</a> within 3 days of receiving it.
+                                If an item you received is severely damaged or otherwise unusable for its purpose on arrival, please <a href={`mailto:${BandEmail}?subject=Cherry Park | Merch Related Question`}>send us an email</a> within 3 days of receiving it.
                                 <br /><br />Otherwise, returns, refunds and exchanges are not able to be processed at this time. Thank you!
                             </p>
                         </Col>
                         <Col xs={{span: 12}} md={{span: 4}} className="flex-col">
                             <h3>Problems or Questions</h3>
-                            <p>For questions about Cherry Park merchandise or issues with a past sale, please <a href="mailto:thecherryparkband@gmail.com?subject=Cherry Park | Merch Related Question">send us an email</a> and we can help you out!</p>
+                            <p>For questions about Cherry Park merchandise or issues with a past sale, please <a href={`mailto:${BandEmail}?subject=Cherry Park | Merch Related Question`}>send us an email</a> and we can help you out!</p>
                         </Col>
                     </Row>
                 </Container>

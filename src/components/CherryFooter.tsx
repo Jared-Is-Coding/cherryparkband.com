@@ -1,6 +1,7 @@
 import React from "react"
 import { Alert, Col, Container, Row } from "react-bootstrap"
-import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa"
+import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa"
+import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, TikTokLink, TwitterLink, YouTubeMusicLink } from "../util/SiteVariables"
 import { AlertPopup } from "./AlertPopup"
 
 type CherryFooterProps = {
@@ -30,36 +31,48 @@ export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
                     <p></p>
                 </Col>
                 <Col xs={{span: 3}}></Col>
+
+                {/* Mobile spacer */}
+                <Col xs={{span: 12}} className="d-md-none"><br /></Col>
                 
                 {/* Footer content */}
                 <Col xs={{span: "auto"}}>
-                    <a href="https://music.apple.com/us/artist/cherry-park/1696841984" target="_blank" title="Link to Cherry Park on music.apple.com">
+                    <a href={AppleMusicLink} target="_blank" title="Link to Cherry Park on music.apple.com">
                         <FaMusic size="1.7em" title="Apple Music" />
                     </a>
                 </Col>
                 <Col xs={{span: "auto"}}>
-                    <a href="https://open.spotify.com/artist/3a8YTU2G2VYGFo0eSLbCFX" target="_blank" title="Link to Cherry Park on spotify.com">
+                    <a href={SpotifyLink} target="_blank" title="Link to Cherry Park on spotify.com">
                         <FaSpotify size="1.7em" title="Spotify" />
                     </a>
                 </Col>
                 <Col xs={{span: "auto"}}>
-                    <a href="https://music.youtube.com/channel/UCAHyvdKl3D20ehs0Ajto3OA" target="_blank" title="Link to Cherry Park on music.youtube.com">
+                    <a href={YouTubeMusicLink} target="_blank" title="Link to Cherry Park on music.youtube.com">
                         <FaYoutube size="1.7em" title="YouTube Music" />
                     </a>
                 </Col>
                 <Col xs={{span: "auto"}}>
-                    <a href="https://www.amazon.com/music/player/artists/B0CBLPT7QD" target="_blank" title="Link to Cherry Park on amazon.com/music">
+                    <a href={AmazonMusicLink} target="_blank" title="Link to Cherry Park on amazon.com/music">
                         <FaAmazon size="1.7em" title="Amazon Music" />
                     </a>
                 </Col>
+
+                {/* Mobile spacer */}
+                <Col xs={{span: 12}} className="d-md-none"><br /></Col>
+
                 <Col xs={{span: "auto"}}>
-                    <a href="https://www.instagram.com/cherryparkband/" target="_blank" title="Link to Cherry Park on Instagram.com">
+                    <a href={InstagramLink} target="_blank" title="Link to Cherry Park on instagram.com">
                         <FaInstagram size="1.7em" title="Instagram" />
                     </a>
                 </Col>
                 <Col xs={{span: "auto"}}>
-                    <a href="https://www.tiktok.com/@cherryparkofficial" target="_blank" title="Link to Cherry Park on Tiktok.com">
+                    <a href={TikTokLink} target="_blank" title="Link to Cherry Park on tiktok.com">
                         <FaTiktok size="1.7em" title="Tiktok" />
+                    </a>
+                </Col>
+                <Col xs={{span: "auto"}}>
+                    <a href={TwitterLink} target="_blank" title="Link to Cherry Park on twitter.com">
+                        <FaTwitter size="1.7em" title="Twitter" />
                     </a>
                 </Col>
             </Row>
