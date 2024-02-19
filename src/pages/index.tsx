@@ -51,7 +51,7 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
             <header>
-                <CherryParkNavbar />
+                <CherryParkNavbar isHomepage={true} />
 
                 <h1 className="flex-center">
                     Cherry Park

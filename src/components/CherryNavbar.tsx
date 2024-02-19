@@ -2,10 +2,24 @@ import React from "react"
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import { AmazonMusicLink, AppleMusicLink, BandEmail, InstagramLink, SpotifyLink, TikTokLink, TwitterLink, YouTubeMusicLink } from "../util/SiteVariables"
 
-export const CherryParkNavbar = () => (
+type CherryNavbarProps = {
+    isHomepage?: boolean
+}
+
+export const CherryParkNavbar = ({isHomepage}: CherryNavbarProps) => (
     <Navbar fixed="top" expand="lg" data-bs-theme="dark">
         <Container>
-            <Navbar.Brand href="/">Cherry Park</Navbar.Brand>
+            <Navbar.Brand href="/">
+                <img
+                    src="/images/logo.png"
+                    width="55"
+                    height="55"
+                    className={(isHomepage ? "d-inline-block" : "d-xs-inline-block d-md-none") + " align-top"}
+                    alt="Cherry Park logo"/>
+                <span className={(isHomepage ? "d-none" : "d-none d-md-inline-block")}>
+                    Cherry Park
+                </span>
+            </Navbar.Brand>
             <Navbar.Toggle label="Menu toggle" aria-controls="site-navbar" />
 
             <Navbar.Collapse id="site-navbar">
