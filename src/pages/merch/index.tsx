@@ -31,7 +31,7 @@ const allMerch: merchData[] = [
     },
     {
         title: "Cherry Park Beanie",
-        price: "$30.00",
+        price: "$25.00",
         imageSrc: "/images/merch/beanie.jpg",
         url: "https://square.link/u/BcqKDEn0?src=embed"
     },
