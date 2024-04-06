@@ -30,6 +30,12 @@ const allMerch: merchData[] = [
         url: "https://square.link/u/KCjEsfoc?src=embed"
     },
     {
+        title: "Cherry Park Tote Bag",
+        price: "$10.00",
+        imageSrc: "/images/merch/tote.jpg",
+        url: "https://square.link/u/RfAXVbM0?src=embed"
+    },
+    {
         title: "Cherry Park Beanie",
         price: "$25.00",
         imageSrc: "/images/merch/beanie.jpg",
@@ -48,20 +54,13 @@ const mapMerch = (item: merchData, index: number) => (
     <>
         <Col
             xs={{span: 10, offset: 1}}
-            md={{span: 5, offset: index % 2 == 0 ? 1 : 0}}
-            lg={{span: 4, offset: index % 2 == 0 ? 2 : 0}}
+            md={{span: 6, offset: 0}}
+            lg={{span: 3, offset: 0}}
             className="flex-center"
             key={`merch-card-item-${item.title}-${index}`}>
             <MerchCard item={item} />
         </Col>
 
-        {index % 2 == 0 && 
-            <Col xs={{span: 12}} className="d-sm-inline d-md-none"><br /></Col>
-        }
-
-        {index % 2 !== 0 && 
-            <Col xs={{span: 12}} className="d-sm-inline"><br /></Col>
-        }
     </>
 )
 
