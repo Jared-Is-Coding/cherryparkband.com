@@ -22,7 +22,7 @@ const allShows: showData[] = [
         imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
-        url: "https://www.ticketmaster.com/event/02006047807D157A",
+        url: "https://thequeenwilmington.com/",
         target: "_blank"
     },
     {

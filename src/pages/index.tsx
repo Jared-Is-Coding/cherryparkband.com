@@ -25,7 +25,7 @@ const carouselSlides: carouselSlideData[] = [
     {
         imageSrc: "/images/shows/2024.02.17_elkton_music_hall/band1.jpg",
         imageSrcMobile: "/images/shows/2024.02.17_elkton_music_hall/band3.jpg",
-        imageTitle: "Live @ Elkton Music Hall, Sept 17th 2024",
+        imageTitle: "Live @ Elkton Music Hall, Feb 17th 20234",
         imageAlt: "Cherry Park playing at Elkton Music Hall, in Elkton Maryland"
     },
     {
