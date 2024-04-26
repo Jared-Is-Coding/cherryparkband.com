@@ -5,7 +5,7 @@
  **/
 
 body {
-    background-color: $primary-color !important;
+    background: linear-gradient(175deg, $primary-color 75%, $secondary-color-muted 100%) fixed;
     color: $secondary-color !important;
 }
 
