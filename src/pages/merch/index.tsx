@@ -8,7 +8,7 @@ import MetaData from "../../components/MetaData"
 import Navbar from "../../components/Navbar"
 import OrdersInformation from "../../components/OrdersInformation"
 import "../../scss/merch.scss"
-import allMerch from "./allMerch"
+import { allMerch } from "./allMerch"
 
 export const Head: HeadFC = () => (
     <>

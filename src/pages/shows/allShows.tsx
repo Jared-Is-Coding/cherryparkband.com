@@ -1,4 +1,4 @@
-export default [
+export const allShows = [
     {
         showTitle: "TBA",
         showDate: "August 17, 2024"

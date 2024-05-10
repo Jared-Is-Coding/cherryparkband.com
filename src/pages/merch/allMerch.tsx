@@ -1,4 +1,4 @@
-export default [
+export const allMerch = [
     {
         title: "Cherry Park Tee",
         price: "$22.00 - $28.00",

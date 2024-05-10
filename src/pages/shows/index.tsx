@@ -6,7 +6,7 @@ import Footer from "../../components/Footer"
 import MetaData from "../../components/MetaData"
 import Navbar from "../../components/Navbar"
 import ShowCard from "../../components/ShowCard"
-import allShows from "./allShows"
+import { allShows } from "./allShows"
 
 export const Head: HeadFC = () => (
     <>
