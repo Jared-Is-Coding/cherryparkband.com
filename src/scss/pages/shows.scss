@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.show-card {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: $card-background-color;
+    border-radius: $card-border-radius;
+    color: $primary-color;
+
+    hr {
+        margin: 5px 0 5px 0;
+    }
+    
+    .show-card-image {
+        max-height: 300px;
+        max-width: 300px;
+        width: 100%;
+        background-color: $card-background-color;
+    }
+
+    .show-card-image.png {
+        background-color: $card-background-color;
+        border-radius: $card-border-radius;
+    }
+
+    .show-card-data {
+        padding-top: 5px;
+    }
+
+    .twenty-one {
+        padding: 0 6px;
+        color: $card-background-color;
+        text-align: center;
+        background: $primary-color;
+        border: solid $primary-color 1px;
+        border-radius: $card-border-radius;
+    }
+}

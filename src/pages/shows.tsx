@@ -6,6 +6,8 @@ import Footer from "../components/Footer"
 import MetaData from "../components/MetaData"
 import Navbar from "../components/Navbar"
 import ShowCard from "../components/ShowCard"
+import "../scss/pages/shows.scss"
+
 
 export const Head: HeadFC = () => (
     <>

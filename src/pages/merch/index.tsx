@@ -7,7 +7,7 @@ import MerchCard from "../../components/MerchCard"
 import MetaData from "../../components/MetaData"
 import Navbar from "../../components/Navbar"
 import OrdersInformation from "../../components/OrdersInformation"
-import "../../scss/merch.scss"
+import "../../scss/pages/merch.scss"
 
 export const Head: HeadFC = () => (
     <>
