@@ -2,13 +2,13 @@ import React from "react"
 import { Alert, Col, Container, Row } from "react-bootstrap"
 import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa"
 import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, TikTokLink, TwitterLink, YouTubeMusicLink } from "../util/SiteVariables"
-import { AlertPopup } from "./AlertPopup"
+import AlertPopup from "./AlertPopup"
 
 type CherryFooterProps = {
     hideListenIconLinks?: boolean
 }
 
-export const CherryFooter = ({hideListenIconLinks}: CherryFooterProps) => (
+export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
             alertTag="merch-new"

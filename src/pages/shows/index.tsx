@@ -2,10 +2,11 @@ import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
-import { CherryFooter } from "../components/CherryFooter"
-import { CherryParkNavbar } from "../components/CherryNavbar"
-import { MetaData } from "../components/MetaData"
-import { ShowCard } from "../components/ShowCard"
+import Footer from "../../components/Footer"
+import MetaData from "../../components/MetaData"
+import Navbar from "../../components/Navbar"
+import ShowCard from "../../components/ShowCard"
+import allShows from "./allShows"
 
 export const Head: HeadFC = () => (
     <>
@@ -13,51 +14,6 @@ export const Head: HeadFC = () => (
         <MetaData title="Shows | Cherry Park" />
     </>
 )
-
-const allShows: showData[] = [
-    {
-        showTitle: "The Queen, Wilmington DE",
-        showDate: "April 5, 2024",
-        otherPerformers: "The Carraways | Avery Hirsch",
-        imageSrc: "/images/venues/the_queen.png",
-        imageTitle: "The Queen venue image",
-        imageAlt: "Venue image for The Queen in Wilmington Delaware",
-        url: "https://thequeenwilmington.com/",
-        target: "_blank"
-    },
-    {
-        showTitle: "Elkton Music Hall, Elkton MD",
-        showDate: "February 17, 2024",
-        otherPerformers: "Syd Lynrowe",
-        imageSrc: "/images/venues/elkton_music_hall.png",
-        imageTitle: "Elkton Music Hall venue image",
-        imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
-        url: "https://www.elktonmusichall.com/",
-        target: "_blank",
-        ageRequirement: true
-    },
-    {
-        showTitle: "Elkton Music Hall, Elkton MD",
-        showDate: "December 2, 2023",
-        otherPerformers: "Kendra Morris",
-        imageSrc: "/images/venues/elkton_music_hall.png",
-        imageTitle: "Elkton Music Hall venue image",
-        imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
-        url: "https://www.elktonmusichall.com/",
-        target: "_blank",
-        ageRequirement: true
-    },
-    {
-        showTitle: "The Queen, Wilmington DE",
-        showDate: "September 24, 2023",
-        otherPerformers: "Chvnce | Rachel Ana Dobken",
-        imageSrc: "/images/venues/the_queen.png",
-        imageTitle: "The Queen venue image",
-        imageAlt: "Venue image for The Queen in Wilmington Delaware",
-        url: "https://thequeenwilmington.com/",
-        target: "_blank"
-    }
-]
 
 const today = new Date().valueOf()
 const dateStringValue = (d: string) => new Date(d + " 23:59:59").valueOf()
@@ -83,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
             <header>
-                <CherryParkNavbar />
+                <Navbar />
 
                 <h1 className="flex-center">
                     Shows
@@ -130,7 +86,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Container>
             </main>
                 
-            <CherryFooter />
+            <Footer />
         </>
     )
 }

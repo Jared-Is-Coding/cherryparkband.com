@@ -41,15 +41,15 @@ type showData = {
     /**
      * Image source URL
      */
-    imageSrc: string
+    imageSrc?: string
     /**
      * Image title text
      */
-    imageTitle: string
+    imageTitle?: string
     /**
      * Image alt text
      */
-    imageAlt: string
+    imageAlt?: string
     /**
      * Show URL
      */

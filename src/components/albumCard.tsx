@@ -5,7 +5,7 @@ type AlbumCardProps = {
     album: albumData
 }
 
-export const AlbumCard = ({album}: AlbumCardProps) => (
+export default ({album}: AlbumCardProps) => (
     <Row>
         {album.imageSrc && 
             <Col xs={{span: 3}} md={{span: 3}} className="flex-center">

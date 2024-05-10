@@ -6,7 +6,7 @@ type CherryNavbarProps = {
     isHomepage?: boolean
 }
 
-export const CherryParkNavbar = ({isHomepage}: CherryNavbarProps) => (
+export default ({isHomepage}: CherryNavbarProps) => (
     <Navbar fixed="top" expand="lg" data-bs-theme="dark">
         <Container>
             <Navbar.Brand href="/">

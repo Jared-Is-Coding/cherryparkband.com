@@ -2,7 +2,7 @@ import React from "react"
 import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa"
 import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, TikTokLink, TwitterLink, YouTubeMusicLink } from "../util/SiteVariables"
 
-export const ListenIconLinks = () => (
+export default () => (
     <>
         <a style={{padding: "0 5px"}} href={AppleMusicLink} target="_blank" title="Link to Cherry Park on music.apple.com">
             <FaMusic size="1.5em" title="Apple Music" />

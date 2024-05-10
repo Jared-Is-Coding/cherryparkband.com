@@ -8,7 +8,7 @@ type MetaDataProps = {
     image?: string
 }
 
-export const MetaData = ({ title, description, image }: MetaDataProps) => {
+export default ({ title, description, image }: MetaDataProps) => {
     const { title: defaultTitle, description: defaultDescription, image: defaultImage, siteUrl } = useMetaData()
 
     return (

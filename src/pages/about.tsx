@@ -2,9 +2,9 @@ import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
-import { CherryFooter } from "../components/CherryFooter"
-import { CherryParkNavbar } from "../components/CherryNavbar"
-import { MetaData } from "../components/MetaData"
+import Footer from "../components/Footer"
+import MetaData from "../components/MetaData"
+import Navbar from "../components/Navbar"
 
 export const Head: HeadFC = () => (
     <>
@@ -17,7 +17,7 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
             <header>
-                <CherryParkNavbar />
+                <Navbar />
 
                 <h1 className="flex-center">
                     About
@@ -33,7 +33,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Container>
             </main>
                 
-            <CherryFooter />
+            <Footer />
         </>
     )
 }

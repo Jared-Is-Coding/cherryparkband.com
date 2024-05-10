@@ -8,7 +8,7 @@ type AlertPopupProps = {
     validUntil?: number
 }
 
-export const AlertPopup = ({AlertContent, alertTag, validFrom, validUntil}: AlertPopupProps) => {
+export default ({AlertContent, alertTag, validFrom, validUntil}: AlertPopupProps) => {
     const [show, setShow] = useState(true)
     const isBrowser = () => typeof window !== "undefined"
     

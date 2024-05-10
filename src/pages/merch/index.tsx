@@ -2,12 +2,13 @@ import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
-import { CherryFooter } from "../../components/CherryFooter"
-import { CherryParkNavbar } from "../../components/CherryNavbar"
-import { MerchCard } from "../../components/MerchCard"
-import { MetaData } from "../../components/MetaData"
-import { OrdersInformation } from "../../components/OrdersInformation"
+import Footer from "../../components/Footer"
+import MerchCard from "../../components/MerchCard"
+import MetaData from "../../components/MetaData"
+import Navbar from "../../components/Navbar"
+import OrdersInformation from "../../components/OrdersInformation"
 import "../../scss/merch.scss"
+import allMerch from "./allMerch"
 
 export const Head: HeadFC = () => (
     <>
@@ -15,40 +16,6 @@ export const Head: HeadFC = () => (
         <MetaData title="Merch | Cherry Park" />
     </>
 )
-
-const allMerch: merchData[] = [
-    {
-        title: "Cherry Park Tee",
-        price: "$22.00 - $28.00",
-        imageSrc: "/images/merch/tee_collage.jpg",
-        url: "https://square.link/u/p7Xu6VAp?src=embed"
-    },
-    {
-        title: "Cherry Park Long Sleeve",
-        price: "$32.00 - $38.00",
-        imageSrc: "/images/merch/long_sleeve_collage.jpg",
-        url: "https://square.link/u/KCjEsfoc?src=embed"
-    },
-    {
-        title: "Cherry Park Tote Bag",
-        price: "$10.00",
-        imageSrc: "/images/merch/tote.jpg",
-        url: "https://square.link/u/RfAXVbM0?src=embed"
-    },
-    {
-        title: "Cherry Park Beanie",
-        price: "$25.00",
-        imageSrc: "/images/merch/beanie.jpg",
-        url: "https://square.link/u/BcqKDEn0?src=embed"
-    },
-    /* {
-        dateAvailable: "February 16, 2024",
-        title: "Cherry Park Hoodie",
-        price: "$42.00 - $48.00",
-        imageSrc: "",
-        url: "https://square.link/u/zvcgoIlW?src=embed"
-    } */
-]
 
 const mapMerch = (item: merchData, index: number) => (
     <>
@@ -68,7 +35,7 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
             <header>
-                <CherryParkNavbar />
+                <Navbar />
 
                 <h1 className="flex-center">
                     Merch
@@ -102,7 +69,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Container>
             </main>
                 
-            <CherryFooter />
+            <Footer />
         </>
     )
 }

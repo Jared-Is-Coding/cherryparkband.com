@@ -11,7 +11,7 @@ type CarouselImageProps = {
     thumbnail?: boolean
 }
 
-export const CarouselImage = ({ src, title, alt, fluid, rounded, roundedCircle, thumbnail }: CarouselImageProps) => (
+export default ({ src, title, alt, fluid, rounded, roundedCircle, thumbnail }: CarouselImageProps) => (
     <Image
         src={src}
         title={title}

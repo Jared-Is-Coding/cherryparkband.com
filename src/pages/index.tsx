@@ -1,11 +1,11 @@
 import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Carousel, Col, Container, Row } from "react-bootstrap"
-import { CarouselImage } from "../components/CarouselImage"
-import { CherryFooter } from "../components/CherryFooter"
-import { CherryParkNavbar } from "../components/CherryNavbar"
-import { ListenIconLinks } from "../components/ListenIconLinks"
-import { MetaData } from "../components/MetaData"
+import CarouselImage from "../components/CarouselImage"
+import Footer from "../components/Footer"
+import ListenIconLinks from "../components/ListenIconLinks"
+import MetaData from "../components/MetaData"
+import Navbar from "../components/Navbar"
 
 export const Head: HeadFC = () => (
     <>
@@ -51,7 +51,7 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
             <header>
-                <CherryParkNavbar isHomepage={true} />
+                <Navbar isHomepage={true} />
 
                 <h1 className="flex-center">
                     Cherry Park
@@ -133,7 +133,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Container>
             </main>
                 
-            <CherryFooter hideListenIconLinks={true} />
+            <Footer hideListenIconLinks={true} />
         </>
     )
 }

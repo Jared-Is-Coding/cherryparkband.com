@@ -5,11 +5,16 @@ type ShowCardProps = {
     show: showData
 }
 
-export const ShowCard = ({show}: ShowCardProps) => (
+export default ({show}: ShowCardProps) => (
     <Row>
         {show.imageSrc && 
             <Col xs={{span: 3}} md={{span: 3}} className="flex-center">
                 <Image src={show.imageSrc} className={show.imageSrc.endsWith(".png") ? "flex-center show-card-image png" : "flex-center show-card-image"} title={show.imageTitle} alt={show.imageAlt} />
+            </Col>
+        }
+        {!show.imageSrc && 
+            <Col xs={{span: 3}} md={{span: 3}} className="flex-center">
+                <Image src={"/images/logo.png"} className={"flex-center show-card-image png"} alt={"Show placeholder image"} />
             </Col>
         }
 

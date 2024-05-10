@@ -1,9 +1,9 @@
 import { HeadFC, Link, PageProps } from "gatsby"
 import * as React from "react"
 import { Container } from "react-bootstrap"
-import { CherryFooter } from "../components/CherryFooter"
-import { CherryParkNavbar } from "../components/CherryNavbar"
-import { MetaData } from "../components/MetaData"
+import Footer from "../components/Footer"
+import MetaData from "../components/MetaData"
+import Navbar from "../components/Navbar"
 
 export const Head: HeadFC = () => (
     <>
@@ -16,7 +16,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
     return (
         <>
             <header>
-                <CherryParkNavbar />
+                <Navbar />
 
                 <h1 className="flex-center">
                     404
@@ -33,7 +33,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
                 </Container>
             </main>
 
-            <CherryFooter hideListenIconLinks={true} />
+            <Footer hideListenIconLinks={true} />
         </>
     )
 }

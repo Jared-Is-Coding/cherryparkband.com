@@ -15,7 +15,7 @@ const orderButtonWords = [
     "Yesssss!"
 ]
 
-export const MerchCard = ({item}: MerchCardProps) => (
+export default ({item}: MerchCardProps) => (
     <div className="parent">
         <div className="child">
             {item.imageSrc &&

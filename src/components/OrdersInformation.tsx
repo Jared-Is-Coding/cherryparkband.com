@@ -2,7 +2,7 @@ import * as React from "react"
 import { Col, Row } from "react-bootstrap"
 import { BandEmail } from "../util/SiteVariables"
 
-export const OrdersInformation = () => (
+export default () => (
     <Row>
         <Col xs={{span: 12}} className="flex-col">
             <h3>Purchasing Multiple Items</h3>
