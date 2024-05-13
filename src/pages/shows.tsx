@@ -22,7 +22,7 @@ const allShows: showData[] = [
         showDate: "August 17, 2024"
     },
     {
-        showTitle: "TBA",
+        showTitle: "Spruce Street Harbor Park, Philadelphia PA",
         showDate: "June 22, 2024"
     },
     {
