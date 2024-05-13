@@ -32,7 +32,7 @@ export default ({show}: ShowCardProps) => (
             <hr />
             {show.url && show.showTitle &&
                 <Card.Text as="h4">
-                    <a href={show.url} target={show.target ?? "_self"}>{show.showTitle}</a>
+                    <a href={show.url} target={show.target ?? "_blank"}>{show.showTitle}</a>
                 </Card.Text>
             }
             {!show.url && show.showTitle &&

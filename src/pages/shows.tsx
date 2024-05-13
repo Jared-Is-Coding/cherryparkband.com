@@ -23,7 +23,12 @@ const allShows: showData[] = [
     },
     {
         showTitle: "Spruce Street Harbor Park, Philadelphia PA",
-        showDate: "June 22, 2024"
+        showDate: "June 22, 2024",
+        otherPerformers: "Moonroof",
+        imageSrc: "/images/venues/spruce_street_harbor_park.png",
+        imageTitle: "Spruce Street Harbor Park venue image",
+        imageAlt: "Venue image for Spruce Street Harbor Park in Philadelphia Pennsylvania",
+        url: "http://sprucestreetharborpark.com/"
     },
     {
         showTitle: "The Queen, Wilmington DE",
@@ -32,8 +37,7 @@ const allShows: showData[] = [
         imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
-        url: "https://thequeenwilmington.com/",
-        target: "_blank"
+        url: "https://thequeenwilmington.com/"
     },
     {
         showTitle: "Elkton Music Hall, Elkton MD",
@@ -43,7 +47,6 @@ const allShows: showData[] = [
         imageTitle: "Elkton Music Hall venue image",
         imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
         url: "https://www.elktonmusichall.com/",
-        target: "_blank",
         ageRequirement: true
     },
     {
@@ -54,7 +57,6 @@ const allShows: showData[] = [
         imageTitle: "Elkton Music Hall venue image",
         imageAlt: "Venue image for Elkton Music Hall in Elkton Maryland",
         url: "https://www.elktonmusichall.com/",
-        target: "_blank",
         ageRequirement: true
     },
     {
@@ -64,8 +66,7 @@ const allShows: showData[] = [
         imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
-        url: "https://thequeenwilmington.com/",
-        target: "_blank"
+        url: "https://thequeenwilmington.com/"
     }
 ]
 
