@@ -31,7 +31,7 @@ const allMerch: merchData[] = [
     },
     {
         title: "Cherry Park Tote Bag",
-        price: "$10.00",
+        price: "$15.00",
         imageSrc: "/images/merch/tote.jpg",
         url: "https://square.link/u/RfAXVbM0?src=embed"
     },
