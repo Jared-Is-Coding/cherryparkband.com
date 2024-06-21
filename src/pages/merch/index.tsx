@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
 import Footer from "../../components/Footer"
 import MerchCard from "../../components/MerchCard"
+import MerchStylesCard from "../../components/MerchStylesCard"
 import MetaData from "../../components/MetaData"
 import Navbar from "../../components/Navbar"
 import OrdersInformation from "../../components/OrdersInformation"
@@ -60,7 +61,49 @@ const mapMerch = (item: merchData, index: number) => (
             key={`merch-card-item-${item.title}-${index}`}>
             <MerchCard item={item} />
         </Col>
+    </>
+)
 
+const allStyles: merchStyles[] = [
+    {
+        title: "White Shirt",
+        imageSrc: "/images/merch/tee.jpg"
+    },
+    {
+        title: "Tie-Dye Shirt",
+        imageSrc: "/images/merch/tee_tye_dye.jpg"
+    },
+    {
+        title: "Cherry Park Text (Orange)",
+        imageSrc: "/images/merch/styles/cherry_park_text.jpg"
+    },
+    {
+        title: "Cherry Park Text (Retro)",
+        imageSrc: "/images/merch/styles/cherry_park_retro_text.jpg"
+    },
+    {
+        title: "Fever Dream Graphic",
+        imageSrc: "/images/merch/styles/fever_dream_graphic.png"
+    },
+    {
+        title: "Antidote Album Art",
+        imageSrc: "/images/albums/antidote/icon.jpg"
+    },
+    {
+        title: "Secret Garden Album Art",
+        imageSrc: "/images/albums/secret_garden/icon.png"
+    },
+]
+
+const mapStyles = (item: merchStyles, index: number) => (
+    <>
+        <Col
+            xs={{span: 6, offset: 0}}
+            lg={{span: 3, offset: 0}}
+            className="flex-center"
+            key={`merch-style-card-item-${item.title}-${index}`}>
+            <MerchStylesCard item={item} />
+        </Col>
     </>
 )
 
@@ -78,7 +121,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <main>
                 <Container>
                     <h2 className="flex-center">
-                        Currently Available
+                        Available Merch
                     </h2>
 
                     <Row>
@@ -92,7 +135,19 @@ const IndexPage: React.FC<PageProps> = () => {
                         }
                     </Row>
 
-                    <br />
+                    <h2 className="flex-center">
+                        Design Styles
+                    </h2>
+
+                    <Row>
+                        <Col xs={{span: 10, offset: 1}} md={{span: 12, offset: 0}}>
+                            <Row>
+                                {!!allStyles.length &&
+                                    allStyles.map(mapStyles)
+                                }
+                            </Row>
+                        </Col>
+                    </Row>
 
                     <h2 className="flex-center">
                         Orders Information

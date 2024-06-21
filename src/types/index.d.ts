@@ -95,6 +95,29 @@ type merchData = {
     url?: string
 }
 
+type merchStyles = {
+    /**
+     * Style title text
+     */
+    title: string
+    /**
+     * Image source url
+     */
+    imageSrc: string
+    /**
+     * Image title text
+     */
+    imageTitle?: string
+    /**
+     * Image alt text
+     */
+    imageAlt?: string
+    /**
+     * Style release date text
+     */
+    dateAvailable?: string
+}
+
 type carouselSlideData = {
     /**
      * Desktop image source for the slide
