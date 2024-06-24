@@ -33,7 +33,7 @@ const allMerch: merchData[] = [
     {
         title: "Cherry Park Tote Bag",
         price: "$15.00",
-        imageSrc: "/images/merch/tote.jpg",
+        imageSrc: "/images/merch/tote3.png",
         url: "https://square.link/u/RfAXVbM0?src=embed"
     },
     {
@@ -73,6 +73,10 @@ const allStyles: merchStyles[] = [
         title: "Tie-Dye Shirt",
         imageSrc: "/images/merch/tee_tye_dye.jpg"
     },
+    // {
+    //     title: "Cream Shirt",
+    //     imageSrc: "/images/merch/tee_cream.jpg"
+    // },
     {
         title: "Cherry Park Text (Orange)",
         imageSrc: "/images/merch/styles/cherry_park_text.jpg"
