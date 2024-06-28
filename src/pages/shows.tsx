@@ -18,10 +18,6 @@ export const Head: HeadFC = () => (
 
 const allShows: showData[] = [
     {
-        showTitle: "TBA",
-        showDate: "August 17, 2024"
-    },
-    {
         showTitle: "Spruce Street Harbor Park, Philadelphia PA",
         showDate: "June 22, 2024",
         otherPerformers: "Moonroof",
