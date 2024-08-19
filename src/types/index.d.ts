@@ -105,6 +105,10 @@ type merchStyles = {
      */
     imageSrc: string
     /**
+     * Additional information to be displayed on the card
+     */
+    additionalInfo?: string
+    /**
      * Image title text
      */
     imageTitle?: string

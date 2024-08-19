@@ -119,6 +119,10 @@ footer {
     text-align: center;
 }
 
+.flex-top {
+    align-self: baseline;
+}
+
 .row-item {
     &:not(:first-child) {
         margin-left: 15px;

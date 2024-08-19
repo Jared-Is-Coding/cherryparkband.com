@@ -71,7 +71,8 @@ const allStyles: merchStyles[] = [
     },
     {
         title: "Tie-Dye Shirt",
-        imageSrc: "/images/merch/tee_tye_dye.jpg"
+        imageSrc: "/images/merch/tee_tye_dye.jpg",
+        additionalInfo: "For specific colors, please include information in your order notes!"
     },
     // {
     //     title: "Cream Shirt",
@@ -104,7 +105,7 @@ const mapStyles = (item: merchStyles, index: number) => (
         <Col
             xs={{span: 6, offset: 0}}
             lg={{span: 3, offset: 0}}
-            className="flex-center"
+            className="flex-center flex-top"
             key={`merch-style-card-item-${item.title}-${index}`}>
             <MerchStylesCard item={item} />
         </Col>
@@ -125,7 +126,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <main>
                 <Container>
                     <h2 className="flex-center">
-                        Available Merch
+                        UnAvailable Merch
                     </h2>
 
                     <Row>

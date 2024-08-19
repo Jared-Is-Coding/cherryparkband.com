@@ -15,6 +15,9 @@ export default ({item}: MerchStylesCardProps) => (
                 <p>Pictures coming soon!</p>
             }
             <p>{item.title}</p>
+            {item.additionalInfo &&
+                <p>{item.additionalInfo}</p>
+            }
         </div>
     </div>
 )
