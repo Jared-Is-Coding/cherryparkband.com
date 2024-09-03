@@ -126,7 +126,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <main>
                 <Container>
                     <h2 className="flex-center">
-                        UnAvailable Merch
+                        Available Merch
                     </h2>
 
                     <Row>
