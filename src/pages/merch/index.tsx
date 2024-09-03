@@ -9,106 +9,13 @@ import MetaData from "../../components/MetaData"
 import Navbar from "../../components/Navbar"
 import OrdersInformation from "../../components/OrdersInformation"
 import "../../scss/pages/merch.scss"
+import merch from "./allMerch"
+import styles from "./allStyles"
 
 export const Head: HeadFC = () => (
     <>
         <html lang="en" />
         <MetaData title="Merch | Cherry Park" />
-    </>
-)
-
-const allMerch: merchData[] = [
-    {
-        title: "Cherry Park Tee",
-        price: "$22.00 - $28.00",
-        imageSrc: "/images/merch/tee_collage.jpg",
-        url: "https://square.link/u/p7Xu6VAp?src=embed"
-    },
-    {
-        title: "Cherry Park Long Sleeve",
-        price: "$32.00 - $38.00",
-        imageSrc: "/images/merch/long_sleeve_collage.jpg",
-        url: "https://square.link/u/KCjEsfoc?src=embed"
-    },
-    {
-        title: "Cherry Park Tote Bag",
-        price: "$15.00",
-        imageSrc: "/images/merch/tote3.png",
-        url: "https://square.link/u/RfAXVbM0?src=embed"
-    },
-    {
-        title: "Cherry Park Beanie",
-        price: "$25.00",
-        imageSrc: "/images/merch/beanie.jpg",
-        url: "https://square.link/u/BcqKDEn0?src=embed"
-    },
-    /* {
-        dateAvailable: "February 16, 2024",
-        title: "Cherry Park Hoodie",
-        price: "$42.00 - $48.00",
-        imageSrc: "",
-        url: "https://square.link/u/zvcgoIlW?src=embed"
-    } */
-]
-
-const mapMerch = (item: merchData, index: number) => (
-    <>
-        <Col
-            xs={{span: 10, offset: 1}}
-            md={{span: 6, offset: 0}}
-            lg={{span: 3, offset: 0}}
-            className="flex-center"
-            key={`merch-card-item-${item.title}-${index}`}>
-            <MerchCard item={item} />
-        </Col>
-    </>
-)
-
-const allStyles: merchStyles[] = [
-    {
-        title: "White Shirt",
-        imageSrc: "/images/merch/tee.jpg"
-    },
-    {
-        title: "Tie-Dye Shirt",
-        imageSrc: "/images/merch/tee_tye_dye.jpg",
-        additionalInfo: "For specific colors, please include information in your order notes!"
-    },
-    // {
-    //     title: "Cream Shirt",
-    //     imageSrc: "/images/merch/tee_cream.jpg"
-    // },
-    {
-        title: "Cherry Park Text (Orange)",
-        imageSrc: "/images/merch/styles/cherry_park_text.jpg"
-    },
-    {
-        title: "Cherry Park Text (Retro)",
-        imageSrc: "/images/merch/styles/cherry_park_retro_text.jpg"
-    },
-    {
-        title: "Fever Dream Graphic",
-        imageSrc: "/images/merch/styles/fever_dream_graphic.png"
-    },
-    {
-        title: "Antidote Album Art",
-        imageSrc: "/images/albums/antidote/icon.jpg"
-    },
-    {
-        title: "Secret Garden Album Art",
-        imageSrc: "/images/albums/secret_garden/icon.png"
-    },
-]
-
-const mapStyles = (item: merchStyles, index: number) => (
-    <>
-        <Col
-            xs={{span: 6, offset: 0}}
-            lg={{span: 3, offset: 0}}
-            className="flex-center flex-top"
-            key={`merch-style-card-item-${item.title}-${index}`}>
-            <MerchStylesCard item={item} />
-        </Col>
     </>
 )
 
@@ -123,20 +30,20 @@ const IndexPage: React.FC<PageProps> = () => {
                 </h1>
             </header>
 
-            <main>
+            <main className="page-merch">
                 <Container>
                     <h2 className="flex-center">
                         Available Merch
                     </h2>
 
                     <Row>
-                        {!allMerch.length &&
+                        {!merch.length &&
                             <Col xs={{span: 12}}>
                                 <p>No merch is currently available.</p>
                             </Col>
                         }
-                        {!!allMerch.length &&
-                            allMerch.map(mapMerch)
+                        {!!merch.length &&
+                            merch.map(MerchCard)
                         }
                     </Row>
 
@@ -147,8 +54,13 @@ const IndexPage: React.FC<PageProps> = () => {
                     <Row>
                         <Col xs={{span: 10, offset: 1}} md={{span: 12, offset: 0}}>
                             <Row>
-                                {!!allStyles.length &&
-                                    allStyles.map(mapStyles)
+                                {!styles.length &&
+                                    <Col xs={{span: 12}}>
+                                        <p>No styles are currently available.</p>
+                                    </Col>
+                                }
+                                {!!styles.length &&
+                                    styles.map(MerchStylesCard)
                                 }
                             </Row>
                         </Col>

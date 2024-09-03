@@ -161,25 +161,3 @@ footer {
     border-radius: $carousel-border-radius;
     width: 100%;
 }
-
-/**
- * ------------------
- *       Cards
- * ------------------
- **/
-
-.card {
-    padding: 5px;
-    text-wrap: pretty;
-}
-
-.card-image {
-    max-height: 300px;
-    width: 100%;
-    max-width: 300px;
-}
-
-.card-image.png {
-    background-color: white;
-    border-radius: $card-border-radius;
-}

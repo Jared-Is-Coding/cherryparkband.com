@@ -38,14 +38,25 @@ h2 {
 }
 
 h3 {
-    font-size: $h3-font-size !important;
     font-weight: bold !important;
     text-decoration: underline;
+    
+    :not(.card-title) {
+        font-size: $h3-font-size !important;
+    }
+
+    .card-title {
+        font-size: $h4-font-size !important;
+    }
 }
 
 .navbar-brand {
     font-family: $h1-font-family !important;
     font-size: $brand-font-size !important;
+}
+
+h4 {
+    font-size: $h4-font-size !important;
 }
 
 
@@ -65,7 +76,7 @@ h2 {
     margin-bottom: calc(20px + 1em) !important;
 }
 
-h3 {
+h3:not(.card-title) {
     padding-top: 25px;
 }
 
