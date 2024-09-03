@@ -8,9 +8,9 @@ import MerchStylesCard from "../../components/MerchStylesCard"
 import MetaData from "../../components/MetaData"
 import Navbar from "../../components/Navbar"
 import OrdersInformation from "../../components/OrdersInformation"
+import merch from "../../lists/allMerch"
+import styles from "../../lists/allStyles"
 import "../../scss/pages/merch.scss"
-import merch from "./allMerch"
-import styles from "./allStyles"
 
 export const Head: HeadFC = () => (
     <>
