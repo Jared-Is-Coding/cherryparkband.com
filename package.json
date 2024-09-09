@@ -12,9 +12,6 @@
     "bugs": {
         "url": "https://github.com/Jared-Is-Coding/cherryparkband.com/issues"
     },
-    "keywords": [
-        "gatsby"
-    ],
     "scripts": {
         "develop": "gatsby develop",
         "start": "gatsby develop",

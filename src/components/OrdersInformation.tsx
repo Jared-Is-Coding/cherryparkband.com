@@ -11,6 +11,7 @@ export default () => (
             </p>
             <br />
         </Col>
+
         <Col xs={{span: 12}} md={{span: 4}} className="flex-col">
             <h3>Order Fulfillment</h3>
             <p>
@@ -19,6 +20,7 @@ export default () => (
                 <br /><br />If you run into any issues or have still not received your order by then, please <a href={`mailto:${BandEmail}?subject=Cherry Park | Merch Related Question`}>send us an email</a>.
             </p>
         </Col>
+
         <Col xs={{span: 12}} md={{span: 4}} className="flex-col">
             <h3>Return Policy</h3>
             <p>
@@ -26,6 +28,7 @@ export default () => (
                 <br /><br />Otherwise, returns, refunds and exchanges are not able to be processed at this time. Thank you!
             </p>
         </Col>
+        
         <Col xs={{span: 12}} md={{span: 4}} className="flex-col">
             <h3>Problems or Questions</h3>
             <p>For questions about Cherry Park merchandise or issues with a past sale, please <a href={`mailto:${BandEmail}?subject=Cherry Park | Merch Related Question`}>send us an email</a> and we can help you out!</p>

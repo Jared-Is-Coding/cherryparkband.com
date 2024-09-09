@@ -19,17 +19,21 @@ export default ({album}: AlbumCardProps) => (
                     {album.releaseDate}
                 </Card.Subtitle>
             }
+
             <hr />
+
             {album.url && album.albumTitle &&
                 <Card.Text as="h4">
                     <a href={album.url} target="_self">{album.albumTitle}</a>
                 </Card.Text>
             }
+
             {!album.url && album.albumTitle &&
                 <>
                     <Card.Text as="h4">
                         {album.albumTitle}
                     </Card.Text>
+                    
                     <Card.Text className="other-performers">
                         More information coming soon!
                     </Card.Text>
