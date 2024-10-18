@@ -2,7 +2,7 @@ export default [
     {
         imageSrc: "/images/albums/until_we_find_our_way_back/icon_wide.png",
         imageSrcMobile: "/images/albums/until_we_find_our_way_back/icon.png",
-        imageTitle: "Cherry Park's upcoming EP, Until We Find Our Way Back",
+        imageTitle: "Cherry Park's third EP, Until We Find Our Way Back",
         imageAlt: "Painted album art of a door, open and leading to a bright, clouded sky for the Cherry Park EP, Until We Find Our Way Back"
     },
     {
