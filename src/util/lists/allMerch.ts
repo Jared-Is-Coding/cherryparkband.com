@@ -1,24 +1,24 @@
 export default [
     {
-        title: "Cherry Park Tee",
+        title: "Short Sleeve Shirt",
         price: "$22.00 - $28.00",
         imageSrc: "/images/merch/tee_collage.jpg",
         url: "https://square.link/u/p7Xu6VAp?src=embed"
     },
     {
-        title: "Cherry Park Long Sleeve",
+        title: "Long Sleeve Shirt",
         price: "$32.00 - $38.00",
         imageSrc: "/images/merch/long_sleeve_collage.jpg",
         url: "https://square.link/u/KCjEsfoc?src=embed"
     },
     {
-        title: "Cherry Park Tote Bag",
+        title: "Tote Bag",
         price: "$15.00",
         imageSrc: "/images/merch/tote3.png",
         url: "https://square.link/u/RfAXVbM0?src=embed"
     },
     {
-        title: "Cherry Park Beanie",
+        title: "Hand-Stitched Beanie",
         price: "$25.00",
         imageSrc: "/images/merch/beanie.jpg",
         url: "https://square.link/u/BcqKDEn0?src=embed"

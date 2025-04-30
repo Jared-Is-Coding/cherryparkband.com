@@ -32,8 +32,8 @@ export default [
         title: "Secret Garden Album Art",
         imageSrc: "/images/albums/secret_garden/icon.png"
     },
-    // {
-    //     title: "Until We Find Our Way Back Album Art",
-    //     imageSrc: "/images/albums/until_we_find_our_way_back/icon.png"
-    // }
+    {
+        title: "Until We Find Our Way Back Album Art",
+        imageSrc: "/images/albums/until_we_find_our_way_back/icon.png"
+    }
 ] as merchStyles[]
