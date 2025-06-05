@@ -45,5 +45,14 @@ export default [
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
         url: "https://thequeenwilmington.com/"
+    },
+    {
+        showTitle: "Shady Grove Music Festival",
+        showDate: "July 12, 2025",
+        otherPerformers: "Red Smith & Blue Dawn | Ritter Lane | Region | Emmett Dreuding | Powerhouse of the Cell | Kilynn Lunsford | Death by Indie | Grace Vonderkuhn",
+        imageSrc: "/images/venues/shady_grove.png",
+        imageTitle: "Shady Grove Music Fest venue image",
+        imageAlt: "Venue image for Shady Grove Music Fest",
+        url: "https://dice.fm/event/8ebry2",
     }
 ] as showData[]

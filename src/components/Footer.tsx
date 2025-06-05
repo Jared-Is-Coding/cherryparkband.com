@@ -20,6 +20,16 @@ export default ({hideListenIconLinks}: CherryFooterProps) => (
             )}
             validFrom={new Date("January 1, 2024 00:00:00").valueOf()}
             validUntil={new Date("November 1, 2024 00:00:00").valueOf()} />
+        <AlertPopup
+            alertTag="show-new"
+            AlertContent={(
+                <>
+                    <Alert.Heading>Upcoming Show</Alert.Heading>
+                    <p>We're performing at <Alert.Link href="/shows">Shady Grove Music Fest on July 12th 2025</Alert.Link></p>
+                </>
+            )}
+            validFrom={new Date("January 1, 2025 00:00:00").valueOf()}
+            validUntil={new Date("July 13, 2025 00:00:00").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
