@@ -16,14 +16,27 @@ export const Head: HeadFC = () => (
     </>
 )
 
-const today = new Date().valueOf()
+const nowTimeMS = new Date().valueOf()
 const dateStringValue = (d: string) => new Date(d + " 23:59:59").valueOf()
+const dateTimeStringValue = (d: string) => new Date(d).valueOf()
+const oneAndHalfYearMS = 1000 * 60 * 60 * 24 * 365 * 1.5
 
 const upcomingShows = shows
-    .filter((show) => dateStringValue(show.showDate) >= today)
+    .filter((show) => (
+        dateStringValue(show.showDate) >= nowTimeMS)
+        && (
+            !show.hiddenUntilDateTime
+            || (nowTimeMS > dateTimeStringValue(show.hiddenUntilDateTime))
+        )
+    )
     .sort((a, b) => dateStringValue(a.showDate) - dateStringValue(b.showDate))
 const pastShows = shows
-    .filter((show) => dateStringValue(show.showDate) < today)
+    .filter((show) => (
+        // In the past
+        dateStringValue(show.showDate) < nowTimeMS)
+        // Within a year and a half ago
+        && nowTimeMS - oneAndHalfYearMS < dateStringValue(show.showDate) 
+    )
     .sort((a, b) => dateStringValue(b.showDate) - dateStringValue(a.showDate))
 
 const IndexPage: React.FC<PageProps> = () => {

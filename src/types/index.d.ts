@@ -35,6 +35,10 @@ type showData = {
      */
     showDate: string
     /**
+     * Don't show this until date string
+     */
+    hiddenUntilDateTime?: string
+    /**
      * Other performers list text
      */
     otherPerformers?: string

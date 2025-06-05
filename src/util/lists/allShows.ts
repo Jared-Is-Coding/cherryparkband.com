@@ -54,5 +54,15 @@ export default [
         imageTitle: "Shady Grove Music Fest venue image",
         imageAlt: "Venue image for Shady Grove Music Fest",
         url: "https://dice.fm/event/8ebry2",
+    },
+    {
+        showTitle: "The Queen, Wilmington DE",
+        showDate: "August 30, 2025",
+        hiddenUntilDateTime: "June 6, 2025 18:00:00",
+        otherPerformers: "Blush",
+        imageSrc: "/images/venues/the_queen.png",
+        imageTitle: "The Queen venue image",
+        imageAlt: "Venue image for The Queen in Wilmington Delaware",
+        url: "https://www.ticketmaster.com/event/020062C5A44A82A3"
     }
 ] as showData[]
