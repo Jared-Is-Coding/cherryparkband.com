@@ -23,7 +23,7 @@ export default ({hideListenIconLinks}: CherryFooterProps) => (
                 </>
             )}
             validFrom={new Date("January 1, 2025 00:00:00").valueOf()}
-            validUntil={new Date("June 6, 2025 18:00:00").valueOf()} />
+            validUntil={new Date("June 6, 2025 12:00:00").valueOf()} />
         <AlertPopup
             alertTag="show-new2"
             AlertContent={(
@@ -37,7 +37,7 @@ export default ({hideListenIconLinks}: CherryFooterProps) => (
                     </p>
                 </>
             )}
-            validFrom={new Date("June 6, 2025 18:00:00").valueOf()}
+            validFrom={new Date("June 6, 2025 12:00:00").valueOf()}
             validUntil={new Date("August 31, 2025 16:00:00").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>

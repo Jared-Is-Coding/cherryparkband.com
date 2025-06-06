@@ -58,7 +58,7 @@ export default [
     {
         showTitle: "The Queen, Wilmington DE",
         showDate: "August 30, 2025",
-        hiddenUntilDateTime: "June 6, 2025 18:00:00",
+        hiddenUntilDateTime: "June 6, 2025 12:00:00",
         otherPerformers: "Blush",
         imageSrc: "/images/venues/the_queen.png",
         imageTitle: "The Queen venue image",
