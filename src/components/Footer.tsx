@@ -11,34 +11,34 @@ type CherryFooterProps = {
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="show-new"
-            AlertContent={(
-                <>
-                    <Alert.Heading>Upcoming Show</Alert.Heading>
-                    <p>
-                        <ul>
-                            <li><Alert.Link href="/shows">Wilmington DE on July 12th, 2025</Alert.Link></li>
-                        </ul>
-                    </p>
-                </>
-            )}
-            validFrom={new Date("January 1, 2025 00:00:00").valueOf()}
-            validUntil={new Date("June 6, 2025 12:00:00").valueOf()} />
-        <AlertPopup
-            alertTag="show-new2"
+            alertTag="show-new3"
             AlertContent={(
                 <>
                     <Alert.Heading>Upcoming Shows</Alert.Heading>
                     <p>
                         <ul>
-                            <li><Alert.Link href="/shows">Wilmington DE on July 12th, 2025</Alert.Link></li>
                             <li><Alert.Link href="/shows">Wilmington DE on August 30th, 2025</Alert.Link></li>
+                            <li><Alert.Link href="/shows">Philadelphia PA on September 4th, 2025</Alert.Link></li>
                         </ul>
                     </p>
                 </>
             )}
-            validFrom={new Date("June 6, 2025 12:00:00").valueOf()}
-            validUntil={new Date("August 31, 2025 16:00:00").valueOf()} />
+            validFrom={new Date("July 1, 2025 12:00:00").valueOf()}
+            validUntil={new Date("August 30, 2025 23:23:59").valueOf()} />
+        <AlertPopup
+            alertTag="show-new4"
+            AlertContent={(
+                <>
+                    <Alert.Heading>Upcoming Shows</Alert.Heading>
+                    <p>
+                        <ul>
+                            <li><Alert.Link href="/shows">Philadelphia PA on September 4th, 2025</Alert.Link></li>
+                        </ul>
+                    </p>
+                </>
+            )}
+            validFrom={new Date("August 31, 2025 12:00:00").valueOf()}
+            validUntil={new Date("September 4, 2025 16:00:00").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">

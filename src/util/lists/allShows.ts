@@ -64,5 +64,14 @@ export default [
         imageTitle: "The Queen venue image",
         imageAlt: "Venue image for The Queen in Wilmington Delaware",
         url: "https://www.ticketmaster.com/event/020062C5A44A82A3"
+    },
+    {
+        showTitle: "Kung Fu Necktie, Philadelphia PA",
+        showDate: "September 4, 2025",
+        otherPerformers: "Summerdrive",
+        imageSrc: "/images/venues/kungfunecktie.png",
+        imageTitle: "Kung Fu Necktie venue image",
+        imageAlt: "Venue image for Kung Fu Necktie",
+        url: "https://www.etix.com/ticket/p/46085735",
     }
 ] as showData[]
