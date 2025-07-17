@@ -25,7 +25,7 @@ export default ({ title, description, image }: MetaDataProps) => {
 
             {/* Site description */}
             <meta name="description" content={description || defaultDescription} />
-            <meta name="keywords" content="cherry park, indie, east, coast, band, dream, pop, antidote, secret, garden"/>
+            <meta name="keywords" content="cherry park, indie, east, coast, band, dream, pop, antidote, secret, garden, until we find our way back"/>
             
             {/* Site properties */}
             <meta property="og:type" content="website" />
