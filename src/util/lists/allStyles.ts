@@ -1,17 +1,12 @@
 export default [
     {
-        title: "White Shirt",
-        imageSrc: "/images/merch/tee.jpg"
+        title: "Smiley Shirt",
+        imageSrc: "/images/merch/cp_tee_2025.jpg"
     },
     {
-        title: "Tie-Dye Shirt",
-        imageSrc: "/images/merch/tee_tye_dye.jpg",
-        additionalInfo: "For specific colors, please include information in your order notes!"
+        title: "Spacey Shirt",
+        imageSrc: "/images/merch/cp_tee2_2025.jpg"
     },
-    // {
-    //     title: "Cream Shirt",
-    //     imageSrc: "/images/merch/tee_cream.jpg"
-    // },
     {
         title: "Cherry Park Text (Orange)",
         imageSrc: "/images/merch/styles/cherry_park_text.jpg"
