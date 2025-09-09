@@ -10,7 +10,7 @@ type CherryFooterProps = {
 
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
-        <AlertPopup
+        {/* <AlertPopup
             alertTag="show-new3"
             AlertContent={(
                 <>
@@ -24,21 +24,7 @@ export default ({hideListenIconLinks}: CherryFooterProps) => (
                 </>
             )}
             validFrom={new Date("July 1, 2025 12:00:00").valueOf()}
-            validUntil={new Date("August 30, 2025 23:23:59").valueOf()} />
-        <AlertPopup
-            alertTag="show-new4"
-            AlertContent={(
-                <>
-                    <Alert.Heading>Upcoming Shows</Alert.Heading>
-                    <p>
-                        <ul>
-                            <li><Alert.Link href="/shows">Philadelphia PA on September 4th, 2025</Alert.Link></li>
-                        </ul>
-                    </p>
-                </>
-            )}
-            validFrom={new Date("August 31, 2025 12:00:00").valueOf()}
-            validUntil={new Date("September 4, 2025 16:00:00").valueOf()} />
+            validUntil={new Date("August 30, 2025 23:23:59").valueOf()} /> */}
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">

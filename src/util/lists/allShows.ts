@@ -68,7 +68,7 @@ export default [
     {
         showTitle: "Kung Fu Necktie, Philadelphia PA",
         showDate: "September 4, 2025",
-        otherPerformers: "Summerdrive",
+        otherPerformers: "Summerdrive | Fullscreen",
         imageSrc: "/images/venues/kungfunecktie.png",
         imageTitle: "Kung Fu Necktie venue image",
         imageAlt: "Venue image for Kung Fu Necktie",
