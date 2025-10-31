@@ -1,6 +1,6 @@
 import React from "react"
-import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa"
-import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, TikTokLink, TwitterLink, YouTubeMusicLink } from "../util/SiteVariables"
+import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
+import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, YouTubeMusicLink } from "../util/SiteVariables"
 
 export default () => (
     <>
@@ -22,14 +22,6 @@ export default () => (
 
         <a style={{padding: "0 5px"}} href={InstagramLink} target="_blank" title="Link to Cherry Park on instagram.com">
             <FaInstagram size="1.5em" title="Instagram" />
-        </a>
-
-        <a style={{padding: "0 5px"}} href={TikTokLink} target="_blank" title="Link to Cherry Park on tiktok.com">
-            <FaTiktok size="1.5em" title="Tiktok" />
-        </a>
-
-        <a style={{padding: "0 5px"}} href={TwitterLink} target="_blank" title="Link to Cherry Park on twitter.com">
-            <FaTwitter size="1.5em" title="X" />
         </a>
     </>
 )

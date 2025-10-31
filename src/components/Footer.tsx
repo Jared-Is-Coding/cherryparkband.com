@@ -1,7 +1,7 @@
 import React from "react"
 import { Alert, Col, Container, Row } from "react-bootstrap"
-import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa"
-import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, TikTokLink, TwitterLink, YouTubeMusicLink } from "../util/SiteVariables"
+import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
+import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, YouTubeMusicLink } from "../util/SiteVariables"
 import AlertPopup from "./AlertPopup"
 
 type CherryFooterProps = {
@@ -10,21 +10,18 @@ type CherryFooterProps = {
 
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
-        {/* <AlertPopup
-            alertTag="show-new3"
+        <AlertPopup
+            alertTag="release-new"
             AlertContent={(
                 <>
-                    <Alert.Heading>Upcoming Shows</Alert.Heading>
+                    <Alert.Heading>New Release</Alert.Heading>
                     <p>
-                        <ul>
-                            <li><Alert.Link href="/shows">Wilmington DE on August 30th, 2025</Alert.Link></li>
-                            <li><Alert.Link href="/shows">Philadelphia PA on September 4th, 2025</Alert.Link></li>
-                        </ul>
+                        "Volume 1" out now! Go check it out on your favorite streaming platform.
                     </p>
                 </>
             )}
-            validFrom={new Date("July 1, 2025 12:00:00").valueOf()}
-            validUntil={new Date("August 30, 2025 23:23:59").valueOf()} /> */}
+            validFrom={new Date("October 31, 2025 12:00:00").valueOf()}
+            validUntil={new Date("November 30, 2025 23:23:59").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
@@ -62,16 +59,6 @@ export default ({hideListenIconLinks}: CherryFooterProps) => (
                 <Col xs={{span: "auto"}}>
                     <a href={InstagramLink} target="_blank" title="Link to Cherry Park on instagram.com">
                         <FaInstagram size="1.7em" title="Instagram" />
-                    </a>
-                </Col>
-                <Col xs={{span: "auto"}}>
-                    <a href={TikTokLink} target="_blank" title="Link to Cherry Park on tiktok.com">
-                        <FaTiktok size="1.7em" title="Tiktok" />
-                    </a>
-                </Col>
-                <Col xs={{span: "auto"}}>
-                    <a href={TwitterLink} target="_blank" title="Link to Cherry Park on twitter.com">
-                        <FaTwitter size="1.7em" title="Twitter" />
                     </a>
                 </Col>
             </Row>

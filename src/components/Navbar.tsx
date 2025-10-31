@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
-import { AmazonMusicLink, AppleMusicLink, BandEmail, InstagramLink, SpotifyLink, TikTokLink, TwitterLink, YouTubeMusicLink } from "../util/SiteVariables"
+import { AmazonMusicLink, AppleMusicLink, BandEmail, InstagramLink, SpotifyLink, YouTubeMusicLink } from "../util/SiteVariables"
 
 type CherryNavbarProps = {
     isHomepage?: boolean
@@ -41,8 +41,6 @@ export default ({isHomepage}: CherryNavbarProps) => (
 
                     <NavDropdown title="Socials" renderMenuOnMount={true} focusFirstItemOnShow="keyboard" id="nav-socials-dropdown">
                         <NavDropdown.Item href={InstagramLink} target="_blank">Instagram</NavDropdown.Item>
-                        <NavDropdown.Item href={TikTokLink} target="_blank">TikTok</NavDropdown.Item>
-                        <NavDropdown.Item href={TwitterLink} target="_blank">Twitter</NavDropdown.Item>
                     </NavDropdown>
 
                     <Nav.Link href={`mailto:${BandEmail}?subject=Cherry Park | General Inquiries`}>Inquiries</Nav.Link>

@@ -9,5 +9,3 @@ export const AmazonMusicLink = "https://www.amazon.com/music/player/artists/B0CB
 
 // Social Links
 export const InstagramLink = "https://www.instagram.com/cherryparkband/"
-export const TikTokLink = "https://www.tiktok.com/@cherryparkofficial"
-export const TwitterLink = "https://twitter.com/cherryparkband/"

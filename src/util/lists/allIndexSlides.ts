@@ -1,9 +1,17 @@
 export default [
     {
-        imageSrc: "/images/albums/until_we_find_our_way_back/icon_wide.png",
-        imageSrcMobile: "/images/albums/until_we_find_our_way_back/icon.png",
+        imageSrc: "/images/albums/volume_1/icon_wide.jpg",
+        imageSrcMobile: "/images/albums/volume_1/icon.jpg",
+        imageTitle: "Cherry Park's latest acoustic release, Volume 1",
+        imageAlt: "Cherry Park's lead singer standing in front of the ocean, blurred with motion for the Cherry Park EP, Volume 1",
+        url: "https://open.spotify.com/artist/3a8YTU2G2VYGFo0eSLbCFX/"
+    },
+    {
+        imageSrc: "/images/albums/until_we_find_our_way_back/icon_wide.jpg",
+        imageSrcMobile: "/images/albums/until_we_find_our_way_back/icon.jpg",
         imageTitle: "Cherry Park's third EP, Until We Find Our Way Back",
-        imageAlt: "Painted album art of a door, open and leading to a bright, clouded sky for the Cherry Park EP, Until We Find Our Way Back"
+        imageAlt: "Painted album art of a door, open and leading to a bright, clouded sky for the Cherry Park EP, Until We Find Our Way Back",
+        url: "https://open.spotify.com/album/1G3KDvuY3wEKrgtcd1Khek"
     },
     {
         imageSrc: "/images/shows/2024.02.17_elkton_music_hall/band1.jpg",
@@ -12,7 +20,7 @@ export default [
         imageAlt: "Cherry Park playing at Elkton Music Hall, in Elkton Maryland"
     },
     {
-        imageSrc: "/images/albums/antidote/icon_widescreen.jpg",
+        imageSrc: "/images/albums/antidote/icon_wide.jpg",
         imageSrcMobile: "/images/albums/antidote/icon.jpg",
         imageTitle: "Cherry Park's second EP, Antidote",
         imageAlt: "Painted album art of a chair in a window's light, for the Cherry Park EP, Antidote",
@@ -24,8 +32,8 @@ export default [
         imageAlt: "Cherry Park band members in front of a brick wall"
     },
     {
-        imageSrc: "/images/albums/secret_garden/icon_wide.png",
-        imageSrcMobile: "/images/albums/secret_garden/icon.png",
+        imageSrc: "/images/albums/secret_garden/icon_wide.jpg",
+        imageSrcMobile: "/images/albums/secret_garden/icon.jpg",
         imageTitle: "Cherry Park's first EP, Secret Garden",
         imageAlt: "Painted album art of an archway leading to water with the moon over it, for the Cherry Park EP, Secret Garden",
         url: "https://open.spotify.com/album/4uxRAidPaTHs8qcvYajCHb"
