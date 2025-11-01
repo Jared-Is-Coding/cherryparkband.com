@@ -16,7 +16,7 @@ export default ({hideListenIconLinks}: CherryFooterProps) => (
                 <>
                     <Alert.Heading>New Release</Alert.Heading>
                     <p>
-                        "Volume 1" out now! Go check it out on your favorite streaming platform.
+                        "Volume #1" out now! Go check it out on your favorite streaming platform.
                     </p>
                 </>
             )}

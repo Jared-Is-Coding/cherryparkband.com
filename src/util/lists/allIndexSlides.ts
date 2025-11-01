@@ -2,8 +2,8 @@ export default [
     {
         imageSrc: "/images/albums/volume_1/icon_wide.jpg",
         imageSrcMobile: "/images/albums/volume_1/icon.jpg",
-        imageTitle: "Cherry Park's latest acoustic release, Volume 1",
-        imageAlt: "Cherry Park's lead singer standing in front of the ocean, blurred with motion for the Cherry Park EP, Volume 1",
+        imageTitle: "Cherry Park's latest acoustic release, Volume #1",
+        imageAlt: "Cherry Park's lead singer standing in front of the ocean, blurred with motion for the Cherry Park EP, Volume #1",
         url: "https://open.spotify.com/artist/3a8YTU2G2VYGFo0eSLbCFX/"
     },
     {
