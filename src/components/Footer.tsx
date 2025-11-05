@@ -3,6 +3,7 @@ import { Alert, Col, Container, Row } from "react-bootstrap"
 import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
 import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, YouTubeMusicLink } from "../util/SiteVariables"
 import AlertPopup from "./AlertPopup"
+import { Link } from "gatsby"
 
 type CherryFooterProps = {
     hideListenIconLinks?: boolean
@@ -11,17 +12,22 @@ type CherryFooterProps = {
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="release-new"
+            alertTag="release-new-2"
             AlertContent={(
                 <>
                     <Alert.Heading>New Release</Alert.Heading>
                     <p>
                         "Volume #1" out now! Go check it out on your favorite streaming platform.
                     </p>
+                    <hr />
+                    <Alert.Heading>!! Merch Restock !!</Alert.Heading>
+                    <p>
+                        Seen our new <Link to="/merch">merch</Link>? T-Shirts are back in stock in time for the holidays - grab yours before they're sold out!
+                    </p>
                 </>
             )}
             validFrom={new Date("October 31, 2025 12:00:00").valueOf()}
-            validUntil={new Date("November 30, 2025 23:23:59").valueOf()} />
+            validUntil={new Date("December 15, 2025 23:23:59").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
