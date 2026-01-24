@@ -73,5 +73,14 @@ export default [
         imageTitle: "Kung Fu Necktie venue image",
         imageAlt: "Venue image for Kung Fu Necktie",
         url: "https://www.etix.com/ticket/p/46085735",
+    },
+    {
+        showTitle: "Philamoca, Philadelphia PA",
+        showDate: "February 13, 2026",
+        otherPerformers: "Postergirl | Blush",
+        imageSrc: "/images/venues/philamoca.png",
+        imageTitle: "Philamoca venue image",
+        imageAlt: "Venue image for Philamoca in Philadelphia, Pennsylvania",
+        url: "https://www.etix.com/ticket/p/76950571"
     }
 ] as showData[]

@@ -3,7 +3,6 @@ import { Alert, Col, Container, Row } from "react-bootstrap"
 import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
 import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, YouTubeMusicLink } from "../util/SiteVariables"
 import AlertPopup from "./AlertPopup"
-import { Link } from "gatsby"
 
 type CherryFooterProps = {
     hideListenIconLinks?: boolean
@@ -12,22 +11,18 @@ type CherryFooterProps = {
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="release-new-2"
+            alertTag="show-new"
             AlertContent={(
                 <>
-                    <Alert.Heading>New Release</Alert.Heading>
+                    <Alert.Heading>Upcoming Shows</Alert.Heading>
                     <p>
-                        "Volume #1" out now! Go check it out on your favorite streaming platform.
+                        We're coming to <strong>Philamoca in Philadelphia, PA on February 13, 2026</strong> with Postergirl and Blush! <Alert.Link href="https://www.etix.com/ticket/p/76950571" target="_self">Get tickets now!</Alert.Link>
                     </p>
-                    <hr />
-                    <Alert.Heading>!! Merch Restock !!</Alert.Heading>
-                    <p>
-                        Seen our new <Link to="/merch">merch</Link>? T-Shirts are back in stock in time for the holidays - grab yours before they're sold out!
-                    </p>
+                    
                 </>
             )}
             validFrom={new Date("October 31, 2025 12:00:00").valueOf()}
-            validUntil={new Date("December 15, 2025 23:23:59").valueOf()} />
+            validUntil={new Date("February 13, 2026 23:23:59").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
