@@ -17,12 +17,12 @@ export default [
         imageSrc: "/images/merch/tote3.png",
         url: "https://square.link/u/RfAXVbM0?src=embed"
     },
-    {
-        title: "Hand-Stitched Beanie",
-        price: "$25.00",
-        imageSrc: "/images/merch/beanie.jpg",
-        url: "https://square.link/u/BcqKDEn0?src=embed"
-    },
+    // {
+    //     title: "Hand-Stitched Beanie",
+    //     price: "$25.00",
+    //     imageSrc: "/images/merch/beanie.jpg",
+    //     url: "https://square.link/u/BcqKDEn0?src=embed"
+    // },
     /* {
         dateAvailable: "February 16, 2024",
         title: "Cherry Park Hoodie",
