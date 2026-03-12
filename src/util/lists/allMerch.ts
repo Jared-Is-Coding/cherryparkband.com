@@ -11,12 +11,12 @@ export default [
     //     imageSrc: "/images/merch/long_sleeve_collage.jpg",
     //     url: "https://square.link/u/KCjEsfoc?src=embed"
     // },
-    {
-        title: "Tote Bag",
-        price: "$15.00",
-        imageSrc: "/images/merch/tote3.png",
-        url: "https://square.link/u/RfAXVbM0?src=embed"
-    },
+    // {
+    //     title: "Tote Bag",
+    //     price: "$15.00",
+    //     imageSrc: "/images/merch/tote3.png",
+    //     url: "https://square.link/u/RfAXVbM0?src=embed"
+    // },
     // {
     //     title: "Hand-Stitched Beanie",
     //     price: "$25.00",

@@ -11,18 +11,17 @@ type CherryFooterProps = {
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="show-new"
+            alertTag="music-new"
             AlertContent={(
                 <>
-                    <Alert.Heading>Upcoming Shows</Alert.Heading>
+                    <Alert.Heading>Upcoming Release</Alert.Heading>
                     <p>
-                        We're coming to <strong>Philamoca in Philadelphia, PA on February 13, 2026</strong> with Postergirl and Blush! <Alert.Link href="https://www.etix.com/ticket/p/76950571" target="_self">Get tickets now!</Alert.Link>
+                        Summer Sun, available to stream March 20th: <Alert.Link href="https://distrokid.com/hyperfollow/cherrypark/summer-sun/" target="_self">Presave now!</Alert.Link>
                     </p>
-                    
                 </>
             )}
-            validFrom={new Date("October 31, 2025 12:00:00").valueOf()}
-            validUntil={new Date("February 13, 2026 23:23:59").valueOf()} />
+            validFrom={new Date("March 1, 2026 12:00:00").valueOf()}
+            validUntil={new Date("March 21, 2026 23:23:59").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
