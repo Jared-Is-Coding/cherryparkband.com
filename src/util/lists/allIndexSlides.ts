@@ -4,7 +4,7 @@ export default [
         imageSrcMobile: "/images/albums/tell_me_how_you_got_here/icon.jpg",
         imageTitle: "Cherry Park's upcoming release, Tell Me How You Got Here",
         imageAlt: "A young child in a space suit with arms raised in a silly pose for the Cherry Park EP, Volume #1",
-        url: "https://distrokid.com/hyperfollow/cherrypark/summer-sun/"
+        url: "https://open.spotify.com/album/5d9GGwFVLe1R0e6xIhOvvw"
     },
     {
         imageSrc: "/images/albums/volume_1/icon_wide.jpg",
