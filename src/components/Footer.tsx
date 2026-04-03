@@ -11,17 +11,17 @@ type CherryFooterProps = {
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="music-new-2"
+            alertTag="music-new-3"
             AlertContent={(
                 <>
-                    <Alert.Heading>New Release</Alert.Heading>
+                    <Alert.Heading>New Release #2</Alert.Heading>
                     <p>
-                        Summer Sun, available to stream on all platforms now!
+                        All Time Favorite, available to stream on all platforms now!
                     </p>
                 </>
             )}
             validFrom={new Date("March 20, 2026 12:00:00").valueOf()}
-            validUntil={new Date("March 31, 2026 23:23:59").valueOf()} />
+            validUntil={new Date("April 16, 2026 23:23:59").valueOf()} />
 
         <Container style={{display: hideListenIconLinks ? "none" : ""}} className="flex-center" fluid>
             <Row className="flex-center">
