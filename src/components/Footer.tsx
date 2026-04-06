@@ -1,7 +1,7 @@
 import React from "react"
 import { Alert, Col, Container, Row } from "react-bootstrap"
 import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
-import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, YouTubeMusicLink } from "../util/SiteVariables"
+import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, YouTubeMusicLink } from "@util/SiteVariables"
 import AlertPopup from "./AlertPopup"
 
 type CherryFooterProps = {

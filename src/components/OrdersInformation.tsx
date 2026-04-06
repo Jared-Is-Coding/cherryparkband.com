@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Col, Row } from "react-bootstrap"
-import { BandEmail } from "../util/SiteVariables"
+import { BandEmail } from "@util/SiteVariables"
 
 export default () => (
     <Row>

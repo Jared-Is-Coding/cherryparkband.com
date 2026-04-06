@@ -2,10 +2,10 @@ import { Link, type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
-import Footer from "../../components/Footer"
-import MetaData from "../../components/MetaData"
-import Navbar from "../../components/Navbar"
-import OrdersInformation from "../../components/OrdersInformation"
+import Footer from "@components/Footer"
+import MetaData from "@components/MetaData"
+import Navbar from "@components/Navbar"
+import OrdersInformation from "@components/OrdersInformation"
 
 export const Head: HeadFC = () => (
     <>

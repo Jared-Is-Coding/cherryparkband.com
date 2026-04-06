@@ -1,12 +1,12 @@
 import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Carousel, Col, Container, Row } from "react-bootstrap"
-import CarouselImage from "../components/CarouselImage"
-import Footer from "../components/Footer"
-import ListenIconLinks from "../components/ListenIconLinks"
-import MetaData from "../components/MetaData"
-import Navbar from "../components/Navbar"
-import allIndexSlides from "../util/lists/allIndexSlides"
+import CarouselImage from "@components/CarouselImage"
+import Footer from "@components/Footer"
+import ListenIconLinks from "@components/ListenIconLinks"
+import MetaData from "@components/MetaData"
+import Navbar from "@components/Navbar"
+import allIndexSlides from "@util/lists/allIndexSlides"
 
 export const Head: HeadFC = () => (
     <>

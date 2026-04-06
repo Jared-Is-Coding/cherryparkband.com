@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
-import { AmazonMusicLink, AppleMusicLink, BandEmail, InstagramLink, SpotifyLink, YouTubeMusicLink } from "../util/SiteVariables"
+import { AmazonMusicLink, AppleMusicLink, BandEmail, InstagramLink, SpotifyLink, YouTubeMusicLink } from "@util/SiteVariables"
 
 type CherryNavbarProps = {
     isHomepage?: boolean

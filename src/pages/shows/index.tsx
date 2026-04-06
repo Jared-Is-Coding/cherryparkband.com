@@ -2,12 +2,12 @@ import { type HeadFC, type PageProps } from "gatsby"
 import * as React from "react"
 import { Col, Row } from "react-bootstrap"
 import Container from 'react-bootstrap/Container'
-import Footer from "../../components/Footer"
-import MetaData from "../../components/MetaData"
-import Navbar from "../../components/Navbar"
-import ShowCard from "../../components/ShowCard"
-import "../../scss/pages/shows.scss"
-import shows from "../../util/lists/allShows"
+import Footer from "@components/Footer"
+import MetaData from "@components/MetaData"
+import Navbar from "@components/Navbar"
+import ShowCard from "@components/ShowCard"
+import "@scss/pages/shows.scss"
+import shows from "@util/lists/allShows"
 
 export const Head: HeadFC = () => (
     <>
