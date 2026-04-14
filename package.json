@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "gatsby": "^5.13.5",
+        "gatsby-adapter-netlify": "^1.4.0",
         "gatsby-plugin-robots-txt": "^1.8.0",
         "gatsby-plugin-sass": "^6.13.1",
         "gatsby-plugin-sitemap": "^6.13.1",
