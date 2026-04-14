@@ -1,7 +1,8 @@
 import React from "react"
+import type { GatsbySSR } from "gatsby"
 
-export const onRenderBody = ({ setPostBodyComponents }) => {
+export const onRenderBody: GatsbySSR["onRenderBody"] = ({ setPostBodyComponents }) => {
     setPostBodyComponents([
-        <script src="/js/script.js" />,
+        <script key="site-script" src="/js/script.js" />,
     ])
 }

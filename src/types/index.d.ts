@@ -1,5 +1,7 @@
-declare module "*.scss"
-declare module "@scss/*"
+declare module "*.scss" {
+    const classes: Record<string, string>
+    export default classes
+}
 
 type albumData = {
     /**

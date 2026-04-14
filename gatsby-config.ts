@@ -1,7 +1,9 @@
 import type { GatsbyConfig } from "gatsby"
+import netlifyAdapter from "gatsby-adapter-netlify"
 import "dotenv/config"
 
 const config: GatsbyConfig = {
+    adapter: netlifyAdapter(),
     siteMetadata: {
         title: "Cherry Park | East Coast indie band",
         description: "Cherry Park is a Delaware based dream pop group. They can be found on all streaming platforms.",
