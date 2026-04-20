@@ -3,6 +3,7 @@ import { Alert, Col, Container, Row } from "react-bootstrap"
 import { FaAmazon, FaInstagram, FaMusic, FaSpotify, FaYoutube } from "react-icons/fa"
 import { AmazonMusicLink, AppleMusicLink, InstagramLink, SpotifyLink, YouTubeMusicLink } from "@util/SiteVariables"
 import AlertPopup from "./AlertPopup"
+import { Link } from "gatsby"
 
 type CherryFooterProps = {
     hideListenIconLinks?: boolean
@@ -11,12 +12,12 @@ type CherryFooterProps = {
 export default ({hideListenIconLinks}: CherryFooterProps) => (
     <footer>
         <AlertPopup
-            alertTag="music-new-3"
+            alertTag="music-new-4"
             AlertContent={(
                 <>
-                    <Alert.Heading>New Release #2</Alert.Heading>
+                    <Alert.Heading>New Album Release</Alert.Heading>
                     <p>
-                        All Time Favorite, available to stream on all platforms now!
+                        Tell Me How You Got Here, available to stream on all platforms now: <a href="https://open.spotify.com/album/0AI9JJZvXa1snZP6bZsueg" target="_blank" rel="noopener noreferrer">check it out</a>!
                     </p>
                 </>
             )}

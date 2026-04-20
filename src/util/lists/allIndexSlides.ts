@@ -2,9 +2,9 @@ export default [
     {
         imageSrc: "/images/albums/tell_me_how_you_got_here/icon_wide.jpg",
         imageSrcMobile: "/images/albums/tell_me_how_you_got_here/icon.jpg",
-        imageTitle: "Cherry Park's upcoming release, Tell Me How You Got Here",
+        imageTitle: "Cherry Park's latest release, Tell Me How You Got Here",
         imageAlt: "A young child in a space suit with arms raised in a silly pose for the Cherry Park EP, Volume #1",
-        url: "https://open.spotify.com/track/1bMCPuq3cfZgTG8Ukc6MHZ"
+        url: "https://open.spotify.com/album/0AI9JJZvXa1snZP6bZsueg"
     },
     {
         imageSrc: "/images/albums/volume_1/icon_wide.jpg",
