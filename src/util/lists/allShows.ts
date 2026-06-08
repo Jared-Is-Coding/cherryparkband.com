@@ -82,5 +82,14 @@ export default [
         imageTitle: "Philamoca venue image",
         imageAlt: "Venue image for Philamoca in Philadelphia, Pennsylvania",
         url: "https://www.etix.com/ticket/p/76950571"
+    },
+    {
+        showTitle: "Old-Fashioned Ice Cream Festival, Wilmington, DE",
+        showDate: "June 27, 2026",
+        otherPerformers: "Cher's Playground | Chorduroy Band | The Full Carbon Get Up | Roger Girke Band  | Fuzaholics",
+        imageSrc: "/images/venues/ncc.png",
+        imageTitle: "New Castle County logo",
+        imageAlt: "Logo for New Castle County in Delaware",
+        url: "https://www.newcastlede.gov/1103/"
     }
 ] as showData[]
