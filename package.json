@@ -21,11 +21,11 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
-        "gatsby": "^5.13.5",
+        "gatsby": "^5.16.1",
         "gatsby-adapter-netlify": "^1.4.0",
         "gatsby-plugin-robots-txt": "^1.8.0",
-        "gatsby-plugin-sass": "^6.13.1",
-        "gatsby-plugin-sitemap": "^6.13.1",
+        "gatsby-plugin-sass": "^6.16.0",
+        "gatsby-plugin-sitemap": "^6.16.0",
         "react": "^18.3.1",
         "react-bootstrap": "^2.10.4",
         "react-dom": "^18.3.1",
@@ -42,6 +42,6 @@
         "@parcel/watcher": "~2.1.0"
     },
     "engines": {
-        "node": ">=22.0.0 <23.0.0"
+        "node": ">=24.14.1"
     }
 }
